@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >-->
+
+
+
+
+    <!--<TextView
+        android:id="@+id/text_body_sample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:text="Comming Soon!"
+        android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView_apply"
+        android:fillViewport="true"
+        android:layout_alignParentTop="true"
+    android:background="@drawable/coach_tab_page_back">
+
+    <RelativeLayout android:id="@+id/inside_apply_rel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent">
+
+
+    <EditText
+
+        android:id="@+id/apply_blurb"
+        android:layout_width="wrap_content"
+        android:minHeight="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:paddingLeft="30dp"
+        android:singleLine="false"
+        android:inputType="textMultiLine"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundedcorner"
+        android:layout_marginTop="90dp"
+        android:ems="10"
+        android:hint="Write about what kind of mentor you are."
+        android:drawableBottom="@android:color/white"
+
+
+        android:maxLength="120"
+        android:maxLines="5"
+        android:textColor="#ffffff"
+        android:maxWidth="350dp"
+        android:minWidth="300dp"
+        />
+
+
+
+
+        <EditText
+
+            android:id="@+id/about_me_edit_text"
+            android:layout_width="500dp"
+            android:minHeight="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:singleLine="false"
+            android:paddingLeft="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundedcorner"
+            android:layout_marginTop="220dp"
+
+            android:ems="10"
+            android:hint="Tell us more about yourself"
+            android:drawableBottom="@android:color/white"
+
+            android:inputType="textMultiLine"
+            android:maxLength="1400"
+            android:maxLines="5"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/blurb_text_view"
+            android:layout_width="wrap_content"
+            android:minHeight="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:paddingLeft="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundedcorner"
+            android:layout_marginTop="90dp"
+            android:ems="10"
+            android:hint="Write about what kind of mentor you are."
+            android:drawableBottom="@android:color/white"
+
+            android:maxLength="400"
+            android:textColor="#ffffff"
+            android:maxWidth="350dp"
+            android:minWidth="300dp"
+
+
+            android:singleLine="false"
+            android:inputType="textMultiLine"
+            android:visibility="invisible"
+            />
+
+
+
+
+        <TextView
+
+            android:id="@+id/about_me_text_view"
+            android:layout_width="500dp"
+            android:minHeight="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundedcorner"
+            android:layout_marginTop="220dp"
+            android:ems="10"
+            android:hint="Tell us more about yourself"
+            android:drawableBottom="@android:color/white"
+            android:maxLength="1400"
+            android:textColor="#ffffff"
+
+            android:singleLine="false"
+            android:inputType="textMultiLine"
+            android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/send_apply_btn"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:text="Submit"
+        android:background="@drawable/roundedcorner_trans"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="350dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:textColor="#aacccc99"
+        android:gravity="center|center_horizontal"
+        android:layout_centerInParent="true"
+        />
+
+        <Button
+            android:id="@+id/edit_apply_btn"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:text="Edit"
+            android:background="@drawable/roundedcorner_trans"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="350dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:textColor="#aacccc99"
+            android:gravity="center|center_horizontal"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Become a Coach"
+            android:id="@+id/textView4"
+            android:gravity="center|center_horizontal"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_bar_apply"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp" />
+
+    </RelativeLayout>
+
+    </ScrollView>
+<!--</RelativeLayout>-->

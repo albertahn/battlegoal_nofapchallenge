@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="keypublic">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAntre0/BtawpWNYR20e1TUqd+exBKDv9QXJx1FqVhU2mpxoF1yM0JR6hVuKFLQMMV4kb4aCGDwrSwqhwpZh4g7TReg8Ljbw6iEd5JDAffNumWBjQ2fvKSI6ie2DIetWbib24SlKae44e2Eih/xiKWH+aoSbKr8sth5Egnbt4bh1SVpR6YCX8fHoGv4jFX+WZ5LW1ANPUBR3xvcVqiuUphmOSqI6FqlssHpvBRIb5dNGl44FR3Kgh7GjNwRdmOnU18C4KU46MiqpnJyS3uKreGDs686MeQBVp0BgY4l27EzPQpRCJoJ1QcvxiPUoIfPoTPdyMgggrWzUwYxV5zSoWabQIDAQAB</string>
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-5099437915490973/2205661184</string>
+    <string name="app_name">Battle Goal</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_id">1522802461290525</string>
+    <string name="action_search">search</string>
+    <string name="action_refresh">refresh</string>
+
+    <!--tab menu-->
+
+    <string name="home_tab">home</string>
+
+    <string name="news_tab">news</string>
+    <string name="message_tab">message</string>
+    <string name="progress_tab">progress</string>
+    <string name="profile_tab">profile</string>
+
+    <string name="chat_tab">CHAT</string>
+    <string name="inbox_tab">INBOX</string>
+
+    <!--texts-->
+
+    <string name="home_hint">What have you accomplished? What are you thankful for? </string>
+
+    <!--URL for langguages-->
+    <string name="default_comments_url">http://mobile.tanggoal.com/comment/get_course_comments/10</string>
+
+    <!--Navigation int-->
+
+    <integer name="navigation_int">9</integer>
+    <integer name="course_int">10</integer>
+
+<!--actionlist-->
+    <string-array name="action_list">
+        <item>English</item>
+        <item>Español</item>
+        <item>한국어</item>
+
+        <item>Português</item>
+        <item>Deutsch</item>
+        <item>Français</item>
+        <item>日本の</item>
+        <item>Italiano</item>
+        <item>Farsi</item>
+        <item>Arabic</item>
+    </string-array>
+
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >News</item>
+        <item >Message</item>
+        <item >Progress</item>
+        <item >Profile</item>
+        <item >Coaches</item>
+        <item >Settings</item>
+        <item >Level</item>
+        <item >Battle</item>
+
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+
+
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+</resources>

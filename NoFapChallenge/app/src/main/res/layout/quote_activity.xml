@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/battle_back"
+    android:id="@+id/quote_background_rel_layout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quotes"
+        android:id="@+id/quote_text_part"
+        android:background="@color/black_transparent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center|fill_horizontal|center_vertical|center_horizontal"
+        android:textColor="#ffffff"
+        android:padding="50dp"
+        android:layout_alignParentTop="false"
+        android:textSize="20dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="author"
+        android:textColor="#ffffff"
+        android:id="@+id/author_text"
+        android:layout_alignBottom="@+id/quote_text_part"
+        android:layout_alignRight="@+id/quote_text_part"
+        android:layout_alignEnd="@+id/quote_text_part"
+        android:padding="10dp" />
+
+
+</RelativeLayout>

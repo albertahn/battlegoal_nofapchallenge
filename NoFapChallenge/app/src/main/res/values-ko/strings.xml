@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="keypublic">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAntre0/BtawpWNYR20e1TUqd+exBKDv9QXJx1FqVhU2mpxoF1yM0JR6hVuKFLQMMV4kb4aCGDwrSwqhwpZh4g7TReg8Ljbw6iEd5JDAffNumWBjQ2fvKSI6ie2DIetWbib24SlKae44e2Eih/xiKWH+aoSbKr8sth5Egnbt4bh1SVpR6YCX8fHoGv4jFX+WZ5LW1ANPUBR3xvcVqiuUphmOSqI6FqlssHpvBRIb5dNGl44FR3Kgh7GjNwRdmOnU18C4KU46MiqpnJyS3uKreGDs686MeQBVp0BgY4l27EzPQpRCJoJ1QcvxiPUoIfPoTPdyMgggrWzUwYxV5zSoWabQIDAQAB</string>
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-5099437915490973/2205661184</string>
+    <string name="app_name">Battle Goal</string>
+
+    <string name="action_settings">설정</string>
+    <string name="app_id">1522802461290525</string>
+    <string name="action_search">검색</string>
+    <string name="action_refresh">새로 고침</string>
+
+
+    <!--tab menu-->
+
+    <string name="home_tab">홈</string>
+
+    <string name="news_tab">뉴스</string>
+    <string name="message_tab">메세지</string>
+    <string name="progress_tab">진행</string>
+    <string name="profile_tab">프로필</string>
+
+    <string name="chat_tab">게시판</string>
+    <string name="inbox_tab">개인 메세지</string>
+
+    <!--texts-->
+
+    <string name="home_hint">오늘의 성취는? 감사한 것은? </string>
+
+    <!--URL for langguages-->
+    <string name="default_comments_url">http://mobile.tanggoal.com/comment/get_course_comments/3</string>
+
+
+
+    <!--Navigation int-->
+
+    <integer name="navigation_int">2</integer>
+    <integer name="course_int">3</integer>
+
+    <!--actionlist-->
+    <string-array name="action_list">
+        <item>English</item>
+        <item>Español</item>
+        <item>한국어</item>
+
+        <item>Português</item>
+        <item>Deutsch</item>
+        <item>Français</item>
+        <item>日本の</item>
+        <item>Italiano</item>
+        <item>Farsi</item>
+        <item>Arabic</item>
+
+    </string-array>
+
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >홈</item>
+        <item >뉴스</item>
+        <item >게시판</item>
+        <item >기록</item>
+        <item >프로필</item>
+        <item >코치</item>
+
+        <item >설정</item>
+        <item >레벨</item>
+        <item >배틀</item>
+
+
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+
+
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+</resources>

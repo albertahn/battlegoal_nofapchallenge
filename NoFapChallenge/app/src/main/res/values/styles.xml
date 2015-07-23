@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="android:spinnerDropDownItemStyle">@style/YourCustomDropDownItemStyle</item>
+
+    </style>
+
+    <style name="YourCustomDropDownItemStyle" parent="AppTheme">
+        <item name="android:textAppearance">@style/YourCustomDropDownItemTextStyle</item>
+    </style>
+
+    <style name="YourCustomDropDownItemTextStyle" parent="@android:style/Widget">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:width">50dp</item>
+        <item name="android:height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <!-- Here you can set the color and other text attributes -->
+
+
+    </style>
+
+    <style name="ActionButtonStyle" parent="AppTheme">
+        <item name="android:minWidth">0dip</item>
+        <item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">20dip</item>
+    </style>
+</resources>

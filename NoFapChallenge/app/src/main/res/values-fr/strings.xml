@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="keypublic">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAntre0/BtawpWNYR20e1TUqd+exBKDv9QXJx1FqVhU2mpxoF1yM0JR6hVuKFLQMMV4kb4aCGDwrSwqhwpZh4g7TReg8Ljbw6iEd5JDAffNumWBjQ2fvKSI6ie2DIetWbib24SlKae44e2Eih/xiKWH+aoSbKr8sth5Egnbt4bh1SVpR6YCX8fHoGv4jFX+WZ5LW1ANPUBR3xvcVqiuUphmOSqI6FqlssHpvBRIb5dNGl44FR3Kgh7GjNwRdmOnU18C4KU46MiqpnJyS3uKreGDs686MeQBVp0BgY4l27EzPQpRCJoJ1QcvxiPUoIfPoTPdyMgggrWzUwYxV5zSoWabQIDAQAB</string>
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-5099437915490973/2205661184</string>
+    <string name="app_name">NFChall</string>
+
+    <string name="action_settings">réglage</string>
+    <string name="app_id">1522802461290525</string>
+    <string name="action_search">recherche</string>
+    <string name="action_refresh">atualização</string>
+
+
+    <!--tab menu-->
+
+    <string name="home_tab">Accueil</string>
+
+    <string name="news_tab">Nouvelles</string>
+    <string name="message_tab">Message</string>
+    <string name="progress_tab">Progrès</string>
+    <string name="profile_tab">Profil</string>
+
+    <string name="chat_tab">Commenter</string>
+    <string name="inbox_tab">Messagerie privée</string>
+
+    <!--texts-->
+
+    <string name="home_hint">comment est votre progrès?</string>
+
+    <!--URL for langguages-->
+    <string name="default_comments_url">http://mobile.tanggoal.com/comment/get_course_comments/6</string>
+
+
+
+    <!--Navigation int-->
+
+    <integer name="navigation_int">5</integer>
+    <integer name="course_int">6</integer>
+
+    <!--actionlist-->
+    <string-array name="action_list">
+        <item>English</item>
+        <item>Español</item>
+        <item>한국어</item>
+
+        <item>Português</item>
+        <item>Deutsch</item>
+        <item>Français</item>
+        <item>日本の</item>
+        <item>Italiano</item>
+        <item>Farsi</item>
+        <item>Arabic</item>
+    </string-array>
+
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Accueil</item>
+        <item >Nouvelles</item>
+        <item >Message</item>
+        <item >Progrès</item>
+        <item >Profil</item>
+        <item >Entraîneurs</item>
+        <item >Settings</item>
+        <item >Niveau</item>
+        <item >Battle</item>
+
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+
+
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+</resources>

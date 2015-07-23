@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coach_profile_rel_lay"
+    android:background="@drawable/coach_tab_page_back">
+
+    <RelativeLayout
+        android:id="@+id/relative_this_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        android:background="@drawable/main_header_selector"
+        android:gravity="fill_horizontal">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/myprofile_picture"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:id="@+id/user_name_profile"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:textIsSelectable="true"
+            android:textSize="12sp"
+            android:paddingLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/myprofile_picture"
+            android:layout_alignRight="@+id/myprofile_picture"
+            android:layout_alignEnd="@+id/myprofile_picture"
+            android:gravity="center_horizontal" />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Follow"
+            android:textColor="#ffffff"
+            android:id="@+id/follow_btn"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/myprofile_picture"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:background="#ff0d3340" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:id="@+id/message_btn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/myprofile_picture"
+            android:layout_toEndOf="@+id/myprofile_picture"
+            android:layout_below="@+id/follow_btn"
+            android:background="#bb1f3251"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView"
+            android:layout_alignBottom="@+id/message_btn"
+            android:src="@android:drawable/sym_action_email"
+            android:layout_alignLeft="@+id/message_btn" />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Battle"
+            android:id="@+id/battle_btn"
+            android:background="#bb1f3251"
+            android:layout_below="@+id/message_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/battle_icon"
+            android:layout_alignBottom="@+id/battle_btn"
+            android:layout_alignLeft="@+id/battle_btn"
+
+            android:src="@drawable/battle"
+            />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/products_listview"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relative_this_layout" />
+
+</RelativeLayout>
+
+
+
+    <!--/**
+ * Created by Albert AN on 8/25/14.
+ * All Rights Reserved
+ *
+ *  If you are not the intended recipient, any disclosure, copying, distribution or any action taken or omitted to be taken in reliance on it, is prohibited and may be unlawful.
+ *  If you have received this e-mail by mistake, please e-mail the sender by replying to this message, and deleting the original and any printout thereof.
+
+ 이 코드의 정보는 대외비이며, 법적으로 보호될 수 있습니다.
+ 코드는 오직 받는 사람만을 위한 것이고,
+ 다른 사람의 접근은 허가되지 않습니다.
+ 의도된 수신자가 아니라면, 발표, 복사,
+ 배포 등의 행위는 금지되어 있으며, 불법입니다.
+ 이 코드를 실수로 받은 것이라면, 송신자에게 반송해고, 원본/ 출력물을 삭제해 주십시오.​
+ */-->

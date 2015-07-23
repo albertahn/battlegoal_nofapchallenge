@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/message_back"
+    >
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/message_frag_list"
+        android:layout_gravity="center_horizontal" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/ad_container"
+        android:name="admobtest.components.albert.com.admobtest.MainActivity$AdFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:background="#000000"
+        android:minHeight="20dp"
+        tools:ignore="MergeRootFrame"
+
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

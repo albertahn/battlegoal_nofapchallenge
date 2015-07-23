@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/setting_scrollview"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/settings_rel_lay"
+    android:background="@color/transparent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@color/black_transparent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Receive Notifications:"
+        android:id="@+id/receive_textView"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notify_button"
+        android:src="@drawable/bell"
+        android:layout_gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Version 4.7.7"
+        android:id="@+id/textView"
+        android:background="@color/black_transparent"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="New Changes:\n\n1.Different encouragement dialogs \n    when pressing button.\n2.Enhanced Battle Goal.\n3.No more Accidental restart button clicks.\n"
+        android:id="@+id/textView2"
+        android:background="@color/black_transparent"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff" />
+
+
+
+
+</RelativeLayout>
+    </ScrollView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/app/build.gradle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/adapter/NavDrawerListAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/comment_stuff/InputComment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/model/NavDrawerItem.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils/ProgressWheel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils_payment/Base64.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils_payment/Base64DecoderException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils_payment/IabException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils_payment/IabHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils_payment/IabResult.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils_payment/Inventory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils_payment/Purchase.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils_payment/Security.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/changeandsuccess/nofapchallenge/utils_payment/SkuDetails.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/counter_bg.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_drawer.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_drawer2.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_whats_hot.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/list_item_bg_normal.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/list_item_bg_pressed.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/list_selector.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/wait.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/free.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_list_item.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ad.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml" charset="UTF-8" />
+  </component>
+</project>
+

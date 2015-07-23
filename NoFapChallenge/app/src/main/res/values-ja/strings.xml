@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="keypublic">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAntre0/BtawpWNYR20e1TUqd+exBKDv9QXJx1FqVhU2mpxoF1yM0JR6hVuKFLQMMV4kb4aCGDwrSwqhwpZh4g7TReg8Ljbw6iEd5JDAffNumWBjQ2fvKSI6ie2DIetWbib24SlKae44e2Eih/xiKWH+aoSbKr8sth5Egnbt4bh1SVpR6YCX8fHoGv4jFX+WZ5LW1ANPUBR3xvcVqiuUphmOSqI6FqlssHpvBRIb5dNGl44FR3Kgh7GjNwRdmOnU18C4KU46MiqpnJyS3uKreGDs686MeQBVp0BgY4l27EzPQpRCJoJ1QcvxiPUoIfPoTPdyMgggrWzUwYxV5zSoWabQIDAQAB</string>
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-5099437915490973/2205661184</string>
+    <string name="app_name">NFChall</string>
+
+    <string name="action_settings">設定</string>
+    <string name="app_id">1522802461290525</string>
+    <string name="action_search">検索</string>
+    <string name="action_refresh">アップデート</string>
+
+
+    <!--tab menu-->
+
+    <string name="home_tab">ホーム</string>
+
+    <string name="news_tab">ニュース</string>
+    <string name="message_tab">メッセージ</string>
+    <string name="progress_tab">自ら進行。</string>
+    <string name="profile_tab">プロフィール</string>
+
+    <string name="chat_tab">コメント</string>
+    <string name="inbox_tab">受信トレイ</string>
+
+    <!--texts-->
+
+    <string name="home_hint">ポルノ中毒克服の助っ人探し。</string>
+
+    <!--URL for langguages-->
+    <string name="default_comments_url">http://mobile.tanggoal.com/comment/get_course_comments/7</string>
+
+
+
+    <!--Navigation int-->
+
+    <integer name="navigation_int">6</integer>
+    <integer name="course_int">7</integer>
+
+    <!--actionlist-->
+    <string-array name="action_list">
+        <item>English</item>
+        <item>Español</item>
+        <item>한국어</item>
+
+        <item>Português</item>
+        <item>Deutsch</item>
+        <item>Français</item>
+        <item>日本語</item>
+        <item>Italiano</item>
+        <item>Farsi</item>
+        <item>Arabic</item>
+    </string-array>
+
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >ホーム</item><!-- home-->
+        <item >ニュース</item><!--news -->
+        <item >メッセージ</item><!-- Message -->
+        <item >自ら進行。</item><!-- Progress -->
+        <item >プロフィール</item><!-- Profile -->
+        <item >コーチ</item><!-- Coaches -->
+
+        <item >Settings</item>
+        <item >レベル</item><!-- Level -->
+        <item >Battle</item>
+
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+
+
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+</resources>

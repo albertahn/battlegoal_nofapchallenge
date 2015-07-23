@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        <integer name="lv1">1</integer>
+
+        <integer name="lv2">2</integer>
+
+        <integer name="lv3">3</integer>
+
+        <integer name="lv4">4</integer>
+
+        <integer name="lv5">5</integer>
+
+        <integer name="lv6">6</integer>
+
+        <integer name="lv7">7</integer>
+
+        <integer name="lv8">8</integer>
+
+        <integer name="lv9">9</integer>
+
+        <integer name="lv10">10</integer>
+
+
+      -->
+        <integer name="lv1">3</integer>
+
+        <integer name="lv2">7</integer>
+
+        <integer name="lv3">20</integer>
+
+        <integer name="lv4">50</integer>
+
+        <integer name="lv5">70</integer>
+
+        <integer name="lv6">90</integer>
+
+        <integer name="lv7">190</integer>
+
+        <integer name="lv8">350</integer>
+
+        <integer name="lv9">750</integer>
+
+        <integer name="lv10">1000</integer>
+
+
+</resources>

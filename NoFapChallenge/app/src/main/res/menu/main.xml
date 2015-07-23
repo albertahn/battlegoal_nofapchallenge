@@ -1,0 +1,70 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.al.nofapsecond.app.MainActivity" >
+
+
+    <item
+        android:id="@+id/action_commentsfrag"
+        android:icon="@drawable/small_chat"
+        android:title="Chat"
+        app:showAsAction="ifRoom"
+        android:titleCondensed="true"
+        />
+
+
+    <item
+        android:id="@+id/inbox_message"
+        android:icon="@drawable/small_inbox_new"
+        android:title="message"
+        app:showAsAction="ifRoom"
+        android:scaleType="fitCenter"
+
+
+        />
+
+    <item
+        android:id="@+id/profile_menu"
+        android:icon="@drawable/small_profile"
+        android:title="profile_menu"
+        android:scaleType="fitCenter"
+
+        android:actionLayout="@layout/menu_layout_icon"
+        app:showAsAction="ifRoom"
+
+        />
+
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+
+        android:title="@string/action_settings"/>
+    <!-- Help
+    <item android:id="@+id/action_help"
+        android:icon="@drawable/ic_action_help"
+        android:title="@string/action_help"
+        app:showAsAction="never"/>-->
+
+    <!-- Check updates
+    <item android:id="@+id/action_check_updates"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/action_check_updates"
+        app:showAsAction="never" /> -->
+
+    <!--logout -->
+    <item android:id="@+id/logout_button"
+        android:title="Logout"
+        android:icon="@drawable/ic_action_refresh"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/action_refresh"
+        app:showAsAction="never" />
+    <!--settings
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" /> -->
+</menu>

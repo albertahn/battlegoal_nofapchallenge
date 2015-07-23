@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+    <!-- Framelayout to display Fragments -->
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </FrameLayout>
+
+    </RelativeLayout>
+
+    <!-- android:layout_gravity="start" Listview to display slider menu   android:layout_gravity="start" android:layout_gravity="start"-->
+    <ScrollView
+        android:layout_width="310dp"
+        android:layout_height="match_parent"
+        android:id="@+id/list_slidermenu"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+
+        android:background="@color/transparent"
+        >
+
+    <RelativeLayout
+        android:id="@+id/relay"
+        android:layout_width="310dp"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:choiceMode="singleChoice"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector"
+        android:background="@color/black_transparent">
+
+        <RelativeLayout
+            android:id="@+id/search_place"
+            android:layout_width="310dp"
+            android:layout_height="35dp"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:choiceMode="singleChoice"
+            android:divider="@color/list_divider"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/list_selector"
+            android:background="@drawable/search_background"
+            android:gravity="center_vertical">
+<TextView
+    android:layout_width="50dp"
+    android:layout_height="30dp"
+    android:text="search"
+    android:layout_marginLeft="20dp"
+    android:textColor="#ffffff"
+    />
+
+            </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+            android:text="New Button"
+            android:id="@+id/chat_menu"
+            android:layout_weight="1"
+            android:background="@drawable/menuback_right"
+
+
+
+            android:gravity="fill"
+            android:layout_gravity="right|top"
+            android:src="@drawable/chat"
+            android:layout_below="@+id/search_place"
+            android:layout_toRightOf="@+id/home_menu"
+            android:layout_toEndOf="@+id/home_menu"
+            android:layout_marginTop="5dp"
+
+
+            android:adjustViewBounds="true"
+            android:paddingTop="28dp"
+            android:paddingBottom="45dp"
+            android:paddingRight="45dp"
+            android:paddingLeft="45dp"
+            android:scaleType="fitCenter"/>
+
+
+        <ImageButton
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+            android:text="New Button"
+            android:id="@+id/inbox_menu"
+            android:layout_weight="1"
+
+            android:background="@drawable/menuback_right"
+
+            android:padding="40dp"
+
+
+            android:gravity="fill"
+
+            android:layout_gravity="right|top"
+            android:layout_toRightOf="@+id/blog_menu"
+            android:src="@drawable/inbox"
+            android:layout_below="@+id/chat_menu"
+
+
+            android:adjustViewBounds="true"
+            android:paddingTop="28dp"
+            android:paddingBottom="45dp"
+            android:paddingRight="45dp"
+            android:paddingLeft="45dp"
+            android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:layout_width="155dp"
+                android:layout_height="130dp"
+                android:text="New Button"
+                android:id="@+id/home_menu"
+                android:layout_weight="1"
+                android:background="@drawable/menubacktest"
+
+                android:adjustViewBounds="true"
+                android:paddingTop="28dp"
+                android:paddingBottom="45dp"
+                android:paddingRight="45dp"
+                android:paddingLeft="45dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home"
+                android:layout_below="@+id/search_place"
+                android:layout_marginTop="5dp" />
+
+        <ImageButton
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+            android:text="New Button"
+            android:id="@+id/blog_menu"
+            android:layout_weight="1"
+            android:background="@drawable/menubacktest"
+
+
+            android:padding="40dp"
+
+            android:src="@drawable/blog"
+            android:layout_below="@+id/home_menu"
+
+
+            android:adjustViewBounds="true"
+            android:paddingTop="28dp"
+            android:paddingBottom="45dp"
+            android:paddingRight="45dp"
+            android:paddingLeft="45dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageButton
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+            android:text="New Button"
+            android:id="@+id/battle_menu"
+
+            android:background="@drawable/menubacktest"
+
+            android:src="@drawable/battle"
+
+
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:padding="40dp"
+            android:scaleType="fitCenter"
+
+
+            android:layout_below="@+id/blog_menu" />
+
+        <ImageButton
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+            android:text="New Button"
+            android:id="@+id/coach_menu"
+            android:layout_weight="1"
+            android:background="@drawable/menuback_right"
+            android:adjustViewBounds="true"
+            android:padding="40dp"
+            android:scaleType="fitCenter"
+            android:layout_toRightOf="@id/battle_menu"
+
+            android:layout_gravity="left|bottom"
+            android:src="@drawable/coach"
+            android:layout_below="@+id/inbox_menu" />
+
+
+        <ImageButton
+            android:id="@+id/level_menu"
+            android:src="@drawable/level"
+            android:background="@drawable/menubacktest"
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+            android:text="New Button"
+
+            android:layout_weight="1"
+
+
+            android:adjustViewBounds="true"
+            android:padding="40dp"
+            android:scaleType="fitCenter"
+
+            android:layout_gravity="left|bottom"
+            android:layout_below="@+id/battle_menu" />
+
+        <ImageButton
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+            android:text="New Button"
+            android:id="@+id/settings_menu"
+            android:layout_weight="1"
+
+            android:background="@drawable/menuback_right"
+            android:adjustViewBounds="true"
+            android:padding="40dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="left|bottom"
+            android:layout_toRightOf="@id/level_menu"
+            android:src="@drawable/store"
+            android:layout_below="@+id/coach_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="HOME"
+
+            android:id="@+id/home_label"
+            android:layout_alignBottom="@+id/home_menu"
+            android:layout_alignLeft="@+id/home_menu"
+            android:layout_alignRight="@+id/home_menu"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textScaleX="1.2"
+            android:fontFamily="sans-serif"
+            android:textSize="10.5dp"
+            android:layout_marginBottom="33dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="BOARD"
+            android:textScaleX="1.2"
+            android:textSize="10.5dp"
+            android:id="@+id/chat_label"
+            android:layout_alignBottom="@+id/chat_menu"
+            android:layout_alignLeft="@+id/chat_menu"
+            android:layout_alignRight="@+id/chat_menu"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:layout_marginBottom="33dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="BLOG"
+            android:id="@+id/blog_label"
+
+            android:layout_alignBottom="@+id/blog_menu"
+            android:layout_alignLeft="@+id/blog_menu"
+            android:layout_alignRight="@+id/blog_menu"
+            android:textColor="#ffffff"
+
+
+            android:gravity="center"
+            android:textScaleX="1.2"
+            android:fontFamily="sans-serif"
+            android:textSize="10.5dp"
+            android:layout_marginBottom="23dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="INBOX"
+            android:id="@+id/inbox_label"
+
+            android:layout_alignBottom="@+id/inbox_menu"
+            android:layout_alignLeft="@+id/inbox_menu"
+            android:layout_alignRight="@+id/inbox_menu"
+            android:textColor="#ffffff"
+
+
+            android:gravity="center"
+            android:textScaleX="1.2"
+            android:fontFamily="sans-serif"
+            android:textSize="10.5dp"
+            android:layout_marginBottom="23dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="BATTLE"
+            android:id="@+id/battle_label"
+
+            android:layout_alignBottom="@+id/battle_menu"
+            android:layout_alignLeft="@+id/battle_menu"
+            android:layout_alignRight="@+id/battle_menu"
+            android:textColor="#ffffff"
+
+
+            android:gravity="center"
+            android:textScaleX="1.2"
+            android:fontFamily="sans-serif"
+            android:textSize="10.5dp"
+            android:layout_marginBottom="23dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="COACH"
+            android:id="@+id/coach_label"
+
+            android:layout_alignBottom="@+id/coach_menu"
+            android:layout_alignLeft="@+id/coach_menu"
+            android:layout_alignRight="@+id/coach_menu"
+            android:textColor="#ffffff"
+
+
+            android:gravity="center"
+            android:textScaleX="1.2"
+            android:fontFamily="sans-serif"
+            android:textSize="10.5dp"
+            android:layout_marginBottom="23dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="LEVEL"
+            android:id="@+id/level_label"
+
+            android:layout_alignBottom="@+id/level_menu"
+            android:layout_alignLeft="@+id/level_menu"
+            android:layout_alignRight="@+id/level_menu"
+            android:textColor="#ffffff"
+
+
+            android:gravity="center"
+            android:textScaleX="1.2"
+            android:fontFamily="sans-serif"
+            android:textSize="10.5dp"
+            android:layout_marginBottom="23dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="STORE"
+            android:id="@+id/settings_label"
+
+            android:layout_alignBottom="@+id/settings_menu"
+            android:layout_alignLeft="@+id/settings_menu"
+            android:layout_alignRight="@+id/settings_menu"
+            android:textColor="#ffffff"
+
+
+            android:gravity="center"
+            android:textScaleX="1.2"
+            android:fontFamily="sans-serif"
+            android:textSize="10.5dp"
+            android:layout_marginBottom="23dp"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="NEW!"
+            android:id="@+id/new_tag"
+            android:layout_alignTop="@+id/battle_menu"
+            android:layout_toRightOf="@+id/battle_menu"
+            android:layout_toEndOf="@+id/battle_menu"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ff0000" />
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+</android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
+
+
+    <!--/**
+ * Created by Albert AN on 8/25/14.
+ * All Rights Reserved
+ *
+ *  If you are not the intended recipient, any disclosure, copying, distribution or any action taken or omitted to be taken in reliance on it, is prohibited and may be unlawful.
+ *  If you have received this e-mail by mistake, please e-mail the sender by replying to this message, and deleting the original and any printout thereof.
+
+ 이 코드의 정보는 대외비이며, 법적으로 보호될 수 있습니다.
+ 코드는 오직 받는 사람만을 위한 것이고,
+ 다른 사람의 접근은 허가되지 않습니다.
+ 의도된 수신자가 아니라면, 발표, 복사,
+ 배포 등의 행위는 금지되어 있으며, 불법입니다.
+ 이 코드를 실수로 받은 것이라면, 송신자에게 반송해고, 원본/ 출력물을 삭제해 주십시오.​
+ */-->

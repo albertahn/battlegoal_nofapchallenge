@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/home_rel_layout"
+    android:background="@drawable/background"
+    android:scaleType="fitXY"
+    android:gravity="fill_horizontal|fill|fill_vertical|top"
+   >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/rel_layout_loginpage"
+            android:background="@color/transparent"
+            android:clickable="false"
+            android:focusable="false">
+    <!--android:background="@drawable/main_header_selector"-->
+
+
+            <RelativeLayout
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:id="@+id/clock_rel"
+                android:background="@drawable/cir"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                >
+
+<!--#ff4cfffd  00000000-->
+                <com.changeandsuccess.nofapchallenge.utils.ProgressWheel
+                    android:id="@+id/progressBarTwo"
+                    android:layout_width="280dp"
+                    android:layout_height="320dp"
+                    ProgressWheel:text="LEVEL"
+
+                    ProgressWheel:textColor="#ffffff"
+                    ProgressWheel:textSize="14sp"
+
+                    ProgressWheel:rimColor="#00000000"
+                    ProgressWheel:radius="40dp"
+                    ProgressWheel:barLength="120dp"
+                    ProgressWheel:barColor="#9895ccff"
+                    ProgressWheel:barWidth="5dp"
+                    ProgressWheel:rimWidth="10dp"
+                    ProgressWheel:spinSpeed="3dp"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:paddingTop="40dp"
+                    android:paddingBottom="40dp"
+                    android:paddingEnd="40dp"
+                    android:paddingRight="40dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_centerInParent="true"
+
+                     />
+
+
+                </RelativeLayout>
+
+
+            <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/achieve_note"
+        android:hint="Write Something"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="155dp"
+        android:background="@drawable/roundedcorner"
+        android:layout_below="@+id/daycountinggroup"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="#ffffff" />
+
+
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/daycountinggroup"
+        android:layout_marginTop="134dp"
+        android:layout_centerHorizontal="true">
+
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="70dp"
+        android:textColor="#ffffff"
+        android:textScaleX=".9"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/day_label"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="DAY"
+        android:textScaleX="1.1"
+        android:textSize="16dp"
+        android:layout_marginTop="-15dp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/tvDay"
+        android:gravity="center">
+
+    </TextView>
+
+        <TextView
+            android:id="@+id/hours_text"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text=""
+            android:textScaleX="1.1"
+            android:textSize="12dp"
+            android:layout_marginTop="0dp"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/tvDay"
+            android:gravity="center">
+
+        </TextView>
+
+ </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="LV.01"
+                android:id="@+id/my_level"
+                android:textColor="#ffffff"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/daycountinggroup"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+ </ScrollView>
+
+    <ImageButton
+        android:id="@+id/bAdd"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:textSize="30sp"
+        android:background="@color/transparent"
+        android:src="@drawable/upicon"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageButton
+
+        android:id="@+id/bRestart"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="45dp"
+        android:layout_height="47dp"
+        android:src="@drawable/refresh"
+        android:text="0"
+        android:background="@color/transparent"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="39dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/bAdd"
+        android:layout_toStartOf="@+id/bAdd"
+        android:layout_marginRight="80dp" />
+
+    <ImageButton
+        android:id="@+id/setting_btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="38dp"
+        android:layout_height="52dp"
+
+        android:layout_marginBottom="39dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/share"
+        android:background="@color/transparent"
+        android:text="0"
+        android:scaleType="fitCenter"
+
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/bAdd" />
+
+</RelativeLayout>
+
+    <!--/**
+* Created by Albert AN on 8/25/14.
+* All Rights Reserved
+*
+*  If you are not the intended recipient, any disclosure, copying, distribution or any action taken or omitted to be taken in reliance on it, is prohibited and may be unlawful.
+*  If you have received this e-mail by mistake, please e-mail the sender by replying to this message, and deleting the original and any printout thereof.
+
+이 코드의 정보는 대외비이며, 법적으로 보호될 수 있습니다.
+코드는 오직 받는 사람만을 위한 것이고,
+다른 사람의 접근은 허가되지 않습니다.
+의도된 수신자가 아니라면, 발표, 복사,
+배포 등의 행위는 금지되어 있으며, 불법입니다.
+이 코드를 실수로 받은 것이라면, 송신자에게 반송해고, 원본/ 출력물을 삭제해 주십시오.​
+*/-->

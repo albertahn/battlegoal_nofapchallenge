@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_back"
+    android:id="@+id/rel_lay_profile_over">
+
+    <!--android:background="@drawable/profile_back"-->
+
+    <RelativeLayout
+        android:id="@+id/relative_this_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:gravity="fill_horizontal"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/myprofile_picture"
+            android:src="@drawable/main_header_selector"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="your name"
+            android:id="@+id/user_name_profile"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentStart="false"
+            android:textAlignment="center"
+            android:textIsSelectable="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/myprofile_picture"
+            android:layout_alignRight="@+id/myprofile_picture"
+            android:layout_alignEnd="@+id/myprofile_picture" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="17dp"
+            android:text='"You are Powerful"'
+            android:id="@+id/recieve_textView"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@+id/myprofile_picture"
+            android:layout_toEndOf="@+id/myprofile_picture"
+            android:background="@color/white_transparent"
+
+            android:layout_alignTop="@+id/myprofile_picture"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|fill_vertical" />
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="Days"
+            android:paddingTop="40dp"
+            android:id="@+id/days_btn"
+            android:background="@color/white_transparent"
+            android:layout_toEndOf="@+id/myprofile_picture"
+            android:layout_toRightOf="@+id/myprofile_picture"
+            android:layout_alignLeft="@+id/recieve_textView"
+            android:layout_alignStart="@+id/recieve_textView"
+            android:layout_below="@+id/recieve_textView"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:layout_width="75dp"
+            android:paddingTop="40dp"
+            android:layout_height="wrap_content"
+            android:text="Battle"
+            android:background="@color/white_transparent"
+            android:id="@+id/battles_btn"
+            android:layout_toEndOf="@+id/days_btn"
+            android:layout_toRightOf="@+id/days_btn"
+            android:layout_alignBottom="@+id/days_btn"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/num_days_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignTop="@+id/days_btn"
+            android:layout_alignLeft="@+id/days_btn"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/num_battle_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignTop="@+id/battles_btn"
+            android:layout_alignLeft="@+id/battles_btn"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="edit"
+            android:id="@+id/edit_picture"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <!--<Button
+            android:layout_width="75dp"
+            android:paddingTop="50dp"
+            android:layout_height="wrap_content"
+            android:text="My Posts"
+            android:background="@color/white_transparent"
+            android:id="@+id/my_posts_tab"
+            android:layout_below="@+id/days_btn"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="75dp"
+            android:paddingTop="50dp"
+            android:layout_height="wrap_content"
+
+            android:text="My Posts"
+            android:background="@color/white_transparent"
+            android:id="@+id/my_progress_tab"
+            android:layout_below="@+id/days_btn"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@+id/my_posts_tab" />
+
+        <Button
+            android:layout_width="75dp"
+            android:paddingTop="50dp"
+            android:layout_height="wrap_content"
+
+            android:text="My Posts"
+            android:background="@color/white_transparent"
+            android:id="@+id/my_settings_tab"
+            android:layout_below="@+id/days_btn"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@+id/my_progress_tab" />-->
+
+    </RelativeLayout>
+
+   <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="+New Course"
+       android:background="@color/transparent"
+        android:id="@+id/below_top_profile"
+       android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+       android:layout_below="@+id/relative_this_layout">
+       <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:tools="http://schemas.android.com/tools"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+
+           tools:context="com.al.tanggoal.app.MainActivity"
+           >
+
+           <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+               android:id="@android:id/tabhost" android:layout_width="fill_parent"
+               android:layout_height="fill_parent">
+               <LinearLayout android:orientation="vertical"
+                   android:layout_width="fill_parent" android:layout_height="fill_parent">
+                   <View android:layout_width="fill_parent" android:layout_height="0.5dip"
+                       android:background="#000" />
+
+                   <TabWidget android:id="@android:id/tabs"
+                       android:layout_width="fill_parent" android:layout_height="wrap_content"
+                       android:layout_marginLeft="0dip" android:layout_marginRight="0dip" />
+
+                   <FrameLayout android:id="@android:id/tabcontent"
+                       android:layout_width="fill_parent" android:layout_height="fill_parent"
+                       android:layout_weight="1.4" >
+
+                       <LinearLayout
+                           android:id="@+id/my_posts_tab"
+                           android:orientation="horizontal"
+                           android:layout_width="fill_parent"
+                           android:layout_height="fill_parent">
+
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:id="@+id/my_progress_tab"
+                           android:orientation="horizontal"
+                           android:layout_width="fill_parent"
+                           android:layout_height="fill_parent">
+
+                       </LinearLayout>
+                       <LinearLayout
+                           android:id="@+id/my_settings_tab"
+                           android:orientation="horizontal"
+                           android:layout_width="fill_parent"
+                           android:layout_height="fill_parent">
+
+                       </LinearLayout>
+
+
+
+                   </FrameLayout>
+
+
+
+
+
+               </LinearLayout>
+           </TabHost>
+
+       </LinearLayout>
+        </RelativeLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.changeandsuccess.nofapchallenge"
+    android:versionCode="42"
+    android:versionName="4.7.4">
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature android:name="there.isnt.a.vibrate.feature"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--optional permission -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <permission
+        android:name="com.changeandsuccess.nofapchallenge.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.changeandsuccess.nofapchallenge.permission.C2D_MESSAGE" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+        <activity
+            android:name="com.changeandsuccess.nofapchallenge.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--  Store puchase activity -->
+        <activity
+            android:label="Store Purchase Page"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".StorePurchasePage">
+        </activity>
+
+        <activity
+            android:label="Store Purchase Page"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".ChangeProfileActivity">
+
+
+
+        </activity>
+
+        <!---->
+
+        <activity
+            android:label="Post Something"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".comment_stuff.LargeCommentActivity">
+        </activity>
+
+        <!--  search -->
+        <activity
+            android:label="Search"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".SearchActivity">
+        </activity>
+
+        <!--  search -->
+        <activity
+            android:label="Quotes"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".QuoteActivity">
+        </activity>
+
+        <!--Follow-->
+        <activity
+            android:label="My Coaches"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".MyCoachesActivity">
+        </activity>
+
+        <!--  My Subscribers List Activity -->
+        <activity
+            android:label="My Followers "
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".MySubscribersList">
+
+        </activity>
+
+        <!--  coach Activity -->
+        <activity
+            android:label="Coach"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".CoachProfile">
+        </activity>
+        <!--  inside message Activity -->
+        <activity
+            android:label="Message"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".MessageInside">
+
+        </activity>
+
+        <activity
+            android:label="Register"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".RegisterActivity">
+
+        </activity>
+
+        <activity
+            android:label="Battle Score"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".BattleScoreActivity">
+
+        </activity>
+
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="facebook" >
+        </activity>
+
+
+
+
+        <!--  Login Activity -->
+        <activity
+            android:label="Login Account"
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".LoginActivity">
+
+        </activity>
+
+
+        <service android:name="com.changeandsuccess.nofapchallenge.GcmIntentService" />
+
+        <receiver
+            android:name="com.changeandsuccess.nofapchallenge.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.changeandsuccess.nofapchallenge" />
+            </intent-filter>
+        </receiver>
+        <!--important for gcm-->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+
+
+        <!--Include the AdActivity configChanges and theme. -->
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+    </application>
+
+</manifest>
