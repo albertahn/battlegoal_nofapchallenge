@@ -30,6 +30,8 @@ import com.changeandsuccess.nofapchallenge.comment_stuff.CommentsFrag;
 import com.changeandsuccess.nofapchallenge.fragments.SettingsFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.LevelFrag;
 import com.changeandsuccess.nofapchallenge.fragments.Message;
+import com.changeandsuccess.nofapchallenge.live_chat.LiveChat_frag;
+import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
 import com.changeandsuccess.nofapchallenge.model.NavDrawerItem;
 import com.changeandsuccess.nofapchallenge.store_puchase_stuff.AllStoreTabsFrag;
 import com.changeandsuccess.nofapchallenge.store_puchase_stuff.FreeStoreFrag;
@@ -290,7 +292,7 @@ View searchBar;
                 break;
             case 1:
 
-                fragment = new Videos();
+                fragment = new LiveFragShow();//AllNewsBlog();//Videos();
                 hideNavSpinnerLang();
                 break;
             case 2:
@@ -472,7 +474,7 @@ View searchBar;
     //flurry stuff
 
 
-    @Override
+    /*@Override
     protected void onStart()
     {
         super.onStart();
@@ -480,9 +482,7 @@ View searchBar;
         FlurryAgent.init(this, "B97Z5BMSGM97ZS4V7MBV");
         FlurryAgent.onStartSession(context, "B97Z5BMSGM97ZS4V7MBV");
 
-        /*Dialog d = new Dialog(context);
-        d.setTitle("flueefy");
-        d.show();*/
+
     }
 
     @Override
@@ -491,6 +491,7 @@ View searchBar;
         super.onStop();
         FlurryAgent.onEndSession(context);
     }
+    */
 
     public static void onBackPressed(final Activity activity) {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);

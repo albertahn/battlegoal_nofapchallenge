@@ -2,88 +2,130 @@
 <items version="2" >
 
     <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jar="/Users/battlegoal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-9603a449e5bf2d5a39acd3c601f561c78d96d1eb.jar" />
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okio-1.4.0-64cc107ff996e51f7775588e45b2a7b35cb62c22.jar" />
     </item>
     <item
-        jar="/Users/albert/Desktop/developer_stuff/adt-bundle-mac-x86_64-20140321/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-9d2b103a7e5bc49c01c5347e42377b5278bdb4d6.jar" />
-    </item>
-    <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/libs/httpmime-4.3.4.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="54ffde537682aea984c22fbcf0106f21397c5f9b">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpmime-4.3.4-5bb2436fa7ffb4cd4331467dfbc53a76a3f3924e.jar" />
-    </item>
-    <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="d7b46bc666a200910e82658e1e14e6e008d6c810">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-ea1fdd4e5e59063f4d4588114f5e8098eda8f59a.jar" />
-    </item>
-    <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-3fb465943bcac281c9482b97585eef0fb4571e4d.jar" />
-    </item>
-    <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/libs/universal-image-loader-1.9.2.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="9e025bc5b84968e7d6ac765e660a70b3e5a87432">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.2-cc76a3a50d4749632517eee28b1b7453f238a16e.jar" />
-    </item>
-    <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/libs/httpclient-4.3.4.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="a9a1fef2faefed639ee0d0fba5b3b8e4eb2ff2d8">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpclient-4.3.4-acf687eaf03b19b9d6b99ce39dfa21c35831f81c.jar" />
-    </item>
-    <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-22a266e6fc44a24f695e1654fefb25954b82057d.jar" />
-    </item>
-    <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-d5f7d587a64053f261b2a25562c2229b41b2ebe8.jar" />
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-9ea541a0fb7b31e0c29378bb66a02012370a9938.jar" />
     </item>
     <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/libs/bolts.jar"
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/bolts-ed77cf1b9a714bce27dcf21cfb2df13d44d8cbd0.jar" />
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-391e53322ed2e11e2abd07ffddc90cfee9ccfe81.jar" />
     </item>
     <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/libs/FlurryAnalytics-5.0.0.jar"
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-2d279ecb7f4956eb485496a6d1b81ab7ef9f81a0.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/engine.io-client/0.5.1/c83503e6668d63b3d5b2a27edf6e3a54d9eb7a66/engine.io-client-0.5.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="c83503e6668d63b3d5b2a27edf6e3a54d9eb7a66">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/engine.io-client-0.5.1-e0cda4864ff12874b2e78030b042d44f8cfaac00.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="002b01649936d95fc09c1a7c2251edda4764a4fe">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-ccb1e0c32673bd03c1027de34e3e683c3fdb75a6.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-065a0a593d97f9c2f068d2de4c7bad83b46c26dc.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/libs/FlurryAnalytics-5.0.0.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="9143ea9b390b4f6eeee3673533402669de23ab7e">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/FlurryAnalytics-5.0.0-6854befb9c9e06eb9899a74d45d15cb8bfccc3d7.jar" />
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/FlurryAnalytics-5.0.0-23cdfee9cbbe676ef74904cc25d50e26b2d112ac.jar" />
     </item>
     <item
-        jar="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/libs/httpcore-4.3.2.jar"
+        jar="/Users/battlegoal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-ws/2.4.0/69206d28966656052a982ceded583abdeb41cf63/okhttp-ws-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="69206d28966656052a982ceded583abdeb41cf63">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okhttp-ws-2.4.0-a43c3613c32953acd82266ce353673515467a0ec.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-f8241c12d0618e68188ffc2aca69e8bfaca1649c.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/libs/universal-image-loader-1.9.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="9e025bc5b84968e7d6ac765e660a70b3e5a87432">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.2-752b7617302c2643809e455c05225cf66f3407e4.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/socket.io-client/0.5.2/41182e10002a59498572181410172744abd0f637/socket.io-client-0.5.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="41182e10002a59498572181410172744abd0f637">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/socket.io-client-0.5.2-bb416dfd6bbb3a5fbdfd42167741afd7cb544958.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-c95986b1cbb828a23da98924bb2db69c7f02175d.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpcore-4.3.2.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="31fbbff1ddbf98f3aa7377c94d33b0447c646b6e">
-        <dex dex="/Users/albert/AndroidStudioProjects/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpcore-4.3.2-a2e646383bcf83cd68be505ad41714f6c8a71515.jar" />
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpcore-4.3.2-f05bf5a5c5f21dba789ee87847840242527d0719.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/libs/bolts.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/bolts-111cc163f3015cac830a8ec3501126b5de087aec.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpclient-4.3.4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="a9a1fef2faefed639ee0d0fba5b3b8e4eb2ff2d8">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpclient-4.3.4-c8d9dae8f267f98743045170c6dd11fee774b5c2.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0-cde8733bd1a1ceaabd11faf6ef7d43269bb8a8d0.jar" />
+    </item>
+    <item
+        jar="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpmime-4.3.4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="54ffde537682aea984c22fbcf0106f21397c5f9b">
+        <dex dex="/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpmime-4.3.4-d0ad251722745555fa8b8c012adc090dc6fffa8d.jar" />
     </item>
 
 </items>

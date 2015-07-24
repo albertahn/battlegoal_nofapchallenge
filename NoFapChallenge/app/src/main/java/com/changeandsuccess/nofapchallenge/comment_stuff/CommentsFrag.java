@@ -60,10 +60,13 @@ public class CommentsFrag extends Fragment {
 
         //if logged in else
 
-        UserDatabase userDatabase= new UserDatabase(getActivity());
-        userDatabase.open();
-        String[][] data = userDatabase.getData();
-        userDatabase.close();
+        LoginActivity loginActivity = new LoginActivity();
+        boolean islogged = loginActivity.isLoggedIn(getActivity());
+
+    UserDatabase userDatabase = new UserDatabase(getActivity());
+    userDatabase.open();
+    String[][] data = userDatabase.getData();
+    userDatabase.close();
 
 
         generatedLoginItem = generateData(data);

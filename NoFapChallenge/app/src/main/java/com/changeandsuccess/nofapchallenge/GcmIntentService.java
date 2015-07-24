@@ -81,8 +81,11 @@ public class GcmIntentService extends IntentService{
                 Log.i(TAG, "Completed work @ " + SystemClock.elapsedRealtime());
                 // Post notification of received message.
                 //sendNotification("Received: " + extras.toString());
-                sendNotification(msg, otherguyname, otherguy_index, otherguy_pic, notify_type);
-                Log.i(TAG, "Received: " + extras.toString());
+                if(msg !=null){
+                    sendNotification(msg, otherguyname, otherguy_index, otherguy_pic, notify_type);
+                    Log.i(TAG, "Received: " + extras.toString());
+                }
+
             }
         }
         GcmBroadcastReceiver.completeWakefulIntent(intent);
