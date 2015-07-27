@@ -153,7 +153,7 @@
 
             android:padding="40dp"
 
-            android:src="@drawable/blog"
+            android:src="@drawable/message"
             android:layout_below="@+id/home_menu"
 
 
@@ -272,7 +272,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="BLOG"
+            android:text="LIVE CHAT"
             android:id="@+id/blog_label"
 
             android:layout_alignBottom="@+id/blog_menu"
@@ -392,6 +392,18 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="NEW!"
             android:id="@+id/new_tag"
+            android:layout_alignTop="@+id/blog_menu"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ff0000"
+            android:layout_toLeftOf="@+id/inbox_menu" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="NEW!"
+            android:id="@+id/new_tag2"
             android:layout_alignTop="@+id/battle_menu"
             android:layout_toRightOf="@+id/battle_menu"
             android:layout_toEndOf="@+id/battle_menu"

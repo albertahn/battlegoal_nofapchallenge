@@ -237,12 +237,12 @@ View searchBar;
 
 
         // configure Flurry
-        FlurryAgent.setLogEnabled(true);
+       // FlurryAgent.setLogEnabled(true);
 
         // init Flurry
-        FlurryAgent.init(this, "B97Z5BMSGM97ZS4V7MBV");
+       // FlurryAgent.init(this, "B97Z5BMSGM97ZS4V7MBV");
 
-        onStart();
+        //onStart();
 
             }//end creat bundle
 

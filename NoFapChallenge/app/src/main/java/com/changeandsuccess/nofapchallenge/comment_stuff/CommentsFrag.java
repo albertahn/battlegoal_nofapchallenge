@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
@@ -31,6 +32,7 @@ import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.comment_stuff.InputComment;
 import com.changeandsuccess.nofapchallenge.comment_stuff.LargeCommentActivity;
 import com.changeandsuccess.nofapchallenge.comment_stuff.LoadComments;
+import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
 import com.changeandsuccess.nofapchallenge.message_activity.InputMessage;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
@@ -52,6 +54,9 @@ public class CommentsFrag extends Fragment {
     String[] messageArray;
     String userIndex;
     Button imageInsertBtn;
+
+    Button live_chat_btn;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -89,6 +94,8 @@ public class CommentsFrag extends Fragment {
         inputMessageEdit = (TextView) rootView.findViewById(R.id.input_edit_text);
         imageInsertBtn = (Button) rootView.findViewById(R.id.add_image_btn);
 
+        live_chat_btn = (Button) rootView.findViewById(R.id.live_chat_btn);
+
         imageInsertBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +107,18 @@ public class CommentsFrag extends Fragment {
                 /*LargeCommentActivity L = new LargeCommentActivity(rootView, getActivity());
 
                 L.onDialogShowImage(rootView, getActivity());*/
+
+            }
+        });
+
+        live_chat_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Fragment  fragment = new LiveFragShow();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_container, fragment).commit();
 
             }
         });

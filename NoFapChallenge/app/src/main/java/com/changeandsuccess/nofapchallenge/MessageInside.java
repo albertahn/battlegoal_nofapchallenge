@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -21,6 +23,7 @@ import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.gcm_stuff.CheckGCMsaved;
 import com.changeandsuccess.nofapchallenge.gcm_stuff.GoogleCloudMessageStuff;
+import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
 import com.changeandsuccess.nofapchallenge.message_activity.InputMessage;
 import com.changeandsuccess.nofapchallenge.message_activity.InsideMessageLoad;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
@@ -46,6 +49,7 @@ public class MessageInside extends ActionBarActivity{
     String prevActivity;
     String otherguyname, other_guy_index;
     Activity activity = this;
+    Button live_chat_btn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -124,6 +128,13 @@ public class MessageInside extends ActionBarActivity{
         //get the message input button
         sendMessageBtn = (Button) rootview.findViewById(R.id.send_message_btn);
         inputMessageEdit = (EditText) rootview.findViewById(R.id.input_edit_text);
+            live_chat_btn =  (Button)  rootview.findViewById(R.id.live_chat_btn);
+
+            if(live_chat_btn !=null){
+
+                live_chat_btn.setVisibility(View.GONE);
+
+            }// hi there
 
         //onclick
         sendMessageBtn.setOnClickListener(new View.OnClickListener() {

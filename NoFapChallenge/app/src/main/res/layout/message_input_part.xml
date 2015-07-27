@@ -4,6 +4,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/message_back">
+
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -13,14 +14,15 @@
         android:divider="@null"
         android:dividerHeight="0dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/live_chat_btn" />
 
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/comment_image_send"
-        />
+        />-->
 
     <EditText
         android:layout_width="fill_parent"
@@ -60,16 +62,16 @@
         android:layout_alignEnd="@+id/send_message_btn"
         android:indeterminate="false" />
 
-    <ImageButton
+   <!-- <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/imageButton"
+        android:id="@+id/what?"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:src="@drawable/abc_ic_clear_search_api_holo_light"
         android:background="#ffffff"
-        android:visibility="gone"/>
+        android:visibility="gone"/>-->
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -78,6 +80,18 @@
         android:text="+"
         android:id="@+id/add_image_btn"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(new) Live Chat Room"
+        android:id="@+id/live_chat_btn"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/input_progress_bar"
+        android:layout_alignEnd="@+id/input_progress_bar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>

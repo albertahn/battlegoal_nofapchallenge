@@ -57,6 +57,7 @@ public class LiveChat_frag extends Fragment
         private Handler mTypingHandler = new Handler();
         private String mUsername;
         private Socket mSocket;
+         public  int numUsers;
         {
             try {
                 mSocket = IO.socket(Constants.CHAT_SERVER_URL);
@@ -90,7 +91,6 @@ public class LiveChat_frag extends Fragment
             boolean islogged = loginActivity.isLoggedIn(getActivity());
             if(islogged) {
 
-
                 UserDatabase userDatabase = new UserDatabase(getActivity());
                 userDatabase.open();
                 String[][] data = userDatabase.getData();
@@ -105,21 +105,27 @@ public class LiveChat_frag extends Fragment
 
             }
 
-            Dialog d = new Dialog(getActivity());
 
-            d.setTitle("mUsername: "+mUsername);
-            d.show();
 
-        mSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
+
+
+            mSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
         mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
         mSocket.on("new message", onNewMessage);
         mSocket.on("user joined", onUserJoined);
         mSocket.on("user left", onUserLeft);
+
+        mSocket.on("login", onLogin);
         mSocket.on("typing", onTyping);
-        mSocket.on("stop typing", onStopTyping);
+            mSocket.on("stop typing", onStopTyping);
         mSocket.connect();
 
-            connectUserToSocket(mUsername);
+
+            if (mSocket.connected() ==false){
+
+                connectUserToSocket(mUsername);
+
+            }
 
 
     }//end create
@@ -134,7 +140,6 @@ public class LiveChat_frag extends Fragment
 //connect guy to socket
 
         public void connectUserToSocket(String username){
-
 
             mSocket.emit("add user", username);
 
@@ -151,7 +156,9 @@ public class LiveChat_frag extends Fragment
         mSocket.off("user joined", onUserJoined);
         mSocket.off("user left", onUserLeft);
         mSocket.off("typing", onTyping);
-        mSocket.off("stop typing", onStopTyping);
+     //login off
+        mSocket.off("login", onLogin);
+            mSocket.off("stop typing", onStopTyping);
 
     }//destroy
 
@@ -199,30 +206,29 @@ public class LiveChat_frag extends Fragment
         });
 
         ImageButton sendButton = (ImageButton) view.findViewById(R.id.send_button);
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            sendButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-
-                attemptSend();
+                    attemptSend();
             }
         });
     }
 
-        @Override
+      /*  @Override
         public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+            super.onActivityResult(requestCode, resultCode, data);
         if (Activity.RESULT_OK != resultCode) {
             getActivity().finish();
             return;
         }
 
-        mUsername = "anonymous";//data.getStringExtra("username");
-        int numUsers = 5;//data.getIntExtra("numUsers", 1);
+        mUsername = data.getStringExtra("username");
+        int numUsers = data.getIntExtra("numUsers", 1);
 
         addLog(getResources().getString(R.string.message_welcome));
         addParticipantsLog(numUsers);
-    }
+    }*/
 
        /* @Override
         public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -286,9 +292,9 @@ public class LiveChat_frag extends Fragment
 
     private void attemptSend() {
 
-        Dialog d = new Dialog(getActivity());
+       /* Dialog d = new Dialog(getActivity());
         d.setTitle("sendto :"+ mUsername);
-        d.show();
+        d.show();*/
 
 
         if (null == mUsername) return;
@@ -319,8 +325,8 @@ public class LiveChat_frag extends Fragment
     private void leave() {
         mUsername = null;
         mSocket.disconnect();
-        mSocket.connect();
-        startSignIn();
+       // mSocket.connect();
+       // startSignIn();
     }
 
     private void scrollToBottom() {
@@ -445,8 +451,58 @@ public class LiveChat_frag extends Fragment
                     removeTyping(username);
                 }
             });
-        }
+        }//end call
     };
+
+//onlogin
+
+       /* private Emitter.Listener onLogin = new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                JSONObject data = (JSONObject) args[0];
+
+
+                try {
+                    numUsers = data.getInt("numUsers");
+
+                    Intent intent = new Intent();
+                    intent.putExtra("username", mUsername);
+                    intent.putExtra("numUsers", numUsers);
+                    getActivity().setResult(getActivity().RESULT_OK, intent);
+
+
+
+                } catch (JSONException e) {
+                    return;
+                }
+
+               // addLog(getResources().getString(R.string.message_welcome));
+               // addParticipantsLog(numUsers);
+            }//end call
+        };*/
+
+        private Emitter.Listener onLogin = new Emitter.Listener() {
+            @Override
+            public void call(final Object... args) {
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        JSONObject data = (JSONObject) args[0];
+                        //String username;
+
+                        try {
+                            //username = data.getString("username");
+                            numUsers = data.getInt("numUsers");
+                        } catch (JSONException e) {
+                            return;
+                        }
+
+                        addLog(getResources().getString(R.string.message_welcome));
+                        addParticipantsLog(numUsers);
+                    }
+                });
+            }
+        };
 
     private Runnable onTypingTimeout = new Runnable() {
         @Override

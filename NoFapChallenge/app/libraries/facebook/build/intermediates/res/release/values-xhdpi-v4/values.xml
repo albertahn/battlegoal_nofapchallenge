@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/battlegoal/Documents/github_repo/7_23_battlegoal_nofapchallenge/NoFapChallenge/app/libraries/facebook/res/values-xhdpi/dimens.xml -->
+    <!-- From: file:/Users/albert/Documents/github_repo/battlegoal_nofapchallenge_7_27/NoFapChallenge/app/libraries/facebook/res/values-xhdpi/dimens.xml -->
     <eat-comment/>
     <dimen name="com_facebook_picker_divider_width">2px</dimen>
 </resources>
