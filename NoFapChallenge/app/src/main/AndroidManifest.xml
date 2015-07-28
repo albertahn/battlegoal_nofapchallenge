@@ -142,7 +142,7 @@
 <!-- livechat login-->
         <activity
             android:name="com.changeandsuccess.nofapchallenge.live_chat.LiveLoginActivity"
-            android:label="@string/title_activity_login"
+            android:label="livechat"
             android:theme="@style/Theme.AppCompat"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>

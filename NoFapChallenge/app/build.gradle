@@ -16,13 +16,14 @@ android {
 
         minSdkVersion 10
         targetSdkVersion 20
-        versionCode 46
-        versionName '4.8.0'
+        versionCode 47
+        versionName '5.0.0'
     }
 
     buildTypes {
 
         debug {
+
         }
 
         release {
@@ -54,7 +55,11 @@ dependencies {
 
     //compile 'com.android.support:appcompat-v7:21.1.+'
     compile 'com.android.support:recyclerview-v7:21.0.+'
-    compile 'com.github.nkzawa:socket.io-client:0.5.2'
+
+    compile('com.github.nkzawa:socket.io-client:0.5.2'){
+
+        exclude group: 'org.json', module: 'json'
+    }
 
     compile files('libs/universal-image-loader-1.9.2.jar')
     compile files('libs/httpclient-4.3.4.jar')

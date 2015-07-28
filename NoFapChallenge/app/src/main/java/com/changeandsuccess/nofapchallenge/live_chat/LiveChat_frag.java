@@ -102,6 +102,10 @@ public class LiveChat_frag extends Fragment
 
                 mUsername = "anonymous";
 
+                Intent i = new Intent(getActivity(),
+                        LoginActivity.class);
+                startActivity(i);
+
 
             }
 

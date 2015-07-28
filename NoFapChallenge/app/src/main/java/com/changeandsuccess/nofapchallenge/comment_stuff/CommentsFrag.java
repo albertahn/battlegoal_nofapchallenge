@@ -80,6 +80,7 @@ public class CommentsFrag extends Fragment {
             userIndex = data[0][1];
 
         }else{
+
             userIndex ="1";
         }
 
@@ -163,7 +164,7 @@ public class CommentsFrag extends Fragment {
 
         actionBar.setSelectedNavigationItem(navInt);
 
-return  rootView;
+        return  rootView;
     }//end on create
 
 
