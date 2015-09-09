@@ -37,6 +37,8 @@ import com.changeandsuccess.nofapchallenge.store_puchase_stuff.AllStoreTabsFrag;
 import com.changeandsuccess.nofapchallenge.store_puchase_stuff.FreeStoreFrag;
 import com.flurry.android.FlurryAgent;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
@@ -91,7 +93,9 @@ View searchBar;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         mTitle = mDrawerTitle = getTitle();
         // load slide menu items
