@@ -89,7 +89,7 @@ boolean islogg;
 
 //progress_peak
          activity= getActivity();
-        mainActLayout = inflater.inflate( R.layout.home_____activity_main, container, false);
+        mainActLayout = inflater.inflate( R.layout.mainactivity_____activity_main, container, false);
         context = getActivity();
         mainActivity = new MainActivity();
 

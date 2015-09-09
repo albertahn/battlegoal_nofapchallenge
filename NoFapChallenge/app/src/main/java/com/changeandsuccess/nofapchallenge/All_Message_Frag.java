@@ -21,7 +21,7 @@ import android.support.v7.app.ActionBarActivity;
 import com.changeandsuccess.nofapchallenge.adapter.TitleNavigationAdapter;
 import com.changeandsuccess.nofapchallenge.comment_stuff.LoadComments;
 import com.changeandsuccess.nofapchallenge.comment_stuff.CommentsFrag;
-import com.changeandsuccess.nofapchallenge.fragments.Message;
+import com.changeandsuccess.nofapchallenge.message_activity.Message;
 import com.changeandsuccess.nofapchallenge.model.SpinnerNavItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 

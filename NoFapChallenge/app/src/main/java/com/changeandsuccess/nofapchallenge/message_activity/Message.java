@@ -1,4 +1,4 @@
-package com.changeandsuccess.nofapchallenge.fragments;
+package com.changeandsuccess.nofapchallenge.message_activity;
 
 /**
  * Created by albert on 4/30/14.
@@ -29,6 +29,8 @@ import com.changeandsuccess.nofapchallenge.gcm_stuff.RegisterBackground;
 import com.changeandsuccess.nofapchallenge.message_activity.LoadMessageFrag;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
@@ -64,6 +66,11 @@ public class Message extends Fragment {
 
             //check gcm
             checkDeviceGCM(getActivity(), getActivity());
+//adshow
+            AdView mAdView = (AdView) rootView.findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+
 
             return rootView;
 
@@ -111,6 +118,7 @@ public class Message extends Fragment {
 
 */
            // }
+
 
             return unrootView;
 

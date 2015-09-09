@@ -29,13 +29,10 @@ import com.changeandsuccess.nofapchallenge.fragments.ComingSoon;
 import com.changeandsuccess.nofapchallenge.comment_stuff.CommentsFrag;
 import com.changeandsuccess.nofapchallenge.fragments.SettingsFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.LevelFrag;
-import com.changeandsuccess.nofapchallenge.fragments.Message;
+import com.changeandsuccess.nofapchallenge.message_activity.Message;
 import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
 import com.changeandsuccess.nofapchallenge.model.NavDrawerItem;
 import com.changeandsuccess.nofapchallenge.store_puchase_stuff.AllStoreTabsFrag;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
@@ -88,11 +85,11 @@ View searchBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_____activity_main);
+        setContentView(R.layout.mainactivity_____activity_main);
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+       /* AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);*/
 
         mTitle = mDrawerTitle = getTitle();
         // load slide menu items

@@ -418,16 +418,7 @@
 
     </ScrollView>
 </android.support.v4.widget.DrawerLayout>
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="false"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
-        android:layout_alignParentTop="true">
-    </com.google.android.gms.ads.AdView>
+
 </RelativeLayout>
 
 
