@@ -8,14 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.comment_stuff.InputComment;
-import com.changeandsuccess.nofapchallenge.comment_stuff.LoadComments;
-import com.changeandsuccess.nofapchallenge.level_stuff.LoadLevelRank;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
-import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 
 import java.util.ArrayList;
 
@@ -35,7 +30,7 @@ public class LevelFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.level_frag, container, false);
+        rootView = inflater.inflate(R.layout.levelfrag_____level_frag, container, false);
 
 
       new LoadLevelRank(rootView,getActivity()).execute();

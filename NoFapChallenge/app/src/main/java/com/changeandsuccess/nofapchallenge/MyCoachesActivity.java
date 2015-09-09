@@ -14,7 +14,6 @@ import android.widget.ListView;
 
 import com.changeandsuccess.nofapchallenge.adapter.Profile_MyMentors_Adapter;
 import com.changeandsuccess.nofapchallenge.model.MyMentorsTabItem;
-import com.changeandsuccess.nofapchallenge.utils.DatabaseStuff;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 
@@ -41,7 +40,7 @@ ListView myMentorsListView;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.my_subscribers_list);
+        setContentView(R.layout.mycoachesactivity_____my_subscribers_list);
 
         // get the action bar
         ActionBar actionBar = getSupportActionBar();

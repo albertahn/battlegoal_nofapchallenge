@@ -1,6 +1,5 @@
 package com.changeandsuccess.nofapchallenge;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,8 +13,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ProgressBar;
-
-import com.changeandsuccess.nofapchallenge.R;
 
 /**
  * Created by albert on 5/19/14.
@@ -34,7 +31,7 @@ public class Videos extends Fragment {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
 
-            rootView = inflater.inflate(R.layout.videos_frag, container, false);
+            rootView = inflater.inflate(R.layout.videos_____videos_frag, container, false);
 
 
             youtubeButton = (Button) rootView.findViewById(R.id.youtube_button);

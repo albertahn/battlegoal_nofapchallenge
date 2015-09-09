@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 
 import com.changeandsuccess.nofapchallenge.R;
 
@@ -214,7 +212,7 @@ public class InputMessage extends AsyncTask<String, Integer, String> {
 
         // int rowList = R.layout.message_bubble_my;
         // 2. Get rowView from inflater
-        View rowView = inflater.inflate(R.layout.message_bubble_my, null, false); //inflater.inflate(rowList, null, false);
+        View rowView = inflater.inflate(R.layout.messageinsideadapter_____message_bubble_my, null, false); //inflater.inflate(rowList, null, false);
 
 
         //add the rowview

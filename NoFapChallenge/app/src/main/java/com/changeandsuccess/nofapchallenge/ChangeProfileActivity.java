@@ -20,7 +20,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.profile_inside_tab.SaveChangeProfile;
-import com.changeandsuccess.nofapchallenge.register_acitvity.SaveRegister;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 
 /**
@@ -46,7 +45,7 @@ public class ChangeProfileActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.change_profile_activity);
+        setContentView(R.layout.changeprofileactivity_____change_profile_activity);
 
 
         UserDatabase info = new UserDatabase(context);

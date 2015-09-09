@@ -40,7 +40,7 @@ public class RegisterActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.register_activity);
+        setContentView(R.layout.registeractivity_____register_activity);
 
 //set the back btn
         ActionBar actionBar = getSupportActionBar();

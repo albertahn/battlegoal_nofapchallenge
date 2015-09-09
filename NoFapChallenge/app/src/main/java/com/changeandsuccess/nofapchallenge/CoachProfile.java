@@ -6,17 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 
-import com.changeandsuccess.nofapchallenge.coach_profile.BattleSend;
 import com.changeandsuccess.nofapchallenge.coach_profile.CheckBattle;
 import com.changeandsuccess.nofapchallenge.coach_profile.FollowButton;
 import com.changeandsuccess.nofapchallenge.coach_profile.LoadCoachProfile;
-import com.changeandsuccess.nofapchallenge.coach_profile.LoadCoachPrograms;
 import com.changeandsuccess.nofapchallenge.coach_profile.ShowMentorship;
 
 import java.util.zip.Inflater;
@@ -42,7 +38,7 @@ public class CoachProfile extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         context = this;
 
-        setContentView(R.layout.coach_profile_header);
+        setContentView(R.layout.coachprofile_____coach_profile_header);
 
         activity = this;
 

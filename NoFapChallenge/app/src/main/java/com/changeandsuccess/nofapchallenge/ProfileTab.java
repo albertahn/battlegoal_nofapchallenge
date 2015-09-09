@@ -1,7 +1,6 @@
 package com.changeandsuccess.nofapchallenge;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,9 +18,7 @@ import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.fragments.SettingsFrag;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
-import com.changeandsuccess.nofapchallenge.profile_inside_tab.LoadMyProgress;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
-import com.facebook.FacebookRequestError;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -73,7 +70,7 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
         if( generatedLoginItem.toString() !="[]"){
 
            //rootView = inflater.inflate(R.layout.profile_frag, container, false);
-            rootView =  inflater.inflate(R.layout.profile_pic_top, container, false);
+            rootView =  inflater.inflate(R.layout.myprogress_frag_____profile_pic_top, container, false);
             mTabHost = (TabHost) rootView.findViewById(android.R.id.tabhost);
             mTabHost.setup();
             //setupTab(new TextView(getActivity()), "posts", R.drawable.featured, R.id.my_posts_tab);
@@ -129,7 +126,7 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
 
         }else{ //not logged in
 
-            View unrootView = inflater.inflate(R.layout.click_to_login, container, false);
+            View unrootView = inflater.inflate(R.layout.message_____click_to_login, container, false);
 
             Intent i = new Intent(getActivity(),
                     LoginActivity.class);
@@ -228,7 +225,7 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
 
     private static View createTabView(final Context context, final String text, final int drawableId) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.tabs_bg, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.allcoachtabs_____tabs_bg, null);
 
         TextView title= (TextView) view.findViewById(R.id.title);
 

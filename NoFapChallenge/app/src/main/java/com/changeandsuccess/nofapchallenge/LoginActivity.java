@@ -35,7 +35,7 @@ public class LoginActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
 
-        setContentView(R.layout.login_page);
+        setContentView(R.layout.loginactivity_____login_page);
 
         //final LoginHelper loginHelper = new LoginHelper();
         //final Context context = this;

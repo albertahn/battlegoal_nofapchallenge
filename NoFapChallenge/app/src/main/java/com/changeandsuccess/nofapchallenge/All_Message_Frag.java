@@ -51,7 +51,7 @@ Menu menu;
                              Bundle savedInstanceState) {
 
         context =getActivity();
-        rootView = inflater.inflate(R.layout.all_message_frag, container, false);
+        rootView = inflater.inflate(R.layout.allbattletab_____all_message_frag, container, false);
 
 
         allTabHost = (TabHost) rootView.findViewById(R.id.all_message_tab_host);

@@ -27,7 +27,7 @@ public class MessageTabAdapter extends ArrayAdapter<MessageTabItem> {
 
     ImageView profile_photo;
 
-    static int rowList = R.layout.message_frag_list_row;
+    static int rowList = R.layout.messagetabadapter_____message_frag_list_row;
 
     private final Context context;
     private final ArrayList<MessageTabItem> itemsArrayList;

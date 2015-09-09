@@ -21,7 +21,7 @@ public class ProgressAdapter  extends ArrayAdapter<Item> {
 
 
 
-    static int rowList = R.layout.row_in_list;
+    static int rowList = R.layout.progressadapter_____row_in_list;
 
     private final Context context;
     private final ArrayList<Item> itemsArrayList;

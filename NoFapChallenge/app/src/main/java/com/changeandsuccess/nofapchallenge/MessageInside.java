@@ -1,17 +1,11 @@
 package com.changeandsuccess.nofapchallenge;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,16 +13,11 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
-import com.changeandsuccess.nofapchallenge.gcm_stuff.CheckGCMsaved;
-import com.changeandsuccess.nofapchallenge.gcm_stuff.GoogleCloudMessageStuff;
-import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
 import com.changeandsuccess.nofapchallenge.message_activity.InputMessage;
 import com.changeandsuccess.nofapchallenge.message_activity.InsideMessageLoad;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
-import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import java.util.ArrayList;
 
@@ -83,7 +72,7 @@ public class MessageInside extends ActionBarActivity{
         if(generatedLoginItem.toString() =="[]") {
 
 
-            rootview = LayoutInflater.from(getApplicationContext()).inflate(R.layout.click_to_login, null);
+            rootview = LayoutInflater.from(getApplicationContext()).inflate(R.layout.message_____click_to_login, null);
             setContentView(rootview);
 
 
@@ -104,7 +93,7 @@ public class MessageInside extends ActionBarActivity{
 
         }else{
 
-            rootview = LayoutInflater.from(getApplicationContext()).inflate(R.layout.message_input_part, null);
+            rootview = LayoutInflater.from(getApplicationContext()).inflate(R.layout.commentsfrag_____message_input_part, null);
             setContentView(rootview);
 
 

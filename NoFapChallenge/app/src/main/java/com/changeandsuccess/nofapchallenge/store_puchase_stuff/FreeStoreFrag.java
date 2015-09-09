@@ -9,8 +9,6 @@ import android.widget.ImageButton;
 
 import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
-import com.changeandsuccess.nofapchallenge.notify_stuff.CheckNotify;
-import com.changeandsuccess.nofapchallenge.notify_stuff.ToggleBellSend;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 
 import java.util.ArrayList;
@@ -47,7 +45,7 @@ public class FreeStoreFrag extends Fragment {
 
         //rootView = inflater.inflate(R.layout.coming_soon, container, false);
 
-        rootView = inflater.inflate(R.layout.store_frag, container, false);
+        rootView = inflater.inflate(R.layout.freestorefrag_____store_frag, container, false);
         new LoadStoreProducts(getActivity()).execute();
 
         return  rootView;

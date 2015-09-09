@@ -1,39 +1,26 @@
 package com.changeandsuccess.nofapchallenge.comment_stuff;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.database.Cursor;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
-import com.changeandsuccess.nofapchallenge.All_Message_Frag;
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.comment_stuff.InputComment;
-import com.changeandsuccess.nofapchallenge.comment_stuff.LargeCommentActivity;
-import com.changeandsuccess.nofapchallenge.comment_stuff.LoadComments;
 import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
-import com.changeandsuccess.nofapchallenge.message_activity.InputMessage;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 
@@ -84,7 +71,7 @@ public class CommentsFrag extends Fragment {
             userIndex ="1";
         }
 
-        rootView = inflater.inflate(R.layout.message_input_part, container, false);
+        rootView = inflater.inflate(R.layout.commentsfrag_____message_input_part, container, false);
 
         new LoadComments(userIndex ,rootView, getActivity()).execute();
 

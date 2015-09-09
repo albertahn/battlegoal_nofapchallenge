@@ -7,7 +7,6 @@ package com.changeandsuccess.nofapchallenge.fragments;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,21 +18,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.LoginHelper;
 import com.changeandsuccess.nofapchallenge.MainActivity;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.admob_stuff.LoadMessageListAd;
 import com.changeandsuccess.nofapchallenge.gcm_stuff.CheckGCMsaved;
 import com.changeandsuccess.nofapchallenge.gcm_stuff.GoogleCloudMessageStuff;
 import com.changeandsuccess.nofapchallenge.gcm_stuff.RegisterBackground;
 import com.changeandsuccess.nofapchallenge.message_activity.LoadMessageFrag;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 
 import java.util.ArrayList;
 
@@ -48,7 +43,7 @@ public class Message extends Fragment {
 
         super.onCreate(savedInstanceState);
 
-        View rootView = inflater.inflate(R.layout.message_frag, container, false);
+        View rootView = inflater.inflate(R.layout.acceptbattle_frag_____message_frag, container, false);
 
         //get userid
         LoginHelper loginHelper = new LoginHelper();
@@ -81,7 +76,7 @@ public class Message extends Fragment {
             d.setContentView(tv);
             d.show();
 */
-            View unrootView = inflater.inflate(R.layout.click_to_login, container, false);
+            View unrootView = inflater.inflate(R.layout.message_____click_to_login, container, false);
 
 
             Intent i = new Intent(getActivity(),

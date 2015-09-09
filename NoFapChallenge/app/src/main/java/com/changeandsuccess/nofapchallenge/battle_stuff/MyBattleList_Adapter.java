@@ -1,6 +1,5 @@
 package com.changeandsuccess.nofapchallenge.battle_stuff;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -14,15 +13,11 @@ import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.BattleScoreActivity;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.SearchActivity;
-import com.changeandsuccess.nofapchallenge.battle_stuff.RequestBattle;
 import com.changeandsuccess.nofapchallenge.model.Battle_partner_item;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -33,7 +28,7 @@ public class MyBattleList_Adapter extends ArrayAdapter<Battle_partner_item> {
 
     Bitmap profilePhotoImage;
 
-    static int rowList = R.layout.battle_row_in_list;
+    static int rowList = R.layout.battlerequests_____adapter_battle_row_in_list;
     View rowView;
 
     TextView score_text;

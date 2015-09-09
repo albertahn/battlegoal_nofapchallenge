@@ -1,7 +1,6 @@
 package com.changeandsuccess.nofapchallenge.coaches_tab_stuff;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,8 +10,6 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.ProgressBar;
 
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
@@ -39,7 +36,7 @@ public class ApplyBeCoach extends Fragment {
 
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         //rootView = inflater.inflate(R.layout.coming_soon, container, false);
-        rootView = inflater.inflate(R.layout.apply_coach_page, container, false);
+        rootView = inflater.inflate(R.layout.applybecoach_____apply_coach_page, container, false);
 
        myBlurb = (EditText) rootView.findViewById(R.id.apply_blurb);
         aboutMe = (EditText) rootView.findViewById(R.id.about_me_edit_text);

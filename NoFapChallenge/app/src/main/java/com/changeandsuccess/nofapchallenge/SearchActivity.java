@@ -24,7 +24,7 @@ public class SearchActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.search_page);
+        setContentView(R.layout.searchactivity_____search_page);
 
         ActionBar actionBar = getSupportActionBar();
 

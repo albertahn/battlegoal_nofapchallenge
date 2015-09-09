@@ -57,12 +57,12 @@ public class MyProgress_frag extends Fragment {
 
         if( generatedLoginItem.toString() !="[]"){
 
-            rootView = inflater.inflate(R.layout.profile_frag, container, false);
+            rootView = inflater.inflate(R.layout.myprogress_frag_____profile_frag, container, false);
 
             mycourseListView = (ListView) rootView.findViewById(R.id.profile_course_list);
 
 
-            View headerView = inflater.inflate(R.layout.profile_pic_top, null, false);
+            View headerView = inflater.inflate(R.layout.myprogress_frag_____profile_pic_top, null, false);
             mycourseListView.addHeaderView(headerView);
             // rootView= headerView;
             //set the header
@@ -85,7 +85,7 @@ public class MyProgress_frag extends Fragment {
 
         }else{ //not logged in
 
-            View unrootView = inflater.inflate(R.layout.click_to_login, container, false);
+            View unrootView = inflater.inflate(R.layout.message_____click_to_login, container, false);
 
             Intent i = new Intent(getActivity(),
                     LoginActivity.class);

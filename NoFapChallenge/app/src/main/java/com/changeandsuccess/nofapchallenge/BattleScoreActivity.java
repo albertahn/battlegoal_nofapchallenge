@@ -1,12 +1,10 @@
 package com.changeandsuccess.nofapchallenge;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -32,7 +30,7 @@ public class BattleScoreActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
 
-        setContentView(R.layout.battle_score_activity);
+        setContentView(R.layout.battlescoreactivity_____battle_score_activity);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);

@@ -1,28 +1,17 @@
 package com.changeandsuccess.nofapchallenge.store_puchase_stuff;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.changeandsuccess.nofapchallenge.CoachProfile;
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.comment_stuff.DeleteComment;
-import com.changeandsuccess.nofapchallenge.comment_stuff.LikeButton;
-import com.changeandsuccess.nofapchallenge.comment_stuff.LoadReplies;
-import com.changeandsuccess.nofapchallenge.model.CommentItem;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -43,7 +32,7 @@ public class StoreListAdapter extends ArrayAdapter<StoreItem> {
     ImageButton replyButton;
 
     String userIndex;
-    static int rowList = R.layout.store_frag_list_row;
+    static int rowList = R.layout.storelistadapter_____store_frag_list_row;
 
     private final Activity activity;
     private final Context context;

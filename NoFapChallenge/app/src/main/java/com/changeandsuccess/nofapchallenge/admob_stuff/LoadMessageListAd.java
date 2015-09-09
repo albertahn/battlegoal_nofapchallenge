@@ -1,7 +1,6 @@
 package com.changeandsuccess.nofapchallenge.admob_stuff;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -20,7 +19,6 @@ import com.google.android.gms.ads.AdView;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.zip.Inflater;
 
 /**
  * Created by albert on 11/3/14.
@@ -47,7 +45,7 @@ public class LoadMessageListAd  extends Fragment {
         this.inflater = (LayoutInflater) inflater;
         this.container = (ViewGroup) container;
 
-        return inflater.inflate(R.layout.fragment_ad, container, false);
+        return inflater.inflate(R.layout.loadmessagelistad_____fragment_ad, container, false);
 
 
     }

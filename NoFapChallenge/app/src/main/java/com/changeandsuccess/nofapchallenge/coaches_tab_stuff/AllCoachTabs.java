@@ -11,8 +11,6 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.ViewProgress;
-import com.changeandsuccess.nofapchallenge.fragments.SettingsFrag;
 
 /**
  * Created by albert on 11/26/14.
@@ -33,7 +31,7 @@ View rootView;
         super.onCreate(savedInstanceState);
 
 
-        rootView =  inflater.inflate(R.layout.all_coaches_tab, container, false);
+        rootView =  inflater.inflate(R.layout.allcoachtabs_____all_coaches_tab, container, false);
         mTabHost = (TabHost) rootView.findViewById(android.R.id.tabhost);
         mTabHost.setup();
 
@@ -70,7 +68,7 @@ return rootView;
 
     private static View createTabView(final Context context, final String text, final int drawableId) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.tabs_bg, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.allcoachtabs_____tabs_bg, null);
 
         TextView title= (TextView) view.findViewById(R.id.title);
 

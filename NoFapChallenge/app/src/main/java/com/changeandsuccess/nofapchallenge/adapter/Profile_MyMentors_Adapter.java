@@ -2,15 +2,6 @@ package com.changeandsuccess.nofapchallenge.adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
-import android.os.AsyncTask;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +16,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -36,7 +25,7 @@ public class Profile_MyMentors_Adapter extends ArrayAdapter<MyMentorsTabItem>{
 
 
     Bitmap profilePhotoImage;
-    static int rowList = R.layout.list_item_in_row_my_mentors;
+    static int rowList = R.layout.profile_mymentors_adapter_____list_item_in_row_my_mentors;
 
     private final Context context;
 

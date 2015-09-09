@@ -1,10 +1,8 @@
 package com.changeandsuccess.nofapchallenge;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -13,14 +11,11 @@ import android.provider.MediaStore;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.quote_stuff.GetFreeQuote;
-import com.changeandsuccess.nofapchallenge.register_acitvity.SaveRegister;
 
 /**
  * Created by albert on 12/31/14.
@@ -43,7 +38,7 @@ public class QuoteActivity extends ActionBarActivity {
 
 
 
-        setContentView(R.layout.quote_activity);
+        setContentView(R.layout.quoteactivity_____quote_activity);
 
 //set the back btn
         ActionBar actionBar = getSupportActionBar();

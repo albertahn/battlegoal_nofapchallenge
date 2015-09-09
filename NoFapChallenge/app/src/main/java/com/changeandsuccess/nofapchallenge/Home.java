@@ -81,7 +81,7 @@ boolean islogg;
                              Bundle savedInstanceState) {
 
 
-        rootViewman = inflater.inflate(R.layout.home_frag, container, false);
+        rootViewman = inflater.inflate(R.layout.home_____home_frag, container, false);
 
 
         LoginActivity loginActivity = new LoginActivity();
@@ -89,7 +89,7 @@ boolean islogg;
 
 //progress_peak
          activity= getActivity();
-        mainActLayout = inflater.inflate( R.layout.activity_main, container, false);
+        mainActLayout = inflater.inflate( R.layout.home_____activity_main, container, false);
         context = getActivity();
         mainActivity = new MainActivity();
 

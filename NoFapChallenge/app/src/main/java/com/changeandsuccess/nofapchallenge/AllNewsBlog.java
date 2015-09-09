@@ -27,7 +27,7 @@ Context context;
 
         context =getActivity();
 
-        rootView = inflater.inflate(R.layout.all_news_frag, container, false);
+        rootView = inflater.inflate(R.layout.allnewsblog_____all_news_frag, container, false);
 
 
         allTabHost = (TabHost) rootView.findViewById(R.id.allnewstabHost);

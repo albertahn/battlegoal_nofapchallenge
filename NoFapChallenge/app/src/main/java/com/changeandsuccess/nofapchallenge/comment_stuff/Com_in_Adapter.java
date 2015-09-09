@@ -2,12 +2,9 @@ package com.changeandsuccess.nofapchallenge.comment_stuff;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,21 +12,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.changeandsuccess.nofapchallenge.CoachProfile;
 import com.changeandsuccess.nofapchallenge.LoginActivity;
-import com.changeandsuccess.nofapchallenge.LoginHelper;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.comment_stuff.DeleteComment;
-import com.changeandsuccess.nofapchallenge.comment_stuff.LikeButton;
-import com.changeandsuccess.nofapchallenge.comment_stuff.LoadReplies;
 import com.changeandsuccess.nofapchallenge.model.CommentItem;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
-import com.changeandsuccess.nofapchallenge.utils.DatabaseStuff;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -60,7 +51,7 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
     ImageButton replyButton;
 
     String userIndex;
-    static int rowList = R.layout.comment_bubble_list_row;
+    static int rowList = R.layout.replyadapter_____comment_bubble_list_row;
 
     private final Activity activity;
     private final Context context;

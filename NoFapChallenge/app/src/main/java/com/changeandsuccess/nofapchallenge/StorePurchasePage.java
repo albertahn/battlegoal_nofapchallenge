@@ -9,7 +9,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.changeandsuccess.nofapchallenge.utils_payment.IabHelper;
 import com.changeandsuccess.nofapchallenge.utils_payment.IabResult;
@@ -58,7 +57,7 @@ public class StorePurchasePage extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.store_inside_product);
+        setContentView(R.layout.storepurchasepage_____store_inside_product);
 //actionbar back button
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);

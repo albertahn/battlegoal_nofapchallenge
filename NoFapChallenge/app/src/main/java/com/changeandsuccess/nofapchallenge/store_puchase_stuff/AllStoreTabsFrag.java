@@ -13,7 +13,6 @@ import android.support.v4.app.Fragment;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.coaches_tab_stuff.ApplyBeCoach;
 import com.changeandsuccess.nofapchallenge.coaches_tab_stuff.Featured;
 
 /**
@@ -33,7 +32,7 @@ public class AllStoreTabsFrag extends Fragment implements TabHost.OnTabChangeLis
         super.onCreate(savedInstanceState);
 
 
-        rootView =  inflater.inflate(R.layout.store_tabs_frag, container, false);
+        rootView =  inflater.inflate(R.layout.allstoretabsfrag_____store_tabs_frag, container, false);
         mTabHost = (TabHost) rootView.findViewById(android.R.id.tabhost);
         mTabHost.setup();
 
@@ -69,7 +68,7 @@ public class AllStoreTabsFrag extends Fragment implements TabHost.OnTabChangeLis
 
     private static View createTabView(final Context context, final String text, final int drawableId) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.tabs_bg, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.allcoachtabs_____tabs_bg, null);
 
         TextView title= (TextView) view.findViewById(R.id.title);
 

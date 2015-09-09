@@ -1,6 +1,5 @@
 package com.changeandsuccess.nofapchallenge.adapter;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
@@ -18,8 +17,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
-import org.w3c.dom.Text;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -34,7 +31,7 @@ public class MessageInsideAdapter extends ArrayAdapter<MessageTabItem>{
     View rowView;
     ImageView profile_photo;
 
-    static int rowList = R.layout.message_bubble;
+    static int rowList = R.layout.messageinsideadapter_____message_bubble;
 
     private final Context context;
     private final ArrayList<MessageTabItem> itemsArrayList;
@@ -83,7 +80,7 @@ public class MessageInsideAdapter extends ArrayAdapter<MessageTabItem>{
         if(userIndex.equals(messagePersonID)){
 
 
-            rowView = inflater.inflate(R.layout.message_bubble_my, parent, false);
+            rowView = inflater.inflate(R.layout.messageinsideadapter_____message_bubble_my, parent, false);
 
             TextView text_body_sample = (TextView) rowView.findViewById(R.id.text_body);
             TextView username =(TextView) rowView.findViewById(R.id.user_name);

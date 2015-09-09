@@ -29,13 +29,13 @@ public class MessageAdapter  extends RecyclerView.Adapter<MessageAdapter.ViewHol
         int layout = -1;
         switch (viewType) {
             case LiveMessage_list.TYPE_MESSAGE:
-                layout = R.layout.item_message;
+                layout = R.layout.messageadapter_____item_message;
                 break;
             case LiveMessage_list.TYPE_LOG:
-                layout = R.layout.item_log;
+                layout = R.layout.messageadapter_____item_log;
                 break;
             case LiveMessage_list.TYPE_ACTION:
-                layout = R.layout.item_action;
+                layout = R.layout.messageadapter_____item_action;
                 break;
         }
         View v = LayoutInflater

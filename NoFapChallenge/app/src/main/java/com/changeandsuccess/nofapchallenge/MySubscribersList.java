@@ -37,7 +37,7 @@ public class MySubscribersList extends ActionBarActivity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.my_subscribers_list);
+        setContentView(R.layout.mycoachesactivity_____my_subscribers_list);
 
         myMentorsListView = (ListView) findViewById(R.id.my_sub_listview);
 

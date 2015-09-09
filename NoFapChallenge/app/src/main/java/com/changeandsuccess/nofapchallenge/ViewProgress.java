@@ -10,7 +10,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -18,7 +17,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.changeandsuccess.nofapchallenge.adapter.MessageTabAdapter;
 import com.changeandsuccess.nofapchallenge.adapter.ProgressAdapter;
 import com.changeandsuccess.nofapchallenge.utils.DatabaseStuff;
 
@@ -35,7 +33,7 @@ public class ViewProgress extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-       final View rootView  = inflater.inflate(R.layout.progressview, container, false);
+       final View rootView  = inflater.inflate(R.layout.viewprogress_____progressview, container, false);
         progList = (ListView)  rootView.findViewById(R.id.tvProgList);
          context = getActivity();
 

@@ -4,9 +4,7 @@ package com.changeandsuccess.nofapchallenge.comment_stuff;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.database.DatabaseUtils;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -25,18 +23,14 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MIME;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URLEncoder;
-import java.nio.charset.Charset;
 
 /**
  * Created by albert on 8/25/14.
@@ -209,9 +203,8 @@ public class InputComment extends AsyncTask<String, Integer, String> {
         ListView insideMessageListView = (ListView) rootView.findViewById(R.id.message_frag_list);
 
 
-        // int rowList = R.layout.message_bubble_my;
         // 2. Get rowView from inflater
-        View rowView = inflater.inflate(R.layout.message_bubble_my, null, false); //inflater.inflate(rowList, null, false);
+        View rowView = inflater.inflate(R.layout.messageinsideadapter_____message_bubble_my, null, false); //inflater.inflate(rowList, null, false);
 
         //refresh
 

@@ -25,7 +25,7 @@ public class FeaturedListAdapter extends ArrayAdapter<FeaturedItem> {
 
     Bitmap profilePhotoImage;
 
-    static int rowList = R.layout.featured_row_in_list;
+    static int rowList = R.layout.featuredlistadapter_____featured_row_in_list;
     View rowView;
 
     private final Context context;

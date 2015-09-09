@@ -1,6 +1,5 @@
 package com.changeandsuccess.nofapchallenge.battle_stuff;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,16 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
-import com.changeandsuccess.nofapchallenge.CoachProfile;
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.SearchActivity;
-import com.changeandsuccess.nofapchallenge.battle_stuff.LoadBattles;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
-import com.changeandsuccess.nofapchallenge.notify_stuff.CheckNotify;
-import com.changeandsuccess.nofapchallenge.notify_stuff.ToggleBellSend;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 
 import java.util.ArrayList;
@@ -57,7 +51,7 @@ Button search_battle_btn;
 
         }//end else
 
-        rootView = inflater.inflate(R.layout.battle_frag, container, false);
+        rootView = inflater.inflate(R.layout.battlefrag_____battle_frag, container, false);
 
 //load people im battling with
 

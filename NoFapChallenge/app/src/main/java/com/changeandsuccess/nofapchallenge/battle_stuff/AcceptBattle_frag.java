@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
@@ -46,7 +45,7 @@ public class AcceptBattle_frag extends Fragment {
             getActivity().startActivity(i);
         }//end else
 
-        rootView = inflater.inflate(R.layout.message_frag, container, false);
+        rootView = inflater.inflate(R.layout.acceptbattle_frag_____message_frag, container, false);
 //load people im battling with
 
         new LoadRequests(userIndex, rootView, getActivity()).execute();

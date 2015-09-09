@@ -30,12 +30,9 @@ import com.changeandsuccess.nofapchallenge.comment_stuff.CommentsFrag;
 import com.changeandsuccess.nofapchallenge.fragments.SettingsFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.LevelFrag;
 import com.changeandsuccess.nofapchallenge.fragments.Message;
-import com.changeandsuccess.nofapchallenge.live_chat.LiveChat_frag;
 import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
 import com.changeandsuccess.nofapchallenge.model.NavDrawerItem;
 import com.changeandsuccess.nofapchallenge.store_puchase_stuff.AllStoreTabsFrag;
-import com.changeandsuccess.nofapchallenge.store_puchase_stuff.FreeStoreFrag;
-import com.flurry.android.FlurryAgent;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -91,7 +88,7 @@ View searchBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home_____activity_main);
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();

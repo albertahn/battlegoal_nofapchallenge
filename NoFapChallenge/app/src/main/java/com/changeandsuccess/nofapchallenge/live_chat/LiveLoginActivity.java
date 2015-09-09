@@ -1,7 +1,6 @@
 package com.changeandsuccess.nofapchallenge.live_chat;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -50,7 +49,7 @@ public class LiveLoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.liveloginactivity_____activity_login);
 
         // Set up the login form.
         mUsernameView = (EditText) findViewById(R.id.username_input);

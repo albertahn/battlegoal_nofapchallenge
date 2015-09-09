@@ -96,7 +96,7 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
 
             // View rootView = ((Activity) activity).getWindow().getDecorView().findViewById(android.R.id.content);
 
-            final View repliesInputpart = LayoutInflater.from(activity).inflate(R.layout.message_input_part, null);
+            final View repliesInputpart = LayoutInflater.from(activity).inflate(R.layout.commentsfrag_____message_input_part, null);
 
             ReplyAdapter proAdapter = new ReplyAdapter(activity, generateData(jsonArray));
 

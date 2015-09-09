@@ -1,8 +1,6 @@
 package com.changeandsuccess.nofapchallenge;
 
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,8 +11,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
-
-import com.changeandsuccess.nofapchallenge.R;
 
 public class Meditate extends Fragment {
 
@@ -27,7 +23,7 @@ public class Meditate extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-         rootView = inflater.inflate(R.layout.med_frag, container, false);
+         rootView = inflater.inflate(R.layout.meditate_____med_frag, container, false);
 
 
 

@@ -12,8 +12,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-import com.changeandsuccess.nofapchallenge.R;
-
 /**
  * Created by albert on 5/20/14.
  */
@@ -33,7 +31,7 @@ public class Blog extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.blog_frag, container, false);
+        rootView = inflater.inflate(R.layout.blog_____blog_frag, container, false);
 
 
 

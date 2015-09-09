@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
@@ -33,7 +32,7 @@ public class ReplyAdapter extends ArrayAdapter<CommentItem> {
     ImageView profile_photo;
 
 
-    static int rowList = R.layout.comment_bubble_list_row;
+    static int rowList = R.layout.replyadapter_____comment_bubble_list_row;
 
     private final Activity activity;
     private final Context context;

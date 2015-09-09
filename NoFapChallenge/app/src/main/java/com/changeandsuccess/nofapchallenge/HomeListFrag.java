@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.changeandsuccess.nofapchallenge.adapter.MessageTabAdapter;
 import com.changeandsuccess.nofapchallenge.adapter.ProgressAdapter;
 import com.changeandsuccess.nofapchallenge.utils.DatabaseStuff;
 
@@ -28,7 +27,7 @@ public class HomeListFrag  extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.home_list_frag, container, false);
+        rootView = inflater.inflate(R.layout.homelistfrag_____home_list_frag, container, false);
         progList = (ListView)  rootView.findViewById(R.id.home_tvProgList);
         context = getActivity();
 

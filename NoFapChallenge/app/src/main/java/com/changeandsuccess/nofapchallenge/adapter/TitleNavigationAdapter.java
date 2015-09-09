@@ -1,6 +1,5 @@
 package com.changeandsuccess.nofapchallenge.adapter;
 
-import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
 
@@ -10,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.model.SpinnerNavItem;
@@ -53,7 +50,7 @@ public class TitleNavigationAdapter extends BaseAdapter {
 
             LayoutInflater mInflater = (LayoutInflater)
                     context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            convertView = mInflater.inflate(R.layout.list_item_title_navigation, parent , false );//e(R.layout.list_item_title_navigation, parent, null);
+            convertView = mInflater.inflate(R.layout.titlenavigationadapter_____list_item_title_navigation, parent , false );//e(R.layout.list_item_title_navigation, parent, null);
         }
 
        // imgIcon = (ImageView) convertView.findViewById(R.id.imgIcon);
@@ -71,7 +68,7 @@ public class TitleNavigationAdapter extends BaseAdapter {
         if (convertView == null) {
             LayoutInflater mInflater = (LayoutInflater)
                     context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            convertView = mInflater.inflate(R.layout.list_item_title_navigation, null);
+            convertView = mInflater.inflate(R.layout.titlenavigationadapter_____list_item_title_navigation, null);
         }
 
        // imgIcon = (ImageView) convertView.findViewById(R.id.imgIcon);

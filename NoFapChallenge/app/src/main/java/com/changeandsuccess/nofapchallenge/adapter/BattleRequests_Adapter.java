@@ -3,7 +3,6 @@ package com.changeandsuccess.nofapchallenge.adapter;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,13 +12,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.changeandsuccess.nofapchallenge.BattleScoreActivity;
 import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.battle_stuff.AcceptBattle;
 import com.changeandsuccess.nofapchallenge.battle_stuff.DeleteBattle_from_tab;
-import com.changeandsuccess.nofapchallenge.battle_stuff.RequestBattle;
-import com.changeandsuccess.nofapchallenge.coach_profile.DeleteBattle;
-import com.changeandsuccess.nofapchallenge.model.Battle_partner_item;
 import com.changeandsuccess.nofapchallenge.model.MyMentorsTabItem;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -35,7 +30,7 @@ public class BattleRequests_Adapter extends ArrayAdapter<MyMentorsTabItem> {
 
     Bitmap profilePhotoImage;
 
-    static int rowList = R.layout.battle_row_in_list;
+    static int rowList = R.layout.battlerequests_____adapter_battle_row_in_list;
     View rowView;
 
     TextView score_text;

@@ -1,21 +1,14 @@
 package com.changeandsuccess.nofapchallenge.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.model.MessageTabItem;
 import com.changeandsuccess.nofapchallenge.model.RankItem;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 import java.util.ArrayList;
 
@@ -24,7 +17,7 @@ import java.util.ArrayList;
  */
 public class LevelRankAdapter extends ArrayAdapter<RankItem> {
 
-    static int rowList = R.layout.rank_list_in_row;
+    static int rowList = R.layout.levelrankadapter_____rank_list_in_row;
 
     private final Context context;
     private final ArrayList<RankItem> itemsArrayList;

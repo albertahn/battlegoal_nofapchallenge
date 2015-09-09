@@ -1,19 +1,13 @@
 package com.changeandsuccess.nofapchallenge.fragments;
 
-import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ProgressBar;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.comment_stuff.InputComment;
-import com.changeandsuccess.nofapchallenge.comment_stuff.LoadComments;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.notify_stuff.CheckNotify;
 import com.changeandsuccess.nofapchallenge.notify_stuff.ToggleBellSend;
@@ -54,7 +48,7 @@ public class SettingsFrag extends Fragment {
             userIndex ="1";
         }
 
-        rootView = inflater.inflate(R.layout.settings_frag, container, false);
+        rootView = inflater.inflate(R.layout.settingsfrag_____settings_frag, container, false);
 
 
 
