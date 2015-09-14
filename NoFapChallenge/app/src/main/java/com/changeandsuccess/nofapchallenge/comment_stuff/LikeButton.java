@@ -26,13 +26,12 @@ import java.util.ArrayList;
 public class LikeButton extends AsyncTask<String, Integer, String> {
 
 
-    final static String STREAMURL = "http://mobile.tanggoal.com/comment/like_comment/";
+    final static String STREAMURL = "http://mobile.tanggoal.com/comment/like_comment_insert/";
     JSONArray jsonArray;
 
     Activity activity;
     String userID, newNumLikes;
     JSONObject jsonOb;
-
 
 
     public LikeButton(String userID, Activity activity) {
@@ -49,7 +48,7 @@ public class LikeButton extends AsyncTask<String, Integer, String> {
         try {
 
 
-            jsonOb = JsonReader.readJsonFromUrl(STREAMURL + params[0]);
+            jsonOb = JsonReader.readJsonFromUrl(STREAMURL +userID+"/"+ params[0]);
             Log.e("newlikesjson", ""+ jsonOb);
 
              return jsonOb.getString("likes");
@@ -72,6 +71,11 @@ public class LikeButton extends AsyncTask<String, Integer, String> {
 
         Log.e("newlikes", ""+result);
 
+        Dialog d = new Dialog(activity);
+
+        d.setTitle(result);
+        d.show();
+
         newNumLikes = result;
 
         getNewNumLikes(newNumLikes);
@@ -83,7 +87,8 @@ public class LikeButton extends AsyncTask<String, Integer, String> {
     public String getNewNumLikes(String newNumLikes){
 
         return newNumLikes;
-    }
+
+    }//
 
 
 }

@@ -2,7 +2,8 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black_transparent">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,10 +16,10 @@
         android:layout_alignParentTop="true"
         android:paddingTop="20dp"
         android:layout_alignParentRight="true"
-        android:background="#ffffff"
+        android:background="#32000101"
         android:layout_alignParentEnd="true"
         android:textSize="12dp"
-        android:textColor="#777777" />
+        android:textColor="#ffffff" />
 
 
     <ImageView
@@ -49,7 +50,8 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/product_picture"
         android:layout_toEndOf="@+id/product_picture"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:textColor="#f2f6ff" />
     <!--here new one-->
 
 </RelativeLayout>

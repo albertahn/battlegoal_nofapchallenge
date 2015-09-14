@@ -26,7 +26,6 @@ import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.gcm_stuff.CheckGCMsaved;
 import com.changeandsuccess.nofapchallenge.gcm_stuff.GoogleCloudMessageStuff;
 import com.changeandsuccess.nofapchallenge.gcm_stuff.RegisterBackground;
-import com.changeandsuccess.nofapchallenge.message_activity.LoadMessageFrag;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 import com.google.android.gms.ads.AdRequest;
@@ -45,7 +44,7 @@ public class Message extends Fragment {
 
         super.onCreate(savedInstanceState);
 
-        View rootView = inflater.inflate(R.layout.acceptbattle_frag_____message_frag, container, false);
+        View rootView = inflater.inflate(R.layout.message_____message_frag, container, false);
 
         //get userid
         LoginHelper loginHelper = new LoginHelper();

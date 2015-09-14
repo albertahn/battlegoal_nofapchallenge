@@ -4,29 +4,20 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.adapter.ProgressAdapter;
-import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 import com.changeandsuccess.nofapchallenge.Item;
-import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.ViewProgress;
-import com.changeandsuccess.nofapchallenge.adapter.MessageTabAdapter;
 import com.changeandsuccess.nofapchallenge.utils.DatabaseStuff;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**

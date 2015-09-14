@@ -51,13 +51,11 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
     ImageButton replyButton;
 
     String userIndex;
-    static int rowList = R.layout.replyadapter_____comment_bubble_list_row;
+    static int rowList = R.layout.com_in_adapter_____comment_bubble_list_row;
 
     private final Activity activity;
     private final Context context;
     private final ArrayList<CommentItem> itemsArrayList;
-
-
 
     ImageLoader imageLoader = ImageLoader.getInstance();
     //imageLoader.destroy();
@@ -143,7 +141,6 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
             reply_to_who.setVisibility(View.GONE);
 
         }
-
 
             // 3. Get the two text view from the rowView
             TextView text_body_sample = (TextView) rowView.findViewById(R.id.text_body);

@@ -64,29 +64,27 @@
         android:layout_alignParentEnd="true" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="25dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
         android:id="@+id/like_button"
         android:src="@drawable/like2"
         android:background="@color/transparent"
         android:padding="5dp"
         android:layout_marginLeft="23dp"
         android:layout_marginStart="23dp"
-        android:layout_alignTop="@+id/num_reply"
-        android:layout_alignLeft="@+id/text_body"
-        android:layout_alignStart="@+id/text_body" />
+        android:layout_alignStart="@+id/text_body"
+        android:layout_alignBottom="@+id/text_body" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="20dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
         android:id="@+id/reply_button"
         android:src="@drawable/message3"
         android:background="@color/transparent"
         android:adjustViewBounds="true"
         android:padding="5dp"
-        android:layout_alignBottom="@+id/like_button"
-        android:layout_toRightOf="@+id/num_reply"
-        android:layout_toEndOf="@+id/num_reply" />
+        android:layout_alignBottom="@+id/text_body"
+        android:layout_toRightOf="@+id/num_likes" />
 
     <TextView
         android:layout_width="30dp"
@@ -96,9 +94,9 @@
         android:id="@+id/num_reply"
         android:paddingLeft="10dp"
         android:textColor="#FFFFFF"
-        android:layout_alignBottom="@+id/reply_rel"
-        android:layout_toRightOf="@+id/like_button"
-        android:layout_toEndOf="@+id/like_button" />
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/reply_button"
+        android:layout_alignBottom="@+id/text_body" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -120,9 +118,9 @@
         android:id="@+id/num_likes"
         android:paddingLeft="10dp"
         android:textColor="#FFFFFF"
-        android:layout_above="@+id/reply_rel"
-        android:layout_toRightOf="@+id/reply_button"
-        android:layout_toEndOf="@+id/reply_button" />
+        android:layout_toRightOf="@+id/like_button"
+        android:layout_toEndOf="@+id/like_button"
+        android:layout_alignBottom="@+id/text_body" />
 
     <TextView
 

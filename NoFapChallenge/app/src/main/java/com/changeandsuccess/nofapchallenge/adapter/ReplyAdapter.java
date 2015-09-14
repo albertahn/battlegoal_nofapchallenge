@@ -32,7 +32,7 @@ public class ReplyAdapter extends ArrayAdapter<CommentItem> {
     ImageView profile_photo;
 
 
-    static int rowList = R.layout.replyadapter_____comment_bubble_list_row;
+    static int rowList = R.layout.com_in_adapter_____comment_bubble_list_row;
 
     private final Activity activity;
     private final Context context;

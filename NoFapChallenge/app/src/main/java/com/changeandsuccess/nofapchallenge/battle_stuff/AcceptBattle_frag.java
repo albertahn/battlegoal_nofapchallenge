@@ -45,7 +45,7 @@ public class AcceptBattle_frag extends Fragment {
             getActivity().startActivity(i);
         }//end else
 
-        rootView = inflater.inflate(R.layout.acceptbattle_frag_____message_frag, container, false);
+        rootView = inflater.inflate(R.layout.message_____message_frag, container, false);
 //load people im battling with
 
         new LoadRequests(userIndex, rootView, getActivity()).execute();

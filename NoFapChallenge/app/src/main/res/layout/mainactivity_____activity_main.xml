@@ -34,7 +34,6 @@
         android:id="@+id/list_slidermenu"
         android:layout_alignParentBottom="true"
         android:layout_gravity="start"
-
         android:background="@color/transparent"
         >
 
@@ -154,7 +153,7 @@
 
             android:padding="40dp"
 
-            android:src="@drawable/message"
+            android:src="@drawable/blog"
             android:layout_below="@+id/home_menu"
 
 
@@ -235,6 +234,40 @@
             android:src="@drawable/store"
             android:layout_below="@+id/coach_menu" />
 
+        <ImageButton
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+
+            android:id="@+id/profile_menu"
+            android:layout_weight="1"
+
+            android:background="@drawable/menuback_right"
+            android:adjustViewBounds="true"
+            android:padding="40dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="left|bottom"
+            android:layout_toRightOf="@id/level_menu"
+            android:src="@drawable/profile_menu"
+            android:layout_below="@+id/settings_menu" />
+
+        <ImageButton
+            android:id="@+id/livechat_menu"
+            android:src="@drawable/message"
+            android:background="@drawable/menubacktest"
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+            android:text="New Button"
+
+            android:layout_weight="1"
+
+
+            android:adjustViewBounds="true"
+            android:padding="40dp"
+            android:scaleType="fitCenter"
+
+            android:layout_gravity="left|bottom"
+            android:layout_below="@+id/level_menu" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -273,7 +306,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="LIVE CHAT"
+            android:text="BLOG"
             android:id="@+id/blog_label"
 
             android:layout_alignBottom="@+id/blog_menu"
@@ -411,6 +444,46 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:textColor="#ff0000" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="PROFILE"
+            android:id="@+id/profile_label"
+
+            android:layout_alignBottom="@+id/profile_menu"
+            android:layout_alignLeft="@+id/profile_menu"
+            android:layout_alignRight="@+id/profile_menu"
+            android:textColor="#ffffff"
+
+
+            android:gravity="center"
+            android:textScaleX="1.2"
+            android:fontFamily="sans-serif"
+            android:textSize="10.5dp"
+            android:layout_marginBottom="23dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="LIVE CHAT"
+            android:id="@+id/livechat_label"
+
+            android:layout_alignBottom="@+id/livechat_menu"
+            android:layout_alignLeft="@+id/livechat_menu"
+            android:layout_alignRight="@+id/livechat_menu"
+            android:textColor="#ffffff"
+
+
+            android:gravity="center"
+            android:textScaleX="1.2"
+            android:fontFamily="sans-serif"
+            android:textSize="10.5dp"
+            android:layout_marginBottom="23dp"/>
 
 
 

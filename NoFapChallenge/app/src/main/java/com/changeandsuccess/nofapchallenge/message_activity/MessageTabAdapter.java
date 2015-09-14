@@ -1,4 +1,4 @@
-package com.changeandsuccess.nofapchallenge.adapter;
+package com.changeandsuccess.nofapchallenge.message_activity;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -10,7 +10,6 @@ import android.widget.ListView;
 
 import com.changeandsuccess.nofapchallenge.MessageInside;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.adapter.MessageTabAdapter;
 import com.changeandsuccess.nofapchallenge.model.MessageTabItem;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 

@@ -36,7 +36,7 @@ public class Blog extends Fragment{
 
 
 
-        site = "http://albertinspire.blogspot.kr/?view=classic";
+        site = "http://battlegoal.tumblr.com/";//"http://albertinspire.blogspot.kr/?view=classic";
 
         mWeb = (WebView) rootView.findViewById(R.id.web1);
         progressBar = (ProgressBar) rootView.findViewById(R.id.pro);

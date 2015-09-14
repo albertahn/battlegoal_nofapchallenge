@@ -290,7 +290,7 @@ View searchBar;
                 break;
             case 1:
 
-                fragment = new LiveFragShow();//AllNewsBlog();//Videos();
+                fragment = new Blog();//LiveFragShow();//AllNewsBlog();//Videos();
                 hideNavSpinnerLang();
                 break;
             case 2:
