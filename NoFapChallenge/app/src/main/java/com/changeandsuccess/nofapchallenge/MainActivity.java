@@ -33,6 +33,7 @@ import com.changeandsuccess.nofapchallenge.message_activity.Message;
 import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
 import com.changeandsuccess.nofapchallenge.model.NavDrawerItem;
 import com.changeandsuccess.nofapchallenge.store_puchase_stuff.AllStoreTabsFrag;
+import com.changeandsuccess.nofapchallenge.util.IabHelper;
 
 import java.util.ArrayList;
 
@@ -79,6 +80,8 @@ public class MainActivity extends ActionBarActivity {
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 
+    private boolean isHome;
+
     ImageButton home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu;
 View searchBar;
 
@@ -86,6 +89,8 @@ View searchBar;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity_____activity_main);
+
+        isHome = true;
 
        /* AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -259,6 +264,8 @@ View searchBar;
         }
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
@@ -282,6 +289,10 @@ View searchBar;
     public void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
+
+        if(position ==0) isHome = true;
+        else isHome = false;
+
         switch (position) {
             case 0:
 
@@ -491,23 +502,26 @@ View searchBar;
     }
     */
 
-    public static void onBackPressed(final Activity activity) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setTitle("Wanna Exit the app");
-        builder.setMessage("exit");
-        builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                activity.finish();
-            }
-        });
-        builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
+    public void onBackPressed(final Activity activity) {
+        if(isHome==true) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+            builder.setTitle("Wanna Exit the app");
+            builder.setMessage("exit");
+            builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    activity.finish();
+                }
+            });
+            builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
 
-            }
-        });
-        builder.show();
+                }
+            });
+            builder.show();
+        }else{
+            displayView(0);
+        }
     }
-
 }
