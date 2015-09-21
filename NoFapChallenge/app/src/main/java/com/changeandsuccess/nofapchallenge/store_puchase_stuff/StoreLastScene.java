@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.util.IabHelper;
@@ -29,6 +30,10 @@ public class StoreLastScene  extends ActionBarActivity {
         Intent intent = getIntent();
         if(intent!=null){
             ITEM_SKU = intent.getStringExtra("sku");
+            TextView textView = (TextView)findViewById(R.id.SLSTextView1);
+            textView.setText(intent.getStringExtra("title"));
+            textView = (TextView)findViewById(R.id.SLSTextView2);
+            textView.setText(intent.getStringExtra("price"));
         }
 
         String base64EncodedPublicKey =
@@ -55,9 +60,7 @@ public class StoreLastScene  extends ActionBarActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        Log.d(TAG, "0");
         if (!mHelper.handleActivityResult(requestCode, resultCode, data)) {
-            Log.d(TAG, "00");
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
@@ -66,15 +69,15 @@ public class StoreLastScene  extends ActionBarActivity {
         public void onIabPurchaseFinished(IabResult result, Purchase purchase)
         {
             if (result.isFailure()) {
-                Log.d(TAG, "1");
                 // Handle error
+                if(result.getResponse()==7) {
+                    mHelper.queryInventoryAsync(mReceivedInventoryListener);
+                }
+
                 return;
             }
             else if (purchase.getSku().equals(ITEM_SKU)) {
-                Log.d(TAG, "2");
                 consumeItem();
-                Log.d(TAG, "3");
-                finish();
                 // buyButton.setEnabled(false);
             }
 
@@ -99,6 +102,7 @@ public class StoreLastScene  extends ActionBarActivity {
         public void onConsumeFinished(Purchase purchase,IabResult result) {
             if (result.isSuccess()) {
                 //    clickButton.setEnabled(true);
+
             } else {
                 // handle error
             }

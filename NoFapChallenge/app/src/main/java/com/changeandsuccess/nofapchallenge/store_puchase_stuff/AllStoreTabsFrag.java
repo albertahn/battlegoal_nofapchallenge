@@ -39,12 +39,12 @@ public class AllStoreTabsFrag extends Fragment  {
     ListView listView;
     SingleAdapter adapter;
 
-    String[] titles = {"익명 상담 문자 서비스","30 Quotes"};
-    String[] prices = {"$ 2.99","$ 3.39"};
+    int[] ids = {0,1};
+    String[] titles = {"Donate to BattleGoal","Live 1 Hour Coaching Session With Albert"};
+    String[] prices = {"$ 1","$ 15"};
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         rootView =  inflater.inflate(R.layout.allstoretabsfrag_____store_tabs_frag, container, false);
@@ -56,8 +56,8 @@ public class AllStoreTabsFrag extends Fragment  {
         listView = (ListView)rootView.findViewById(R.id.listView);
         adapter = new SingleAdapter();
 
-        adapter.addItem(new SingleItem(titles[0], prices[0]));
-        adapter.addItem(new SingleItem(titles[1], prices[1]));
+        adapter.addItem(new SingleItem(ids[0],titles[0], prices[0]));
+        adapter.addItem(new SingleItem(ids[1],titles[1], prices[1]));
 
         listView.setAdapter(adapter);
 
@@ -67,9 +67,21 @@ public class AllStoreTabsFrag extends Fragment  {
                 ListView listView = (ListView) parent;
 
                 SingleItem item = (SingleItem) adapter.getItem(position);
-                Toast.makeText(rootView.getContext(), item.getTitle(), Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(rootView.getContext(),StoreLastScene.class);
-                intent.putExtra("sku","android.test.purchased");
+
+                Intent intent = new Intent(rootView.getContext(), StoreLastScene.class);
+                if(item.id == 0) {  //donate
+                    Toast.makeText(rootView.getContext(), item.getTitle(), Toast.LENGTH_LONG).show();
+                  //  intent.putExtra("sku", "android.test.purchased");.
+                    intent.putExtra("title", item.getTitle());
+                    intent.putExtra("price", item.getPrice());
+                    intent.putExtra("sku", "donate_battlegoal");
+                }else if(item.id == 1){ //attach with albert
+                    Toast.makeText(rootView.getContext(), item.getTitle(), Toast.LENGTH_LONG).show();
+                  //  intent.putExtra("sku", "android.test.purchased");
+                    intent.putExtra("title", item.getTitle());
+                    intent.putExtra("price", item.getPrice());
+                    intent.putExtra("sku", "albert_29_skype_call_training_session");
+                }
 
               //  intent.putExtra("sku","donate_battlegoal");
                 startActivity(intent);

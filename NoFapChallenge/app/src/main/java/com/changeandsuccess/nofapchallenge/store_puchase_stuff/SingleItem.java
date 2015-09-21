@@ -5,15 +5,25 @@ package com.changeandsuccess.nofapchallenge.store_puchase_stuff;
  */
 
 public class SingleItem {
+    int id;
     String title;
     String price;
 
     public SingleItem() {
     }
 
-    public SingleItem(String title, String price) {
+    public SingleItem(int id,String title, String price) {
+        this.id = id;
         this.title = title;
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPrice() {
