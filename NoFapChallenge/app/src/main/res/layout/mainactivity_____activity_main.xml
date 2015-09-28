@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
@@ -10,7 +10,7 @@
 <android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawer_layout"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
@@ -20,26 +20,27 @@
     <!-- Framelayout to display Fragments -->
     <FrameLayout
         android:id="@+id/frame_container"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent" >
 
     </FrameLayout>
 
     </RelativeLayout>
 
-    <!-- android:layout_gravity="start" Listview to display slider menu   android:layout_gravity="start" android:layout_gravity="start"-->
+    <!-- android:layout_gravity="start"android.support.v4.widget.DrawerLayout Listview to display slider menu   android:layout_gravity="start" android:layout_gravity="start"-->
     <ScrollView
-        android:layout_width="310dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list_slidermenu"
         android:layout_alignParentBottom="true"
         android:layout_gravity="start"
+        android:layout_marginLeft="-64dp"
         android:background="@color/transparent"
         >
 
     <RelativeLayout
         android:id="@+id/relay"
-        android:layout_width="310dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="2"
         android:choiceMode="singleChoice"
@@ -50,7 +51,7 @@
 
         <RelativeLayout
             android:id="@+id/search_place"
-            android:layout_width="310dp"
+            android:layout_width="fill_parent"
             android:layout_height="35dp"
             android:weightSum="2"
             android:layout_marginTop="10dp"

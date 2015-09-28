@@ -1,5 +1,7 @@
 package com.changeandsuccess.nofapchallenge.store_puchase_stuff;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -7,11 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
+import com.changeandsuccess.nofapchallenge.comment_stuff.LargeCommentActivity;
 import com.changeandsuccess.nofapchallenge.util.IabHelper;
 import com.changeandsuccess.nofapchallenge.util.IabResult;
 import com.changeandsuccess.nofapchallenge.util.Inventory;
 import com.changeandsuccess.nofapchallenge.util.Purchase;
+import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 
 /**
  * Created by tanggames on 2015-09-18.
@@ -21,6 +26,9 @@ public class StoreLastScene  extends ActionBarActivity {
     private static final String TAG = "HelloWorld";
     IabHelper mHelper;
     String ITEM_SKU;
+    Activity thisman = this;
+
+    String useremail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +37,7 @@ public class StoreLastScene  extends ActionBarActivity {
 
         Intent intent = getIntent();
         if(intent!=null){
-            ITEM_SKU = intent.getStringExtra("sku");
+           // ITEM_SKU = intent.getStringExtra("sku"); //comment out
             TextView textView = (TextView)findViewById(R.id.SLSTextView1);
             textView.setText(intent.getStringExtra("title"));
             textView = (TextView)findViewById(R.id.SLSTextView2);
@@ -50,10 +58,30 @@ public class StoreLastScene  extends ActionBarActivity {
                 }
             }
         });
+
+        //get useremail
+
+        LoginActivity loginActivity = new LoginActivity();
+
+        if(loginActivity.isLoggedIn(thisman)){
+            UserDatabase info = new UserDatabase(thisman);
+            info.open();
+            String[][] data = info.getData();
+            info.close();
+
+            useremail = data[0][3];
+
+        }else{
+
+            Intent i = new Intent(thisman,
+                    LoginActivity.class);
+            startActivity(i);
+        }
+
     }
 
     public void onLastSceneButtonClicked(View v){
-        //ITEM_SKU = "android.test.purchased";
+        ITEM_SKU = "android.test.purchased"; //
         mHelper.launchPurchaseFlow(this, ITEM_SKU, 10001, mPurchaseFinishedListener, "mypurchasetoken");
     }
 
@@ -102,6 +130,11 @@ public class StoreLastScene  extends ActionBarActivity {
         public void onConsumeFinished(Purchase purchase,IabResult result) {
             if (result.isSuccess()) {
                 //    clickButton.setEnabled(true);
+
+
+               SendPuchase_to_db sending = new SendPuchase_to_db(useremail, thisman);
+
+                sending.execute();
 
             } else {
                 // handle error
