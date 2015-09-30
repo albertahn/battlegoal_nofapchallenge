@@ -20,7 +20,12 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.changeandsuccess.nofapchallenge.adapter.NavDrawerListAdapter;
 import com.changeandsuccess.nofapchallenge.battle_stuff.AllBattleTab;
@@ -31,9 +36,16 @@ import com.changeandsuccess.nofapchallenge.fragments.SettingsFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.LevelFrag;
 import com.changeandsuccess.nofapchallenge.message_activity.Message;
 import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
+import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.model.NavDrawerItem;
 import com.changeandsuccess.nofapchallenge.store_puchase_stuff.AllStoreTabsFrag;
 import com.changeandsuccess.nofapchallenge.util.IabHelper;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 import java.util.ArrayList;
 
@@ -82,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
 
     private boolean isHome;
 
-    ImageButton home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu;
+    ImageButton home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu,profile_menu;
 View searchBar;
 
     @Override
@@ -90,11 +102,16 @@ View searchBar;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity_____activity_main);
 
-        isHome = true;
-
-       /* AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdView mAdView = (AdView)findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);*/
+        mAdView.loadAd(adRequest);
+        isHome = true;
+        LoginHelper loginHelper = new LoginHelper();
+        String[][] loginData = loginHelper.checkLogin(this);
+        ArrayList<LoginItem> generatedLoginItem = generateData(loginData);
+        if( generatedLoginItem.toString() !="[]"){
+            readSavedUser(this, generatedLoginItem);
+        }
 
         mTitle = mDrawerTitle = getTitle();
         // load slide menu items
@@ -103,7 +120,7 @@ View searchBar;
 
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (View) findViewById(R.id.list_slidermenu);
+        mDrawerList = (LinearLayout) findViewById(R.id.list_slidermenu);
 
 
         //menubuttons
@@ -116,6 +133,7 @@ View searchBar;
                 coach_menu = (ImageButton) mDrawerList.findViewById(R.id.coach_menu); //5
                 level_menu = (ImageButton) mDrawerList.findViewById(R.id.level_menu);  //7
                 setting_menu = (ImageButton) mDrawerList.findViewById(R.id.settings_menu);//6
+              profile_menu =  (ImageButton) mDrawerList.findViewById(R.id.profile_menu);
 
         home_menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,8 +190,15 @@ View searchBar;
                 displayView(6);
             }
         });
+        profile_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(12);
+            }
+        });
 
      //searchBar
+        /*
         searchBar = (View) mDrawerList.findViewById(R.id.search_place);//6
 
         searchBar.setOnClickListener(new View.OnClickListener() {
@@ -185,7 +210,7 @@ View searchBar;
                 startActivity(i);
             }
         });
-
+*/
 
         // enabling action bar app icon and behaving it as toggle button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -247,20 +272,25 @@ View searchBar;
 
         //onStart();
 
-            }//end creat bundle
+        Button CloseButton = (Button)findViewById(R.id.CloseButton);
+        CloseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             //   mDrawerLayout.closeDrawer(v);
+                mDrawerLayout.closeDrawer(mDrawerList);
+            }
+        });
+    }//end creat bundle
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         //Handle the back button
         if (keyCode == KeyEvent.KEYCODE_BACK && isTaskRoot()) {
-
             onBackPressed(this);
             return true;
 
         }else{
-
                 return super.onKeyDown(keyCode, event);
-
         }
     }
 
@@ -352,6 +382,11 @@ View searchBar;
                 fragment = new SettingsFrag();
                 hideNavSpinnerLang();
                 break;
+            case 12:
+                fragment = new ProfileTab();
+                hideNavSpinnerLang();
+                break;
+
 
             default:
                 hideNavSpinnerLang();
@@ -524,4 +559,52 @@ View searchBar;
             displayView(0);
         }
     }
+
+    public void readSavedUser(Context context, ArrayList<LoginItem> generatedLoginItem) {
+
+        TextView usernameText = (TextView) findViewById(R.id.profileName);
+        TextView lvText =  (TextView) findViewById(R.id.profileLevel);
+
+        String username = generatedLoginItem.get(0).getUsername().toString();
+        String lv = generatedLoginItem.get(0).getLevel().toString();
+
+        usernameText.setText(username);
+        lv = "LV."+lv;
+        lvText.setText(lv);
+
+        String propic = generatedLoginItem.get(0).getProfile_picture();
+
+        ImageView profile_photo = (ImageView) findViewById(R.id.profilePicture);
+        String imageurl = "http://tanggoal.com/public/uploads/members_pic/" + propic;
+
+
+        ImageLoader imageloader = ImageLoader.getInstance();
+
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
+                .showImageForEmptyUri(R.drawable.ic_launcher)
+                .displayer(new RoundedBitmapDisplayer(250))
+                .cacheInMemory(true)
+                .considerExifParams(true)
+                .build();
+
+        //kill it first
+
+        //imageloader.destroy();
+
+        Boolean isInit = imageloader.isInited();
+
+        if(!isInit) {
+            imageloader.init(ImageLoaderConfiguration.createDefault(context));
+        }
+
+        imageloader.displayImage(imageurl, profile_photo, options);
+    }
+    public static ArrayList<LoginItem> generateData(String[][] data){
+        ArrayList<LoginItem> items = new ArrayList<LoginItem>();
+
+        for (int i =0; i<data.length ; i++){
+            items.add(new LoginItem( data[i][1], data[i][2], data[i][3],data[i][4],data[i][5],data[i][6],data[i][7]));
+        }
+        return items;
+    } //end generate
 }

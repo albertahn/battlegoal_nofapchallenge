@@ -265,11 +265,6 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
             getFragmentManager().beginTransaction()
                     .add(R.id.my_settings_tab,  new SettingsFrag())
                     .commit();
-
-
         }
-
     }//end tabchange
-
-
 }
