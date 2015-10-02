@@ -30,6 +30,7 @@ import java.util.Locale;
 /**
  * Created by albert on 8/25/14.
  */
+
 public class CommentsFrag extends Fragment {
 
     ArrayList<LoginItem> generatedLoginItem;
@@ -41,15 +42,15 @@ public class CommentsFrag extends Fragment {
     String[] messageArray;
     String userIndex;
     Button imageInsertBtn;
-
     Button live_chat_btn;
+
+    com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton englishBtn, espanolBtn,koreanBtn,portuguesBtn,deutschBtn;
+    com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton francaisBtn, japaneseBtn,italianoBtn,farsiBtn,arabicBtn;
+
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
-
         //if logged in else
 
         LoginActivity loginActivity = new LoginActivity();
@@ -57,7 +58,7 @@ public class CommentsFrag extends Fragment {
 
     UserDatabase userDatabase = new UserDatabase(getActivity());
     userDatabase.open();
-    String[][] data = userDatabase.getData();
+        String[][] data = userDatabase.getData();
     userDatabase.close();
 
 
@@ -81,33 +82,38 @@ public class CommentsFrag extends Fragment {
         sendMessageBtn = (Button) rootView.findViewById(R.id.send_message_btn);
         inputMessageEdit = (TextView) rootView.findViewById(R.id.input_edit_text);
         imageInsertBtn = (Button) rootView.findViewById(R.id.add_image_btn);
-
         live_chat_btn = (Button) rootView.findViewById(R.id.live_chat_btn);
+
+        englishBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.EnglishButton);
+        espanolBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.EspanolButton);
+        koreanBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.KoreanButton);
+        portuguesBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.PortuguesButton);
+        deutschBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.DeutscheButton);
+        francaisBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.FrancaiusButton);
+        japaneseBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.JapaneseButton);
+        italianoBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.ItalianoButton);
+        farsiBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.FarsiButton);
+        arabicBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.ArabicButton);
 
         imageInsertBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent i = new Intent(getActivity(),
                         LargeCommentActivity.class);
                 startActivity(i);
 
                 /*LargeCommentActivity L = new LargeCommentActivity(rootView, getActivity());
-
                 L.onDialogShowImage(rootView, getActivity());*/
-
             }
         });
 
         live_chat_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Fragment  fragment = new LiveFragShow();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.frame_container, fragment).commit();
-
             }
         });
 
@@ -116,7 +122,6 @@ public class CommentsFrag extends Fragment {
         sendMessageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 inputMessageEdit = (EditText) rootView.findViewById(R.id.input_edit_text);
                 //get the text
                 inputText = (String) inputMessageEdit.getText().toString();
@@ -136,25 +141,211 @@ public class CommentsFrag extends Fragment {
                     ProgressBar progressBar = (ProgressBar) rootView.findViewById(R.id.input_progress_bar);
                     progressBar.setVisibility(View.VISIBLE);
                 }//end if
+            }
+        });
 
 
+        englishBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "en"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+
+                new LoadComments(userIndex, rootView, getActivity()).execute();
+                inSelectedProcess();
+                englishBtn.selected();
+            }
+
+        });
+        espanolBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "es"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+                new LoadComments(userIndex, rootView,getActivity()).execute();
+
+                inSelectedProcess();
+                espanolBtn.selected();
+            }
+        });
+        koreanBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "ko"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+
+
+                new LoadComments(userIndex, rootView,getActivity()).execute();
+
+                inSelectedProcess();
+                koreanBtn.selected();
+            }
+        });
+        portuguesBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "pt"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+
+                new LoadComments(userIndex, rootView,getActivity()).execute();
+
+                inSelectedProcess();
+                portuguesBtn.selected();
+            }
+        });
+        deutschBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "de"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+
+                new LoadComments(userIndex, rootView,getActivity()).execute();
+
+                inSelectedProcess();
+                deutschBtn.selected();
+            }
+        });
+        francaisBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "fr"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+
+                new LoadComments(userIndex, rootView,getActivity()).execute();
+
+                inSelectedProcess();
+                francaisBtn.selected();
+            }
+        });
+        japaneseBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "ja"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+                new LoadComments(userIndex, rootView,getActivity()).execute();
+
+                inSelectedProcess();
+                japaneseBtn.selected();
+            }
+        });
+        italianoBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "it"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+                new LoadComments(userIndex, rootView,getActivity()).execute();
+
+                inSelectedProcess();
+                italianoBtn.selected();
+            }
+        });
+        farsiBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "fa"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+
+                new LoadComments(userIndex, rootView,getActivity()).execute();
+
+                inSelectedProcess();
+                farsiBtn.selected();
+            }
+        });
+        arabicBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String languageToLoad  = "ar"; // your language
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getActivity().getResources().updateConfiguration(config,
+                        getActivity().getResources().getDisplayMetrics());
+
+                View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
+
+                new LoadComments(userIndex, rootView,getActivity()).execute();
+
+                inSelectedProcess();
+                arabicBtn.selected();
             }
         });
 
 //language spinner
         ActionBar actionBar =((ActionBarActivity)getActivity()).getSupportActionBar();
 //set the spinner element
-        setbarNavSpinner();
+        //setbarNavSpinner();
 
 //set the default language
-        int navInt = getActivity().getResources().getInteger(R.integer.navigation_int);
+       // int navInt = getActivity().getResources().getInteger(R.integer.navigation_int);
 
-        actionBar.setSelectedNavigationItem(navInt);
+        //actionBar.setSelectedNavigationItem(navInt);
 
         return  rootView;
     }//end on create
-
-
 
     public static ArrayList<LoginItem> generateData(String[][] data){
         ArrayList<LoginItem> items = new ArrayList<LoginItem>();
@@ -166,176 +357,17 @@ public class CommentsFrag extends Fragment {
         return items;
     } //end generate
 
-    public void setbarNavSpinner(){
-
-        ActionBar actionBar =((ActionBarActivity)getActivity()).getSupportActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-
-        SpinnerAdapter mSpinnerAdapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.action_list, android.R.layout.simple_spinner_dropdown_item);
-
-
-        // assigning the spinner navigation
-        actionBar.setListNavigationCallbacks(mSpinnerAdapter, new ActionBar.OnNavigationListener( ) {
-
-            @Override
-            public boolean onNavigationItemSelected ( int arg0 , long arg1 ) {
-
-//                Log.e("navid", ""+arg0+":"+ arg1);
-
-                if (arg0 ==0) {
-
-
-                    String languageToLoad  = "en"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-
-                    new LoadComments(userIndex, rootView, getActivity()).execute();
-
-                } else if (arg0==1) {
-
-                    String languageToLoad  = "es"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-                    new LoadComments(userIndex, rootView,getActivity()).execute();
-
-
-                } else if (arg0== 2 ) {
-
-
-                    String languageToLoad  = "ko"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-
-
-                    new LoadComments(userIndex, rootView,getActivity()).execute();
-
-                } else if ( arg0== 3 ) {
-
-
-                    String languageToLoad  = "pt"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-
-                    new LoadComments(userIndex, rootView,getActivity()).execute();
-
-                } else if ( arg0==4  ) {
-
-
-                    String languageToLoad  = "de"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-
-                    new LoadComments(userIndex, rootView,getActivity()).execute();
-
-                }else if ( arg0==5 ) {
-
-
-                    String languageToLoad  = "fr"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-
-                    new LoadComments(userIndex, rootView,getActivity()).execute();
-
-                }else if ( arg0==6 ) {
-
-                    String languageToLoad  = "ja"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-                    new LoadComments(userIndex, rootView,getActivity()).execute();
-
-                }else if ( arg0==7 ) {
-
-                    String languageToLoad  = "it"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-                    new LoadComments(userIndex, rootView,getActivity()).execute();
-
-                }else if ( arg0==8 ) {
-
-                    String languageToLoad  = "fa"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-
-                    new LoadComments(userIndex, rootView,getActivity()).execute();
-
-                }else if ( arg0==9 ) {
-
-                    String languageToLoad  = "ar"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getActivity().getResources().updateConfiguration(config,
-                            getActivity().getResources().getDisplayMetrics());
-
-                    View rootView = ((Activity) getActivity()).getWindow().getDecorView().findViewById(android.R.id.content);
-
-                    new LoadComments(userIndex, rootView,getActivity()).execute();
-
-                }else{
-                    //email suggest
-                }
-
-                return false;
-
-            }
-
-        } );
-
+    public void inSelectedProcess(){
+        englishBtn.inSelected();
+        espanolBtn.inSelected();
+        koreanBtn.inSelected();
+        portuguesBtn.inSelected();
+        deutschBtn.inSelected();
+        francaisBtn.inSelected();
+        japaneseBtn.inSelected();
+        italianoBtn.inSelected();
+        farsiBtn.inSelected();
+        arabicBtn.inSelected();
     }
+
 }
