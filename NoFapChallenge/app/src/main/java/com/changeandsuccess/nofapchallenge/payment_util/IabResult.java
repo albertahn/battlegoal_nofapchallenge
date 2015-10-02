@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.changeandsuccess.nofapchallenge.utils_payment;
+package com.changeandsuccess.nofapchallenge.payment_util;
 
 /**
  * Represents the result of an in-app billing operation.

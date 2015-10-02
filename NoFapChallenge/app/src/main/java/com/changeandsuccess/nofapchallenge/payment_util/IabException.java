@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.changeandsuccess.nofapchallenge.util;
+package com.changeandsuccess.nofapchallenge.payment_util;
 
 /**
  * Exception thrown when something went wrong with in-app billing.

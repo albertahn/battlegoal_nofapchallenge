@@ -4,18 +4,19 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.comment_stuff.LargeCommentActivity;
-import com.changeandsuccess.nofapchallenge.util.IabHelper;
-import com.changeandsuccess.nofapchallenge.util.IabResult;
-import com.changeandsuccess.nofapchallenge.util.Inventory;
-import com.changeandsuccess.nofapchallenge.util.Purchase;
+import com.changeandsuccess.nofapchallenge.payment_util.IabHelper;
+import com.changeandsuccess.nofapchallenge.payment_util.IabResult;
+import com.changeandsuccess.nofapchallenge.payment_util.Inventory;
+import com.changeandsuccess.nofapchallenge.payment_util.Purchase;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 
 /**
@@ -27,22 +28,32 @@ public class StoreLastScene  extends ActionBarActivity {
     IabHelper mHelper;
     String ITEM_SKU;
     Activity thisman = this;
-
-    String useremail;
+    String user_index;
+    int product_index;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.allstoretabsfrag_____last_scene);
 
+//productindex
+
+
         Intent intent = getIntent();
         if(intent!=null){
+
+            product_index = (int) intent.getIntExtra("product_index", 1);
+
+            Dialog d = new Dialog(this);
+
+
             // ITEM_SKU = intent.getStringExtra("sku"); //comment out
             TextView textView = (TextView)findViewById(R.id.SLSTextView1);
             textView.setText(intent.getStringExtra("title"));
             textView = (TextView)findViewById(R.id.SLSTextView2);
             textView.setText(intent.getStringExtra("price"));
-        }
+
+        }//
 
         String base64EncodedPublicKey =
                 "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAntre0/BtawpWNYR20e1TUqd+exBKDv9QXJx1FqVhU2mpxoF1yM0JR6hVuKFLQMMV4kb4aCGDwrSwqhwpZh4g7TReg8Ljbw6iEd5JDAffNumWBjQ2fvKSI6ie2DIetWbib24SlKae44e2Eih/xiKWH+aoSbKr8sth5Egnbt4bh1SVpR6YCX8fHoGv4jFX+WZ5LW1ANPUBR3xvcVqiuUphmOSqI6FqlssHpvBRIb5dNGl44FR3Kgh7GjNwRdmOnU18C4KU46MiqpnJyS3uKreGDs686MeQBVp0BgY4l27EzPQpRCJoJ1QcvxiPUoIfPoTPdyMgggrWzUwYxV5zSoWabQIDAQAB";
@@ -69,7 +80,7 @@ public class StoreLastScene  extends ActionBarActivity {
             String[][] data = info.getData();
             info.close();
 
-            useremail = data[0][3];
+            user_index = data[0][1];
 
         }else{
 
@@ -77,6 +88,9 @@ public class StoreLastScene  extends ActionBarActivity {
                     LoginActivity.class);
             startActivity(i);
         }
+//backbutton
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
     }
 
@@ -132,7 +146,7 @@ public class StoreLastScene  extends ActionBarActivity {
                 //    clickButton.setEnabled(true);
 
 
-                SendPuchase_to_db sending = new SendPuchase_to_db(useremail, thisman);
+                SendPuchase_to_db sending = new SendPuchase_to_db(user_index, product_index, thisman);
 
                 sending.execute();
 
@@ -148,4 +162,18 @@ public class StoreLastScene  extends ActionBarActivity {
         if (mHelper != null) mHelper.dispose();
         mHelper = null;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+
+                finish();
+                return super.onOptionsItemSelected(item);
+        }
+    } //end onoptions selected
 }

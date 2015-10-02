@@ -64,6 +64,8 @@ public class StoreListAdapter extends ArrayAdapter<StoreItem> {
 
         } else {
             //login person
+
+
         }
 
         //imageLoader
@@ -89,15 +91,13 @@ public class StoreListAdapter extends ArrayAdapter<StoreItem> {
         // 2. Get rowView from inflater
         rowView = inflater.inflate(rowList, parent, false);
 
-
         // 3. Get the two text view from the rowView
         TextView product_description = (TextView) rowView.findViewById(R.id.product_description);
         TextView product_name = (TextView) rowView.findViewById(R.id.product_name);
         ImageView product_pic = (ImageView) rowView.findViewById(R.id.product_picture);
 
-
         // 4. Set the text for textView
-        product_description.setText(itemsArrayList.get(position).getPrice());
+        product_description.setText("price: $"+itemsArrayList.get(position).getPrice());
         product_name.setText(itemsArrayList.get(position).getProduct_name());
 
 
@@ -110,6 +110,12 @@ public class StoreListAdapter extends ArrayAdapter<StoreItem> {
                 .considerExifParams(true)
                 .build();
 
+
+        imageLoader.displayImage(imageurl, product_pic, options);
+
+        int memindex = Integer.parseInt(itemsArrayList.get(position).getProduct_index().toString());
+
+        rowView.setId(memindex);
 
         return rowView;
     }

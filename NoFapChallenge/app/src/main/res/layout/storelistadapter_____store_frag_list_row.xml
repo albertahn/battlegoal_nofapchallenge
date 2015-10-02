@@ -2,7 +2,8 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#da010101">
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,15 +15,15 @@
         android:layout_toRightOf="@+id/product_picture"
         android:layout_alignParentTop="false"
         android:layout_alignParentRight="true"
-        android:background="#ffffff"
+        android:background="@color/transparent"
         android:layout_alignParentEnd="true"
-        android:textSize="12dp"
-        android:textColor="#777777"
+        android:textSize="16dp"
+        android:textColor="#ffffff"
         android:layout_below="@+id/product_name" />
 
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="70dp"
         android:id="@+id/product_picture"
         android:src="@drawable/ic_launcher"
@@ -38,7 +39,7 @@
         android:layout_alignBottom="@+id/product_description"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/abc_ic_go_search_api_holo_light" />
+        android:src="@drawable/arrow_purchase" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,7 +50,7 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/product_picture"
         android:layout_toEndOf="@+id/product_picture"
-        android:textSize="16dp"
+        android:textSize="18dp"
         android:textColor="#ffffff" />
     <!--here new one-->
 

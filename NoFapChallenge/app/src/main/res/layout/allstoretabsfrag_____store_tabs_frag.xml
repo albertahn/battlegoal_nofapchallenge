@@ -4,11 +4,11 @@
     android:orientation="vertical"
     android:background="@drawable/coach_tab_page_back">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent" android:layout_height="200dp"
         android:orientation="horizontal"
         android:id="@+id/coach_info_container">
-    </LinearLayout>
+    </LinearLayout>-->
 
     <ListView
         android:layout_width="match_parent"

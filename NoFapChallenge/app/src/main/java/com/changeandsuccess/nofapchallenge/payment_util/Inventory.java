@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.changeandsuccess.nofapchallenge.utils_payment;
+package com.changeandsuccess.nofapchallenge.payment_util;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -29,12 +29,12 @@ public class StoreItem {
 
                         this.product_index=product_index;
                         this.product_name=product_name;
-                        this.product_description=product_description;
-                        this.product_pic=product_description;
+                        this.product_description = product_description;
+                        this.product_pic = product_pic;
                         this.price=price;
-                        this.username=product_description;
-                        this.profile_picture=product_description;
-                         this.timestamp = timestamp;
+                        this.username = username;
+                        this.profile_picture = profile_picture;
+                        this.timestamp = timestamp;
 
     }// end loginitem
 

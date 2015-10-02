@@ -29,13 +29,15 @@ public class SendPuchase_to_db extends AsyncTask<String, Integer, String> {
 
     Activity activity;
     View rootView;
-    String email, username;
+    String user_index;
+    int product_index;
 
-    public SendPuchase_to_db(String email, Activity activity) {
+    public SendPuchase_to_db(String email, int product_index, Activity activity) {
 
 
-        this.email = email;
+        this.user_index = email;
         this.activity = activity;
+        this.product_index = product_index;
         //rootView = ((Activity) activity).getWindow().getDecorView().findViewById(android.R.id.content);
 
         //prodListView = (ListView) rootView.findViewById(R.id.product_page_listview);
@@ -51,14 +53,15 @@ public class SendPuchase_to_db extends AsyncTask<String, Integer, String> {
 
             MultipartEntityBuilder builder = MultipartEntityBuilder.create();
             builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
-            builder.addTextBody("email", email, ContentType.create("text/plain", MIME.UTF8_CHARSET));
+            builder.addTextBody("user_index", user_index, ContentType.create("text/plain", MIME.UTF8_CHARSET));
+            builder.addTextBody("product_index", ""+product_index, ContentType.create("text/plain", MIME.UTF8_CHARSET));
 
             HttpClient httpClient = new DefaultHttpClient();
 
             httpClient.getParams().setParameter(CoreProtocolPNames.USER_AGENT,
                     System.getProperty("http.agent"));
 
-            HttpPost httpPost = new HttpPost("http://mobile.tanggoal.com/buy/buy_donation/");
+            HttpPost httpPost = new HttpPost("http://mobile.tanggoal.com/buy/buy_android_product/");
 
             httpPost.setEntity( builder.build());
 
@@ -107,13 +110,13 @@ public class SendPuchase_to_db extends AsyncTask<String, Integer, String> {
         da.setContentView(tv);
         da.show();
 
-   /*     super.onPostExecute(result);
+        super.onPostExecute(result);
 
 
 
         //now login person
 
-
+/*
         try {
             JSONObject json = new JSONObject(result);
             String user_index = json.get("index").toString();

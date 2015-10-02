@@ -43,5 +43,7 @@ public class coach_info extends LinearLayout {
     }
 
     public void setPortrait(){
+
+
     }
 }

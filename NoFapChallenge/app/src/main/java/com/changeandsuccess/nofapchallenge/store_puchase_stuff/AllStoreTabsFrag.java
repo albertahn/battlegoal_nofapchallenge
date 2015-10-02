@@ -1,31 +1,14 @@
 package com.changeandsuccess.nofapchallenge.store_puchase_stuff;
 
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TabHost;
-import android.widget.AdapterView;
-
-import android.support.v4.app.Fragment;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.coaches_tab_stuff.Featured;
-import com.changeandsuccess.nofapchallenge.util.IabHelper;
-import com.changeandsuccess.nofapchallenge.util.IabResult;
-import com.changeandsuccess.nofapchallenge.util.Inventory;
-import com.changeandsuccess.nofapchallenge.util.Purchase;
 
 import java.util.ArrayList;
 
@@ -33,7 +16,7 @@ import java.util.ArrayList;
  * Created by albert on 1/18/15.
  */
 
-public class AllStoreTabsFrag extends Fragment  {
+public class AllStoreTabsFrag extends Fragment {
     View rootView;
 
     ListView listView;
@@ -49,6 +32,11 @@ public class AllStoreTabsFrag extends Fragment  {
 
         rootView =  inflater.inflate(R.layout.allstoretabsfrag_____store_tabs_frag, container, false);
 
+ new LoadStoreProducts(getActivity()).execute();
+
+
+
+/*
         coach_info layout1 = new coach_info(rootView.getContext());
         LinearLayout coach_info_container = (LinearLayout)rootView.findViewById(R.id.coach_info_container);
         coach_info_container.addView(layout1);
@@ -87,6 +75,7 @@ public class AllStoreTabsFrag extends Fragment  {
                 startActivity(intent);
             }
         });
+        */
 
         return rootView;
     }//end oncreate
@@ -119,8 +108,9 @@ public class AllStoreTabsFrag extends Fragment  {
 
             return view;
         }
+
         public void addItem(SingleItem item){
             items.add(item);
         }
-    }
+    } //single adapter
 }

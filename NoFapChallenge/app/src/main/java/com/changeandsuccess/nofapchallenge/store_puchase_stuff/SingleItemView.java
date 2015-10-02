@@ -3,10 +3,8 @@ package com.changeandsuccess.nofapchallenge.store_puchase_stuff;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.changeandsuccess.nofapchallenge.R;
 

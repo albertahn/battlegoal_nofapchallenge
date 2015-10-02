@@ -53,11 +53,6 @@
         </activity>
 
         <!--  Store puchase activity -->
-        <activity
-            android:label="Store Purchase Page"
-            android:configChanges="keyboardHidden|orientation"
-            android:name=".StorePurchasePage">
-        </activity>
 
         <activity
             android:label="Store Purchase Page"

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.changeandsuccess.nofapchallenge.utils_payment;
+package com.changeandsuccess.nofapchallenge.payment_util;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -13,15 +13,12 @@
  * limitations under the License.
  */
 
-package com.changeandsuccess.nofapchallenge.util;
+package com.changeandsuccess.nofapchallenge.payment_util;
 
 import android.text.TextUtils;
 import android.util.Log;
 
 import com.changeandsuccess.nofapchallenge.BuildConfig;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 
 import java.security.InvalidKeyException;

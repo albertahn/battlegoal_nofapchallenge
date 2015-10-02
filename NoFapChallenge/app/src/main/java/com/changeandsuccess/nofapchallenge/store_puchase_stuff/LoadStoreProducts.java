@@ -1,6 +1,7 @@
 package com.changeandsuccess.nofapchallenge.store_puchase_stuff;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -9,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.StorePurchasePage;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 
 import org.json.JSONArray;
@@ -23,7 +23,7 @@ import java.util.ArrayList;
  * Created by albert on 1/6/15.
  */
 public class LoadStoreProducts extends AsyncTask<String, Integer, String> {
-
+    ArrayList<StoreItem> items;
         JSONArray jsonArray;
         Activity activity;
         String userID;
@@ -36,7 +36,7 @@ public class LoadStoreProducts extends AsyncTask<String, Integer, String> {
         // progressBar = (ProgressBar) rootView.findViewById(R.id.input_progress_bar);
         // progressBar.setVisibility(View.VISIBLE);
 
-        }
+        } //loadstoreproducts
 
 
 //interface to get result
@@ -83,7 +83,7 @@ protected void onPostExecute(String result) {
 
             StoreListAdapter proAdapter = new StoreListAdapter(activity, generateData(jsonArray), userID);
 
-            final  ListView storelist = (ListView) rootview.findViewById(R.id.store_list_view);
+            final  ListView storelist = (ListView) rootview.findViewById(R.id.listView);
 
             if(storelist !=null){
 
@@ -95,17 +95,33 @@ protected void onPostExecute(String result) {
                         int cock = view.getId();
                         //String  otherguyname = view.getTag(position).toString();
 
-                        Intent i = new Intent(activity,
-                                StorePurchasePage.class);
+                        Dialog d = new Dialog(activity);
+                        d.setTitle(""+cock);
+                        d.show();
 
-                        i.putExtra("other_guy_index", "" + cock);
-                        //i.putExtra("otherguyname", otherguyname);
 
-                        i.putExtra("prevActivity", "MainActivity");
-                        activity.startActivity(i);
+                        Intent intent = new Intent(activity, StoreLastScene.class);
+                        if(cock == 3) {  //donate
+                            //Toast.makeText(rootView.getContext(), items[2].getProduct_name(), Toast.LENGTH_LONG).show();
+                            //  intent.putExtra("sku", "android.test.purchased");.
+                            intent.putExtra("product_index", cock);
+                            intent.putExtra("title", items.get(2).getProduct_name());
+                            intent.putExtra("price", items.get(2).getProduct_description());
+                            intent.putExtra("sku", "donate_battlegoal");
+                        }else if(cock == 1){ //attach with albert
+                           // Toast.makeText(rootView.getContext(), item.getTitle(), Toast.LENGTH_LONG).show();
+                            //  intent.putExtra("sku", "android.test.purchased");
+                            intent.putExtra("title", items.get(0).getProduct_name());
+                            intent.putExtra("price", items.get(0).getProduct_description());
+                            intent.putExtra("sku", "albert_29_skype_call_training_session");
+                        }
+
+                        //  intent.putExtra("sku","donate_battlegoal");
+                        activity.startActivity(intent);
+
                     }
                 });
-            }
+            }//if
 
         } else {
 
@@ -118,7 +134,7 @@ protected void onPostExecute(String result) {
 
         ArrayList<StoreItem> generateData(JSONArray jsondata) {
 
-        ArrayList<StoreItem> items = new ArrayList<StoreItem >();
+        items = new ArrayList<StoreItem>();
 
         for (int i = 0; i < jsondata.length(); i++) {
 
