@@ -94,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
 
     private boolean isHome;
 
-    ImageButton home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu,profile_menu;
+    ImageButton home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu,profile_menu,store_menu;
 View searchBar;
 
     @Override
@@ -125,15 +125,17 @@ View searchBar;
 
         //menubuttons
 
-                 home_menu = (ImageButton) mDrawerList.findViewById(R.id.home_menu);//0
-                chat_menu = (ImageButton) mDrawerList.findViewById(R.id.chat_menu); //2
-                blog_menu = (ImageButton) mDrawerList.findViewById(R.id.blog_menu);  //1
-                inbox_menu = (ImageButton) mDrawerList.findViewById(R.id.inbox_menu);
-                battle_menu = (ImageButton) mDrawerList.findViewById(R.id.battle_menu); //8
-                coach_menu = (ImageButton) mDrawerList.findViewById(R.id.coach_menu); //5
-                level_menu = (ImageButton) mDrawerList.findViewById(R.id.level_menu);  //7
-                setting_menu = (ImageButton) mDrawerList.findViewById(R.id.settings_menu);//6
-              profile_menu =  (ImageButton) mDrawerList.findViewById(R.id.profile_menu);
+        home_menu = (ImageButton) mDrawerList.findViewById(R.id.home_menu);//0
+        chat_menu = (ImageButton) mDrawerList.findViewById(R.id.chat_menu); //2
+        blog_menu = (ImageButton) mDrawerList.findViewById(R.id.blog_menu);  //1
+        inbox_menu = (ImageButton) mDrawerList.findViewById(R.id.inbox_menu);
+        battle_menu = (ImageButton) mDrawerList.findViewById(R.id.battle_menu); //8
+        coach_menu = (ImageButton) mDrawerList.findViewById(R.id.coach_menu); //5
+        level_menu = (ImageButton) mDrawerList.findViewById(R.id.level_menu);  //7
+        store_menu = (ImageButton) mDrawerList.findViewById(R.id.store_menu);//6
+        profile_menu =  (ImageButton) mDrawerList.findViewById(R.id.profile_menu);
+        setting_menu = (ImageButton) mDrawerList.findViewById(R.id.setting_menu);//6
+
 
         home_menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,7 +186,7 @@ View searchBar;
                 displayView(7);
             }
         });
-        setting_menu.setOnClickListener(new View.OnClickListener() {
+        store_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 displayView(6);
@@ -196,7 +198,12 @@ View searchBar;
                 displayView(12);
             }
         });
-
+        setting_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(11);
+            }
+        });
      //searchBar
         /*
         searchBar = (View) mDrawerList.findViewById(R.id.search_place);//6

@@ -1,69 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:id="@+id/setting_scrollview"
-    >
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:id="@+id/settings_rel_lay"
-    android:background="@color/transparent"
-    >
+    android:layout_height="fill_parent">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:background="@color/black_transparent"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Receive Notifications:"
-        android:id="@+id/receive_textView"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentTop="false"
-        android:gravity="center"
-        android:textColor="#ffffff"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/notify_button"
-        android:src="@drawable/bell"
-        android:layout_gravity="right"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Version 4.7.7"
+        android:text="앱 설정"
         android:id="@+id/textView"
-        android:background="@color/black_transparent"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ffffff" />
+        android:textSize="30dp"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원 정보"
+            android:id="@+id/button3"
+            android:layout_weight="0.42" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="앱 설정"
+            android:id="@+id/button4"
+            android:layout_weight="0.58" />
+    </LinearLayout>
+
 
     <TextView
-        android:layout_width="320dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="New Changes:\n\n1.Different encouragement dialogs \n    when pressing button.\n2.Enhanced Battle Goal.\n3.No more Accidental restart button clicks.\n"
-        android:id="@+id/textView2"
-        android:background="@color/black_transparent"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:textColor="#ffffff" />
+        android:text="
+        현재버전 4.7.7
+        ---------------------------------------
+        4.7.7. 버전 안내
+        1. 새롭게 알림 기능 추가
+        "
+        android:id="@+id/textView5"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="알림 설정"
+            android:textSize="30dp"
+            android:padding="10dp" />
 
 
-
-
-</RelativeLayout>
-    </ScrollView>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알림/Notification"
+            android:id="@+id/notify_button"
+            android:textSize="30dp" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알림/Sound"
+            android:id="@+id/checkBox2"
+            android:textSize="30dp" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전체 알림"
+            android:id="@+id/checkBox3"
+            android:textSize="30dp" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="부분 알림"
+            android:id="@+id/checkBox4"
+            android:textSize="30dp" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="새 소식/이메일"
+            android:id="@+id/checkBox5"
+            android:textSize="30dp" />
+    </LinearLayout>
+</LinearLayout>

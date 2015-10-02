@@ -38,7 +38,7 @@
     android:layout_gravity="start"
     android:layout_marginLeft="-64dp"
     >
-    <!--"
+    <!--
     android:layout_gravity="start"
     android:layout_marginLeft="-64dp"
     -->
@@ -294,7 +294,7 @@
             android:layout_width="90dp"
             android:layout_height="70dp"
             android:text="New Button"
-            android:id="@+id/settings_menu"
+            android:id="@+id/store_menu"
             android:layout_weight="1"
 
             android:background="@drawable/menuback_right"
@@ -327,7 +327,28 @@
             android:paddingRight="10dp"
             android:paddingBottom="20dp"
             android:layout_below="@+id/battle_menu"
-            android:layout_toRightOf="@+id/settings_menu" />
+            android:layout_toRightOf="@+id/store_menu" />
+
+            <ImageButton
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+
+                android:id="@+id/setting_menu"
+                android:layout_weight="1"
+
+                android:background="@drawable/menuback_right"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/setting"
+
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp"
+                android:layout_below="@+id/battle_menu"
+                android:layout_toRightOf="@+id/profile_menu" />
+
 
         <ImageButton
             android:id="@+id/livechat_menu"
@@ -338,7 +359,6 @@
             android:text="New Button"
 
             android:layout_weight="1"
-
 
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
@@ -488,11 +508,11 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="STORE"
-            android:id="@+id/settings_label"
+            android:id="@+id/store_label"
 
-            android:layout_alignBottom="@+id/settings_menu"
-            android:layout_alignLeft="@+id/settings_menu"
-            android:layout_alignRight="@+id/settings_menu"
+            android:layout_alignBottom="@+id/store_menu"
+            android:layout_alignLeft="@+id/store_menu"
+            android:layout_alignRight="@+id/store_menu"
             android:textColor="#ffffff"
 
 
@@ -546,6 +566,25 @@
             android:fontFamily="sans-serif"
             android:textSize="10.5dp"
             android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="SETTING"
+                android:id="@+id/setting_label"
+
+                android:layout_alignBottom="@+id/setting_menu"
+                android:layout_alignLeft="@+id/setting_menu"
+                android:layout_alignRight="@+id/setting_menu"
+                android:textColor="#ffffff"
+
+
+                android:gravity="center"
+                android:textScaleX="1.2"
+                android:fontFamily="sans-serif"
+                android:textSize="10.5dp"
+                android:layout_marginBottom="5dp"/>
 
 
         <TextView

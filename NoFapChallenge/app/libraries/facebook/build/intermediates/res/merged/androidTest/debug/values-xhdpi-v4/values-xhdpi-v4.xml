@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/albert/Documents/github_repo/10_1_battlegoal_nofapchallenge/NoFapChallenge/app/libraries/facebook/build/intermediates/bundles/debug/res/values-xhdpi-v4/values-xhdpi-v4.xml -->
+    <!-- From: file:/C:/Users/tanggames/Documents/GitHub/battlegoal_nofapchallenge/NoFapChallenge/app/libraries/facebook/build/intermediates/bundles/debug/res/values-xhdpi-v4/values-xhdpi-v4.xml -->
     <eat-comment/>
     <dimen name="com_facebook_picker_divider_width">2px</dimen>
 </resources>
