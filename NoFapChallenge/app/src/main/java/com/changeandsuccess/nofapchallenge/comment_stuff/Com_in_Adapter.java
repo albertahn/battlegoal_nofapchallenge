@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -112,7 +114,6 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
         final Integer commentindex = Integer.parseInt(itemsArrayList.get(position).getcomment_index().toString());
 
        int rep_to= itemsArrayList.get(position).getreply_to();
-
         // 2. Get rowView from inflater
         rowView = inflater.inflate(rowList, parent, false);
 
@@ -138,6 +139,7 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
         }else{
 
             Button reply_to_who = (Button) rowView.findViewById(R.id.reply_to_who);
+            //rowView.setId(position);
             reply_to_who.setVisibility(View.GONE);
 
         }
@@ -197,6 +199,15 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
             // 5. retrn rowView
            //final Integer commentindex = Integer.parseInt(itemsArrayList.get(position).getcomment_index().toString());
             rowView.setId(commentindex);
+
+        for(int i=0;i<itemsArrayList.size();i++){
+            int reply_to = itemsArrayList.get(i).getreply_to();
+            if(reply_to==commentindex){
+                ListView listview = (ListView) rowView.findViewById(R.id.listView2);
+                ReplyAdapter adapter = new ReplyAdapter(activity);
+                listview.setAdapter(adapter);
+            }
+        }
 
         //get the rep buttons
 

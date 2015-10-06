@@ -86,6 +86,10 @@ public class CommentItem {
         return reply_num;
     }
 
+    public int getposition(){
+        return position;
+    }
+
     public String getLikes(){
 
         return likes;

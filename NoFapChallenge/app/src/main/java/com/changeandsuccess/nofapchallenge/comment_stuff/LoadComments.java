@@ -32,6 +32,8 @@ public class LoadComments extends AsyncTask<String, Integer, String> {
     View rootView;
    // ProgressBar progressBar;
 
+    private  ArrayList<CommentItem> itemsArrayList;
+
 
     public LoadComments(String userID, View rootView, Activity activity) {
         this.rootView = rootView;
@@ -73,19 +75,37 @@ public class LoadComments extends AsyncTask<String, Integer, String> {
         if (jsonArray != null) {
             //homeListView.getContext()
 
-            Com_in_Adapter proAdapter = new Com_in_Adapter(activity, generateData(jsonArray), userID);
+            itemsArrayList = generateData(jsonArray);
+
+            Com_in_Adapter proAdapter = new Com_in_Adapter(activity,itemsArrayList, userID);
 
            final ListView listView = (ListView) rootView.findViewById(R.id.message_frag_list);
 
             if(listView !=null){
-
                 listView.setAdapter(proAdapter);
             }
+/*
+            for(int i=0;i<itemsArrayList.size();i++){
+                Log.d("emptyarray", "00000000 rootView = "+rootView);
+               int reply_to = itemsArrayList.get(i).getreply_to();
+                Log.d("emptyarray", "11111111 reply_to = "+reply_to);
+                View view=  rootView.findViewById(reply_to);
+                Log.d("emptyarray", "222222222 view = "+view);
 
+                if(view!=null) {
+                    ListView listview = (ListView) view.findViewById(R.id.listView2);
+
+                    Log.d("emptyarray", "3333333333");
+                    ReplyAdapter adapter = new ReplyAdapter(activity);
+
+                    Log.d("emptyarray", "444444444444");
+                    listview.setAdapter(adapter);
+                }
+            }
+*/
           //  progressBar.setVisibility(View.GONE);
 
         } else {
-
             Log.d("emptyarray", "sptmey man");
         }
 

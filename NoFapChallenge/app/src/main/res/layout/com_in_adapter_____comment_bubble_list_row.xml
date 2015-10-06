@@ -72,7 +72,7 @@
         android:padding="5dp"
         android:layout_marginLeft="23dp"
         android:layout_marginStart="23dp"
-        android:layout_alignStart="@+id/text_body"
+        android:layout_alignLeft="@+id/text_body"
         android:layout_alignBottom="@+id/text_body" />
 
     <ImageButton
@@ -142,6 +142,16 @@
         android:layout_alignRight="@+id/text_body"
         android:layout_alignEnd="@+id/text_body"
         android:layout_alignBottom="@+id/text_body" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:id="@+id/listView2"
+        android:layout_below="@+id/reply_rel"
+        android:layout_alignLeft="@+id/like_button"
+        android:layout_alignStart="@+id/like_button"
+        android:layout_alignRight="@+id/reply_to_who"
+        android:layout_alignEnd="@+id/reply_to_who" />
 </RelativeLayout>
 
 
