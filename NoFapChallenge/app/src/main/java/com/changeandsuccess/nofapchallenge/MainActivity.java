@@ -19,11 +19,13 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.adapter.NavDrawerListAdapter;
@@ -92,6 +94,7 @@ public class MainActivity extends ActionBarActivity {
     private boolean isHome;
 
     ImageButton home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu,profile_menu,store_menu;
+    RelativeLayout news_menu,notice_menu;
 View searchBar;
 
     @Override
@@ -132,6 +135,25 @@ View searchBar;
         store_menu = (ImageButton) mDrawerList.findViewById(R.id.store_menu);//6
         profile_menu =  (ImageButton) mDrawerList.findViewById(R.id.profile_menu);
         setting_menu = (ImageButton) mDrawerList.findViewById(R.id.setting_menu);//6
+
+        news_menu = (RelativeLayout)mDrawerList.findViewById(R.id.News);
+        notice_menu = (RelativeLayout)mDrawerLayout.findViewById(R.id.Notices);
+
+        news_menu.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                displayView(1);
+                return true;
+            }
+        });
+
+        notice_menu.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                displayView(1);
+                return true;
+            }
+        });
 
 
         home_menu.setOnClickListener(new View.OnClickListener() {

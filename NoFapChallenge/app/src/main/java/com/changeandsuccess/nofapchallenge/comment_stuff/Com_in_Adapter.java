@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -46,7 +47,6 @@ import java.util.ArrayList;
  이 코드를 실수로 받은 것이라면, 송신자에게 반송해고, 원본/ 출력물을 삭제해 주십시오.​
  */
 public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
-
     View rowView;
     ImageView profile_photo;
     ArrayList<LoginItem> generatedLoginItem;
@@ -58,19 +58,21 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
     private final Activity activity;
     private final Context context;
     private final ArrayList<CommentItem> itemsArrayList;
+    private  ArrayList<CommentItem> itemsArrayList_reply;
 
     ImageLoader imageLoader = ImageLoader.getInstance();
     //imageLoader.destroy();
 
     String newNumLikes;
 
-    public Com_in_Adapter(Activity context, ArrayList<CommentItem> itemsArrayList, String userID) {
+    public Com_in_Adapter(Activity context, ArrayList<CommentItem> itemsArrayList,ArrayList<CommentItem> itemsArrayList_reply, String userID) {
 
         super(context, rowList, itemsArrayList);
         this.activity = context;
 
         this.context = context;
         this.itemsArrayList = itemsArrayList;
+        this.itemsArrayList_reply = itemsArrayList_reply;
         this.userIndex = userID;
 
 
@@ -192,19 +194,18 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
                         activity.startActivity(i);
                     }
                 });
-
             }
-
 
             // 5. retrn rowView
            //final Integer commentindex = Integer.parseInt(itemsArrayList.get(position).getcomment_index().toString());
             rowView.setId(commentindex);
 
-        for(int i=0;i<itemsArrayList.size();i++){
-            int reply_to = itemsArrayList.get(i).getreply_to();
+        for(int i=0;i<itemsArrayList_reply.size();i++){
+            int reply_to = itemsArrayList_reply.get(i).getreply_to();
             if(reply_to==commentindex){
                 ListView listview = (ListView) rowView.findViewById(R.id.listView2);
                 ReplyAdapter adapter = new ReplyAdapter(activity);
+                adapter.addItem(new ReplyItem(itemsArrayList_reply.get(i).getmembers_index(),itemsArrayList_reply.get(i).getusername(),itemsArrayList_reply.get(i).getcomment_text(),itemsArrayList_reply.get(i).getprofile_picture()));
                 listview.setAdapter(adapter);
             }
         }

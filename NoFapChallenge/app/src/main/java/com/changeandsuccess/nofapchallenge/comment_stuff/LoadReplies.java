@@ -161,20 +161,18 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
             try {
                 //check if course comment
                 //if(jsondata.getJSONObject(i).getString("courses_index")!="") {
+                    items.add(new CommentItem(
+                            jsondata.getJSONObject(i).getString("members_index"),
+                            jsondata.getJSONObject(i).getString("profile_picture"),
+                            jsondata.getJSONObject(i).getString("username"),
+                            jsondata.getJSONObject(i).getString("comment_index"),
+                            jsondata.getJSONObject(i).getString("comment_text"),
+                            jsondata.getJSONObject(i).getInt("reply_to"),
+                            jsondata.getJSONObject(i).getString("reply_num"),
+                            jsondata.getJSONObject(i).getString("likes"),
+                            jsondata.getJSONObject(i).getString("timestamp")
 
-                items.add(new CommentItem(
-                        jsondata.getJSONObject(i).getString("members_index"),
-                        jsondata.getJSONObject(i).getString("profile_picture"),
-                        jsondata.getJSONObject(i).getString("username"),
-                        jsondata.getJSONObject(i).getString("comment_index"),
-                        jsondata.getJSONObject(i).getString("comment_text"),
-                        jsondata.getJSONObject(i).getInt("reply_to"),
-                        jsondata.getJSONObject(i).getString("reply_num"),
-                        jsondata.getJSONObject(i).getString("likes"),
-                        jsondata.getJSONObject(i).getString("timestamp")
-
-                ));
-
+                    ));
                 // }//end if
             } catch (JSONException e) {
 

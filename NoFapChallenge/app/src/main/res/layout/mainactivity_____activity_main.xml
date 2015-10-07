@@ -87,45 +87,25 @@
               android:textSize="20dp"
               android:layout_marginLeft="25dp"
               android:layout_marginTop="10dp" />
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="KOR"
-              android:id="@+id/lang1"
-              android:layout_below="@id/profileName"
-              android:layout_toRightOf="@+id/profilePicture"
-              android:textSize="20dp"
-              android:background="#5bb0ff"
-              android:layout_marginLeft="5dp" />
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="ENG"
-              android:id="@+id/lang2"
-              android:layout_below="@id/profileName"
-              android:layout_toRightOf="@+id/lang1"
-              android:textSize="20dp"
-              android:background="#66c9ff"
-              android:layout_marginLeft="5dp" />
 
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Goal 1 day 1000 jumprope!!"
+              android:text="Goal :"
               android:id="@+id/profileGoal"
-              android:layout_below="@+id/lang1"
-              android:layout_toRightOf="@+id/profileLevel"
+              android:layout_toRightOf="@+id/profilePicture"
               android:layout_marginTop="10dp"
               android:layout_marginLeft="10dp"
-              android:textSize="15dp" />
+              android:textSize="15dp"
+              android:layout_below="@id/profileName"/>
 
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Moto No Pain No Gain"
+              android:text="Moto :"
               android:id="@+id/profileMoto"
               android:layout_below="@+id/profileGoal"
-              android:layout_toRightOf="@+id/profileLevel"
+              android:layout_toRightOf="@+id/profilePicture"
               android:layout_marginLeft="10dp"
               android:layout_marginTop="5dp"
               android:textSize="15dp"
@@ -140,7 +120,8 @@
               android:layout_alignParentRight="true"
               android:layout_alignParentEnd="true"
               android:layout_marginRight="10dp"
-              android:layout_marginTop="10dp" />
+              android:layout_marginTop="10dp"
+              android:background="#00ffffff" />
 
 
       </RelativeLayout>

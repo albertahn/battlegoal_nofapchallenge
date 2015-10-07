@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="앱 설정"
+        android:text="App Setting"
         android:id="@+id/textView"
         android:textSize="30dp"
         android:padding="10dp" />
@@ -22,13 +22,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="회원 정보"
+            android:text="User Info"
             android:id="@+id/button3"
             android:layout_weight="0.42" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="앱 설정"
+            android:text="AppSetting"
             android:id="@+id/button4"
             android:layout_weight="0.58" />
     </LinearLayout>
@@ -38,10 +38,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="
-        현재버전 4.7.7
+        Current Version : 4.7.7
         ---------------------------------------
-        4.7.7. 버전 안내
-        1. 새롭게 알림 기능 추가
+        4.7.7. Version Info
         "
         android:id="@+id/textView5"
         android:textSize="20dp" />
@@ -55,39 +54,39 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="알림 설정"
+            android:text="Notice Setting"
             android:textSize="30dp"
             android:padding="10dp" />
 
 
-        <ImageButton
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="알림/Notification"
+            android:text="Notice/Notification"
             android:id="@+id/notify_button"
             android:textSize="30dp" />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="알림/Sound"
+            android:text="Notice/Sound"
             android:id="@+id/checkBox2"
             android:textSize="30dp" />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="전체 알림"
+            android:text="Full notification"
             android:id="@+id/checkBox3"
             android:textSize="30dp" />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="부분 알림"
+            android:text="Part notification"
             android:id="@+id/checkBox4"
             android:textSize="30dp" />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="새 소식/이메일"
+            android:text="News/Email"
             android:id="@+id/checkBox5"
             android:textSize="30dp" />
     </LinearLayout>

@@ -56,7 +56,7 @@ public class SettingsFrag extends Fragment {
 
         new CheckNotify(getActivity(), userIndex).execute();
         //button
-
+/*
         notifyButton = (ImageButton) rootView.findViewById(R.id.notify_button);
         //onclick
         notifyButton.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +70,7 @@ public class SettingsFrag extends Fragment {
             }
         });
 
-
+*/
 
 return  rootView;
     }//end on create

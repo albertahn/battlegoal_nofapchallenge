@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -344,6 +345,8 @@ public class CommentsFrag extends Fragment {
 
         //actionBar.setSelectedNavigationItem(navInt);
 
+        String xx = Locale.getDefault().getLanguage();
+        setLanguageMarked(xx);
         return  rootView;
     }//end on create
 
@@ -368,6 +371,30 @@ public class CommentsFrag extends Fragment {
         italianoBtn.inSelected();
         farsiBtn.inSelected();
         arabicBtn.inSelected();
+    }
+    public void setLanguageMarked(String xx){
+        inSelectedProcess();
+        if(xx.equals("en")){
+            englishBtn.selected();
+        }else if(xx.equals("es")) {
+            espanolBtn.selected();
+        }else if(xx.equals("ko")) {
+            koreanBtn.selected();
+        }else if(xx.equals("pt")) {
+            portuguesBtn.selected();
+        }else if(xx.equals("de")) {
+            deutschBtn.selected();
+        }else if(xx.equals("fr")) {
+            francaisBtn.selected();
+        }else if(xx.equals("ja")) {
+            japaneseBtn.selected();
+        }else if(xx.equals("it")) {
+            italianoBtn.selected();
+        }else if(xx.equals("fa")) {
+            farsiBtn.selected();
+        }else if(xx.equals("ar")) {
+            arabicBtn.selected();
+        }
     }
 
 }
