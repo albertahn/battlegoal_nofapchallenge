@@ -65,7 +65,7 @@ public class Reply_SingleItem extends RelativeLayout {
             }
         });
 
-    }// init 
+    }// init
 
     public void setPhoto(String name,final String members_index){
         String imageurl = "http://tanggoal.com/public/uploads/members_pic/" + name;
