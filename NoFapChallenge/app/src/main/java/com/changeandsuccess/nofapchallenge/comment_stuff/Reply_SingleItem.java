@@ -1,5 +1,6 @@
 package com.changeandsuccess.nofapchallenge.comment_stuff;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.util.AttributeSet;
@@ -41,7 +42,7 @@ public class Reply_SingleItem extends RelativeLayout {
         super(context, attrs);
       // init(context,parent);
     }
-    public void init(Context context,ViewGroup parent){
+    public void init(final Context context,ViewGroup parent){
         m_context = context;
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         rowView = inflater.inflate(R.layout.replyadapter_____singleitem,this,true);
@@ -50,7 +51,21 @@ public class Reply_SingleItem extends RelativeLayout {
         TextView text_body_sample = (TextView) rowView.findViewById(R.id.text_body);
         TextView username = (TextView) rowView.findViewById(R.id.user_name);
         TextView replynum = (TextView) rowView.findViewById(R.id.num_reply);
-    }
+
+        //onclick listener
+
+        rowView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Dialog d = new Dialog(context);
+                d.setTitle("hi");
+                d.show();
+
+            }
+        });
+
+    }// init 
 
     public void setPhoto(String name,final String members_index){
         String imageurl = "http://tanggoal.com/public/uploads/members_pic/" + name;

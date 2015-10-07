@@ -376,6 +376,7 @@ public class CommentsFrag extends Fragment {
         inSelectedProcess();
         if(xx.equals("en")){
             englishBtn.selected();
+
         }else if(xx.equals("es")) {
             espanolBtn.selected();
         }else if(xx.equals("ko")) {

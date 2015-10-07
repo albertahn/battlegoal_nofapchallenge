@@ -25,9 +25,14 @@ public class BitmapButton extends Button {
     }
 
     public void selected(){
+
         setTextColor(Color.BLACK);
+        setBackgroundColor(Color.GRAY);
     }
     public void inSelected(){
+
         setTextColor(Color.GRAY);
+        setBackgroundColor(Color.argb(00,00,00,00));
+
     }
 }
