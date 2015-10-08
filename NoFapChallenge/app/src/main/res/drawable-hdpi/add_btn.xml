@@ -6,7 +6,5 @@
         android:drawable="@drawable/btn_red_pressed"></item>
     
     <item android:drawable="@drawable/main_header_selector"></item>
-    
-  
   
 </selector>

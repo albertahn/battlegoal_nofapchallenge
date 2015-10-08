@@ -6,7 +6,7 @@
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@+id/home_rel_layout"
-    android:background="@drawable/background"
+    android:background="#ffb84d"
     android:scaleType="fitXY"
     android:gravity="fill_horizontal|fill|fill_vertical|top"
    >
@@ -164,14 +164,14 @@
 
     <ImageButton
         android:id="@+id/bAdd"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:text="+"
         android:textSize="30sp"
         android:background="@color/transparent"
-        android:src="@drawable/upicon"
+        android:src="@drawable/btn_done_n"
         android:scaleType="fitCenter"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         />
@@ -182,15 +182,15 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="45dp"
         android:layout_height="47dp"
-        android:src="@drawable/refresh"
+        android:src="@drawable/btn_reload_n"
         android:text="0"
         android:background="@color/transparent"
         android:scaleType="fitCenter"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="30dp"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/bAdd"
         android:layout_toStartOf="@+id/bAdd"
-        android:layout_marginRight="80dp" />
+        android:layout_marginRight="30dp" />
 
     <ImageButton
         android:id="@+id/setting_btn"
@@ -198,14 +198,14 @@
         android:layout_width="38dp"
         android:layout_height="52dp"
 
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="30dp"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/share"
+        android:src="@drawable/btn_share_n"
         android:background="@color/transparent"
         android:text="0"
         android:scaleType="fitCenter"
 
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/bAdd" />
 

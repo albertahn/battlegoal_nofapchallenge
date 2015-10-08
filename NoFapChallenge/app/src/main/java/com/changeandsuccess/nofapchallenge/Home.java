@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -152,22 +154,12 @@ boolean islogg;
             nfDay.setText("00");
         }
 //add button click
-        add.setOnClickListener(new
-
-                                       View.OnClickListener() {
-
-
-                                           @Override
-                                           public void onClick (View v){
-
-
-
-                                    if(islogg){
-
-                                              if(equalLastDay()==false) {
-
-
-                                                  new PressButtons(activity, rootViewman).add();
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                if(islogg){
+                    if(equalLastDay()==false) {
+                        new PressButtons(activity, rootViewman).add();
 
                                                 /*  Toast toast = Toast.makeText(activity,
                                                           ""+mySuccess++, Toast.LENGTH_LONG);
@@ -177,38 +169,39 @@ boolean islogg;
                                                   imageCodeProject.setImageResource(R.drawable.ic_launcher);
                                                   toastView.addView(imageCodeProject, 0);
                                                   toast.show();*/
-
-                                                      new MyLevelStuff(activity).checkLevelUpdate(mySuccess, userLevel);
-
-
-
-                                                  //Log.e("lus",""+ plussone);
-                                                  wheelRun(plussone);
-
-                                              }else {
-
-                                              }//emd
+                        new MyLevelStuff(activity).checkLevelUpdate(mySuccess, userLevel);
+                        wheelRun(plussone);
+                    }else {
+                    }//emd
 
                                        /* Intent i = new Intent(context,
                                                 QuoteActivity.class);
                                         startActivity(i);*/
-
-                                           } else{//logged
-
-                                                        Intent i = new Intent(getActivity(),
-                                                                LoginActivity.class);
-                                                        startActivity(i);
-
-
-                                                    }//else
-
-//quote activity
-
-
-                                           }
-                                       }//end click
-
+                } else{//logged
+                    Intent i = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(i);
+                }//else/
+            }
+        }
         ); //end onclick
+        add.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int action = event.getAction();
+                if(action==MotionEvent.ACTION_DOWN){
+                    Toast.makeText(context,"ACTION_DOWN",Toast.LENGTH_LONG).show();
+                    Drawable a =  Drawable.createFromPath("@drawable/btn_done_p");
+                    add.setBackgroundDrawable(a);
+
+                }else if(action==MotionEvent.ACTION_UP){
+                    Toast.makeText(context,"ACTION_UP",Toast.LENGTH_LONG).show();
+                    Drawable a =  Drawable.createFromPath("@drawable/btn_done_d");
+                    add.setBackgroundDrawable(a);
+                }
+
+                return true;
+            }
+        });
 
 
 
