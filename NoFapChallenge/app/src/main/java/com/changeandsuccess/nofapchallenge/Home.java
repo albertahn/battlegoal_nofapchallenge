@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -28,8 +30,16 @@ import android.support.v7.app.ActionBar;
 import android.widget.Toast;
 
 import com.changeandsuccess.nofapchallenge.HomeTabStuff.PressButtons;
+import com.changeandsuccess.nofapchallenge.battle_stuff.AllBattleTab;
+import com.changeandsuccess.nofapchallenge.coaches_tab_stuff.AllCoachTabs;
+import com.changeandsuccess.nofapchallenge.comment_stuff.CommentsFrag;
+import com.changeandsuccess.nofapchallenge.fragments.ComingSoon;
+import com.changeandsuccess.nofapchallenge.fragments.SettingsFrag;
+import com.changeandsuccess.nofapchallenge.level_stuff.LevelFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.MyLevelStuff;
+import com.changeandsuccess.nofapchallenge.message_activity.Message;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
+import com.changeandsuccess.nofapchallenge.store_puchase_stuff.AllStoreTabsFrag;
 import com.changeandsuccess.nofapchallenge.utils.DatabaseStuff;
 import com.changeandsuccess.nofapchallenge.utils.ProgressWheel;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
@@ -51,6 +61,9 @@ public class Home extends Fragment {
     int counter;
     ImageButton add;
     ImageButton  restart;
+    ImageButton shareBTN;
+    ImageButton homeBtn,chatBtn,inboxBtn,profileBtn;
+    ImageButton userSettingBtn;
 
     TextView nfDay, hourText;
 
@@ -76,7 +89,19 @@ public class Home extends Fragment {
 
     int levelRuler;
 boolean islogg;
+
+
+    private DrawerLayout mDrawerLayout;
+    private View mDrawerList;
+
+
     //FragmentManager fragmentManager = getSupportFragmentManager();
+
+    public Home(){}
+    public Home(DrawerLayout mDrawerLayout,View mDrawerList){
+        this.mDrawerLayout = mDrawerLayout;
+        this.mDrawerList = mDrawerList;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
@@ -106,9 +131,18 @@ boolean islogg;
 
         restart = (ImageButton) rootViewman.findViewById(R.id.bRestart);
 
+
+        shareBTN = (ImageButton) rootViewman.findViewById(R.id.setting_btn);
+
         nfDay = (TextView) rootViewman.findViewById(R.id.tvDay);
 
         hourText = (TextView) rootViewman.findViewById(R.id.hours_text);
+
+        homeBtn = (ImageButton) rootViewman.findViewById(R.id.imageButton1);
+        chatBtn = (ImageButton) rootViewman.findViewById(R.id.imageButton2);
+        inboxBtn = (ImageButton) rootViewman.findViewById(R.id.imageButton3);
+        profileBtn = (ImageButton) rootViewman.findViewById(R.id.imageButton4);
+        userSettingBtn = (ImageButton) rootViewman.findViewById(R.id.userSetting);
 
        // String hoursPast = new HomeDateCount(activity).getDiffTime();
         //hourText.setText(""+hoursPast);
@@ -154,101 +188,118 @@ boolean islogg;
             nfDay.setText("00");
         }
 //add button click
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View v){
-                if(islogg){
-                    if(equalLastDay()==false) {
-                        new PressButtons(activity, rootViewman).add();
-
-                                                /*  Toast toast = Toast.makeText(activity,
-                                                          ""+mySuccess++, Toast.LENGTH_LONG);
-                                                  toast.setGravity(Gravity.CENTER, 0, 0);
-                                                  LinearLayout toastView = (LinearLayout) toast.getView();
-                                                  ImageView imageCodeProject = new ImageView(activity);
-                                                  imageCodeProject.setImageResource(R.drawable.ic_launcher);
-                                                  toastView.addView(imageCodeProject, 0);
-                                                  toast.show();*/
-                        new MyLevelStuff(activity).checkLevelUpdate(mySuccess, userLevel);
-                        wheelRun(plussone);
-                    }else {
-                    }//emd
-
-                                       /* Intent i = new Intent(context,
-                                                QuoteActivity.class);
-                                        startActivity(i);*/
-                } else{//logged
-                    Intent i = new Intent(getActivity(), LoginActivity.class);
-                    startActivity(i);
-                }//else/
-            }
-        }
-        ); //end onclick
         add.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 int action = event.getAction();
-                if(action==MotionEvent.ACTION_DOWN){
-                    Toast.makeText(context,"ACTION_DOWN",Toast.LENGTH_LONG).show();
-                    Drawable a =  Drawable.createFromPath("@drawable/btn_done_p");
-                    add.setBackgroundDrawable(a);
+                if (action == MotionEvent.ACTION_DOWN) {
+                    add.setBackgroundResource(R.drawable.btn_done_p);
 
-                }else if(action==MotionEvent.ACTION_UP){
-                    Toast.makeText(context,"ACTION_UP",Toast.LENGTH_LONG).show();
-                    Drawable a =  Drawable.createFromPath("@drawable/btn_done_d");
-                    add.setBackgroundDrawable(a);
+                } else if (action == MotionEvent.ACTION_UP) {
+                    add.setBackgroundResource(R.drawable.btn_done_n);
+
+                    if (islogg) {
+                        if (equalLastDay() == false) {
+                            new PressButtons(activity, rootViewman).add();
+                            new MyLevelStuff(activity).checkLevelUpdate(mySuccess, userLevel);
+                            wheelRun(plussone);
+                        } else {
+                        }//emd
+                    } else {//logged
+                        Intent i = new Intent(getActivity(), LoginActivity.class);
+                        startActivity(i);
+                    }//else/
                 }
 
                 return true;
             }
         });
 
+        restart.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int action = event.getAction();
+                if (action == MotionEvent.ACTION_DOWN) {
+                    restart.setBackgroundResource(R.drawable.btn_reload_p);
 
+                } else if (action == MotionEvent.ACTION_UP) {
+                    restart.setBackgroundResource(R.drawable.btn_reload_n);
 
-        restart.setOnClickListener(new
+                    if (islogg) {
 
-                                           View.OnClickListener() {
-                                               @Override
-                                               public void onClick (View view){
+                        //new PressButtons(activity, rootViewman).restart();
+                        setRestartDialog();
+                    } else {
+                        Intent i = new Intent(getActivity(),
+                                LoginActivity.class);
+                        startActivity(i);
+                    }
+                }
 
-                                                   if(islogg) {
-
-                                                       //new PressButtons(activity, rootViewman).restart();
-                                                       setRestartDialog();
-                                                   }else{
-                                                       Intent i = new Intent(getActivity(),
-                                                               LoginActivity.class);
-                                                       startActivity(i);
-                                                   }
-
-
-                                               }//end click
-                                           }
-
-        );
+                return true;
+            }
+        });
 
         //info btn
 
-        ImageButton shareBTN = (ImageButton) rootViewman.findViewById(R.id.setting_btn);
 
-        shareBTN.setOnClickListener(new View.OnClickListener() {
+        shareBTN.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int action = event.getAction();
+                if (action == MotionEvent.ACTION_DOWN) {
+                    shareBTN.setBackgroundResource(R.drawable.btn_share_p);
+
+                } else if (action == MotionEvent.ACTION_UP) {
+                    shareBTN.setBackgroundResource(R.drawable.btn_share_n);
+
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    String shareBody = "Try out this app to become better and help people! http://bit.ly/1lt0Xiv ";
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "http://bit.ly/1lt0Xiv");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                    startActivity(Intent.createChooser(sharingIntent, "Share via"));
+                }
+
+                return true;
+            }
+        });
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(0);
+            }
+        });
+
+        chatBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(2);
+            }
+        });
+
+        inboxBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(3);
+            }
+        });
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(12);
+            }
+        });
+
+        userSettingBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 
-                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                String shareBody = "Try out this app to become better and help people! http://bit.ly/1lt0Xiv ";
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "http://bit.ly/1lt0Xiv");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-                startActivity(Intent.createChooser(sharingIntent, "Share via"));
-
-                /*Fragment fragment = new CommentsFrag();
-
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.frame_container, fragment).commit();*/
             }
         });
+
 
         //hide keyboard
         getActivity().getWindow().setSoftInputMode(
@@ -512,7 +563,7 @@ boolean islogg;
                 toast.show();
 
 
-                Fragment fragment = new Home();
+                Fragment fragment = new Home(mDrawerLayout,mDrawerList);
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.frame_container, fragment).commit();
@@ -618,9 +669,110 @@ boolean islogg;
         }
 
         return returingRuler;
-
-
-
     }
 
+    public void displayView(int position) {
+        // update the main content by replacing fragments
+        Fragment fragment = null;
+        if(position ==0)
+            MainActivity.isHome = true;
+        else
+            MainActivity.isHome = false;
+
+        switch (position) {
+            case 0:
+
+                fragment = new Home(mDrawerLayout,mDrawerList);
+                hideNavSpinnerLang();
+                break;
+            case 1:
+
+                fragment = new Blog();//LiveFragShow();//AllNewsBlog();//Videos();
+                hideNavSpinnerLang();
+                break;
+            case 2:
+                fragment = new CommentsFrag();
+
+                break;
+            case 3:
+                //fragment = new ViewProgress();
+                fragment = new Message();
+                hideNavSpinnerLang();
+                break;
+            case 4:
+                fragment = new ProfileTab();
+                hideNavSpinnerLang();
+                break;
+
+            case 5:
+                fragment = new AllCoachTabs();//Featured();
+                hideNavSpinnerLang();
+                break;
+
+            case 6:
+                fragment = new AllStoreTabsFrag();//new ComingSoon();//new AllStoreTabsFrag();//StoreFrag();
+                hideNavSpinnerLang();
+                break;
+
+            case 7:
+                fragment = new LevelFrag();
+
+                hideNavSpinnerLang();
+                break;
+
+            case 8:
+                fragment = new AllBattleTab();//new BattleFrag();
+                hideNavSpinnerLang();
+                break;
+
+            case 9:
+                fragment = new CommentsFrag();
+                hideNavSpinnerLang();
+                break;
+            case 10:
+                fragment = new ComingSoon();
+                hideNavSpinnerLang();
+                break;
+
+            case 11:
+                fragment = new SettingsFrag();
+                hideNavSpinnerLang();
+                break;
+            case 12:
+                fragment = new ProfileTab();
+                hideNavSpinnerLang();
+                break;
+
+
+            default:
+                hideNavSpinnerLang();
+                break;
+        }
+
+        if (fragment != null) {
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.frame_container, fragment).commit();
+
+            // update selected item and title, then close the drawer
+            //    mDrawerList.setItemChecked(position, true);
+            //    mDrawerList.setSelection(position);
+
+            //set titles for tabs
+            //setTitle(navMenuTitles[position]);
+            mDrawerLayout.closeDrawer(mDrawerList);
+            mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
+        } else {
+            // error in creating fragment
+            Log.e("MainActivity", "Error in creating fragment");
+        }
+    }
+
+    public void hideNavSpinnerLang(){
+
+        ActionBar actionBar =((ActionBarActivity)context).getSupportActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+        // actionBar.setDisplayShowTitleEnabled(false);
+
+    }//end hide spinner
 }//end

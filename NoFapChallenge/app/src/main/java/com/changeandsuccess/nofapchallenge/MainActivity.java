@@ -91,7 +91,7 @@ public class MainActivity extends ActionBarActivity {
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 
-    private boolean isHome;
+    public static boolean isHome;
 
     ImageButton home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu,profile_menu,store_menu;
     RelativeLayout news_menu,notice_menu;
@@ -352,11 +352,10 @@ View searchBar;
         switch (position) {
             case 0:
 
-                fragment = new Home();
+                fragment = new Home(mDrawerLayout,mDrawerList);
                 hideNavSpinnerLang();
                 break;
             case 1:
-
                 fragment = new Blog();//LiveFragShow();//AllNewsBlog();//Videos();
                 hideNavSpinnerLang();
                 break;

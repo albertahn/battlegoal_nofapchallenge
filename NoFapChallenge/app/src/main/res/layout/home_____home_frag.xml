@@ -30,13 +30,13 @@
 
 
             <RelativeLayout
-                android:layout_width="320dp"
-                android:layout_height="320dp"
+                android:layout_width="270dp"
+                android:layout_height="270dp"
                 android:id="@+id/clock_rel"
                 android:background="@drawable/cir"
                 android:layout_centerInParent="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="100dp"
                 >
 
 <!--#ff4cfffd  00000000-->
@@ -159,6 +159,137 @@
                 android:layout_below="@+id/daycountinggroup"
                 android:layout_centerInParent="true" />
 
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageButton1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false"
+                android:src="@drawable/home"
+                android:background="@drawable/menubacktest" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="HOME"
+
+                android:id="@+id/home_label"
+                android:layout_alignBottom="@+id/imageButton1"
+                android:layout_alignLeft="@+id/imageButton1"
+                android:layout_alignRight="@+id/imageButton1"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textScaleX="1.2"
+                android:fontFamily="sans-serif"
+                android:textSize="10.5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageButton2"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/imageButton1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/menubacktest"
+                android:scaleType="fitCenter"
+                android:src="@drawable/chat"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="CHAT"
+
+                android:id="@+id/chat_label"
+                android:layout_alignBottom="@+id/imageButton2"
+                android:layout_alignLeft="@+id/imageButton2"
+                android:layout_alignRight="@+id/imageButton2"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textScaleX="1.2"
+                android:fontFamily="sans-serif"
+                android:textSize="10.5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageButton3"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/imageButton2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/menubacktest"
+                android:src="@drawable/inbox"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp"
+                android:scaleType="fitCenter" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="INBOX"
+
+                android:id="@+id/inbox_label"
+                android:layout_alignBottom="@+id/imageButton3"
+                android:layout_alignLeft="@+id/imageButton3"
+                android:layout_alignRight="@+id/imageButton3"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textScaleX="1.2"
+                android:fontFamily="sans-serif"
+                android:textSize="10.5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageButton4"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/imageButton3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile_menu"
+                android:background="@drawable/menubacktest" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="PROFILE"
+
+                android:id="@+id/profile_label"
+                android:layout_alignBottom="@+id/imageButton4"
+                android:layout_alignLeft="@+id/imageButton4"
+                android:layout_alignRight="@+id/imageButton4"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textScaleX="1.2"
+                android:fontFamily="sans-serif"
+                android:textSize="10.5dp"
+                android:layout_marginBottom="5dp" />
+
+
+
         </RelativeLayout>
  </ScrollView>
 
@@ -168,8 +299,7 @@
         android:layout_height="70dp"
         android:text="+"
         android:textSize="30sp"
-        android:background="@color/transparent"
-        android:src="@drawable/btn_done_n"
+        android:background="@drawable/btn_done_n"
         android:scaleType="fitCenter"
         android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
@@ -180,11 +310,10 @@
 
         android:id="@+id/bRestart"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="45dp"
+        android:layout_width="47dp"
         android:layout_height="47dp"
-        android:src="@drawable/btn_reload_n"
         android:text="0"
-        android:background="@color/transparent"
+        android:background="@drawable/btn_reload_n"
         android:scaleType="fitCenter"
         android:layout_marginBottom="30dp"
         android:layout_alignParentBottom="true"
@@ -195,13 +324,12 @@
     <ImageButton
         android:id="@+id/setting_btn"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="38dp"
-        android:layout_height="52dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
 
         android:layout_marginBottom="30dp"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/btn_share_n"
-        android:background="@color/transparent"
+        android:background="@drawable/btn_share_n"
         android:text="0"
         android:scaleType="fitCenter"
 
