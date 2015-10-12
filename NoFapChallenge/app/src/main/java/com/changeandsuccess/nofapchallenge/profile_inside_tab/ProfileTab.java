@@ -1,4 +1,4 @@
-package com.changeandsuccess.nofapchallenge;
+package com.changeandsuccess.nofapchallenge.profile_inside_tab;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,7 +16,10 @@ import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import com.changeandsuccess.nofapchallenge.fragments.SettingsFrag;
+import com.changeandsuccess.nofapchallenge.ChangeProfileActivity;
+import com.changeandsuccess.nofapchallenge.LoginActivity;
+import com.changeandsuccess.nofapchallenge.LoginHelper;
+import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -75,7 +78,9 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
             mTabHost.setup();
             //setupTab(new TextView(getActivity()), "posts", R.drawable.featured, R.id.my_posts_tab);
             setupTab(new TextView(getActivity()), "progress", R.drawable.my_progress, R.id.my_progress_tab);
+            setupTab(new TextView(getActivity()), "puchases", R.drawable.store, R.id.my_purchase_tab);
             setupTab(new TextView(getActivity()), "settings", R.drawable.my_setting, R.id.my_settings_tab);
+
 
             mTabHost.setOnTabChangedListener(this);
             mTabHost.getTabWidget().setDividerDrawable(null);
@@ -95,7 +100,12 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
                     .commit();
 
 
-            UserDatabase info = new UserDatabase(getActivity());
+            getFragmentManager().beginTransaction()
+                    .add(R.id.my_purchase_tab, new MyPurchase_frag())
+                    .commit();
+
+
+                            UserDatabase info = new UserDatabase(getActivity());
             info.open();
             String[][] data = info.getData();
             info.close();
@@ -178,9 +188,7 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
         ImageView profile_photo = (ImageView) rootView.findViewById(R.id.myprofile_picture);
         String imageurl = "http://tanggoal.com/public/uploads/members_pic/" + propic;
 
-
         ImageLoader imageloader = ImageLoader.getInstance();
-
         //imageloader.displayImage(url, view);
 
         DisplayImageOptions options = new DisplayImageOptions.Builder()
@@ -189,8 +197,6 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
                 .cacheInMemory(true)
                 .considerExifParams(true)
                 .build();
-
-        //kill it first
 
         //imageloader.destroy();
 
@@ -204,12 +210,6 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
 
 
     } //end readSavedUser
-
-
-
-
-
-
 
     private void setupTab(final View view, final String tag, int drawableId, int tabcontentid) {
 

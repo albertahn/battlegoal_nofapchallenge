@@ -213,6 +213,15 @@
                            android:layout_height="fill_parent">
 
                        </LinearLayout>
+
+                       <LinearLayout
+                           android:id="@+id/my_purchase_tab"
+                           android:orientation="horizontal"
+                           android:layout_width="fill_parent"
+                           android:layout_height="fill_parent">
+
+                       </LinearLayout>
+
                        <LinearLayout
                            android:id="@+id/my_settings_tab"
                            android:orientation="horizontal"

@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v4.app.Fragment;
@@ -34,11 +33,12 @@ import com.changeandsuccess.nofapchallenge.battle_stuff.AllBattleTab;
 import com.changeandsuccess.nofapchallenge.coaches_tab_stuff.AllCoachTabs;
 import com.changeandsuccess.nofapchallenge.comment_stuff.CommentsFrag;
 import com.changeandsuccess.nofapchallenge.fragments.ComingSoon;
-import com.changeandsuccess.nofapchallenge.fragments.SettingsFrag;
+import com.changeandsuccess.nofapchallenge.profile_inside_tab.SettingsFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.LevelFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.MyLevelStuff;
 import com.changeandsuccess.nofapchallenge.message_activity.Message;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
+import com.changeandsuccess.nofapchallenge.profile_inside_tab.ProfileTab;
 import com.changeandsuccess.nofapchallenge.store_puchase_stuff.AllStoreTabsFrag;
 import com.changeandsuccess.nofapchallenge.utils.DatabaseStuff;
 import com.changeandsuccess.nofapchallenge.utils.ProgressWheel;
@@ -293,13 +293,13 @@ boolean islogg;
             }
         });
 
-        userSettingBtn.setOnClickListener(new View.OnClickListener(){
+       /* userSettingBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 
             }
         });
-
+*/
 
         //hide keyboard
         getActivity().getWindow().setSoftInputMode(

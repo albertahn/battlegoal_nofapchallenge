@@ -14,7 +14,7 @@
         android:padding="10dp" />
 
 
-<!--
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -91,5 +91,5 @@
             android:id="@+id/checkBox5"
             android:textSize="30dp" />
     </LinearLayout>
-    -->
+
 </LinearLayout>

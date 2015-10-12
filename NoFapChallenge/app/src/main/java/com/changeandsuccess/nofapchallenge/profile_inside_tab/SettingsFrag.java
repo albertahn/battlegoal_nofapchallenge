@@ -1,4 +1,4 @@
-package com.changeandsuccess.nofapchallenge.fragments;
+package com.changeandsuccess.nofapchallenge.profile_inside_tab;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

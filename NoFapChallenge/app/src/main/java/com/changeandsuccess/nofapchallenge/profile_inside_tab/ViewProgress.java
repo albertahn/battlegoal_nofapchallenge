@@ -1,4 +1,4 @@
-package com.changeandsuccess.nofapchallenge;
+package com.changeandsuccess.nofapchallenge.profile_inside_tab;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.changeandsuccess.nofapchallenge.Item;
+import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.adapter.ProgressAdapter;
 import com.changeandsuccess.nofapchallenge.utils.DatabaseStuff;
 
