@@ -126,6 +126,15 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
+        <ImageButton
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text=""
+            android:id="@+id/my_product_sales"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/coinstack"/>
 
         <!--<Button
             android:layout_width="75dp"
@@ -163,86 +172,86 @@
 
     </RelativeLayout>
 
-   <RelativeLayout
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:text="+New Course"
-       android:background="@color/transparent"
+        android:background="@color/transparent"
         android:id="@+id/below_top_profile"
-       android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_gravity="center_horizontal"
-       android:layout_below="@+id/relative_this_layout">
-       <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-           xmlns:tools="http://schemas.android.com/tools"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
+        android:layout_below="@+id/relative_this_layout">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-           tools:context="com.al.tanggoal.app.MainActivity"
-           >
+            tools:context="com.al.tanggoal.app.MainActivity"
+            >
 
-           <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-               android:id="@android:id/tabhost" android:layout_width="fill_parent"
-               android:layout_height="fill_parent">
-               <LinearLayout android:orientation="vertical"
-                   android:layout_width="fill_parent" android:layout_height="fill_parent">
-                   <View android:layout_width="fill_parent" android:layout_height="0.5dip"
-                       android:background="#000" />
+            <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@android:id/tabhost" android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <View android:layout_width="fill_parent" android:layout_height="0.5dip"
+                        android:background="#000" />
 
-                   <TabWidget android:id="@android:id/tabs"
-                       android:layout_width="fill_parent" android:layout_height="wrap_content"
-                       android:layout_marginLeft="0dip" android:layout_marginRight="0dip" />
+                    <TabWidget android:id="@android:id/tabs"
+                        android:layout_width="fill_parent" android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dip" android:layout_marginRight="0dip" />
 
-                   <FrameLayout android:id="@android:id/tabcontent"
-                       android:layout_width="fill_parent" android:layout_height="fill_parent"
-                       android:layout_weight="1.4" >
+                    <FrameLayout android:id="@android:id/tabcontent"
+                        android:layout_width="fill_parent" android:layout_height="fill_parent"
+                        android:layout_weight="1.4" >
 
-                       <LinearLayout
-                           android:id="@+id/my_posts_tab"
-                           android:orientation="horizontal"
-                           android:layout_width="fill_parent"
-                           android:layout_height="fill_parent">
+                        <LinearLayout
+                            android:id="@+id/my_posts_tab"
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
 
-                       </LinearLayout>
+                        </LinearLayout>
 
-                       <LinearLayout
-                           android:id="@+id/my_progress_tab"
-                           android:orientation="horizontal"
-                           android:layout_width="fill_parent"
-                           android:layout_height="fill_parent">
+                        <LinearLayout
+                            android:id="@+id/my_progress_tab"
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
 
-                       </LinearLayout>
+                        </LinearLayout>
 
-                       <LinearLayout
-                           android:id="@+id/my_purchase_tab"
-                           android:orientation="horizontal"
-                           android:layout_width="fill_parent"
-                           android:layout_height="fill_parent">
+                        <LinearLayout
+                            android:id="@+id/my_purchase_tab"
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
 
-                       </LinearLayout>
+                        </LinearLayout>
 
-                       <LinearLayout
-                           android:id="@+id/my_settings_tab"
-                           android:orientation="horizontal"
-                           android:layout_width="fill_parent"
-                           android:layout_height="fill_parent">
+                        <LinearLayout
+                            android:id="@+id/my_settings_tab"
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
 
-                       </LinearLayout>
-
-
-
-                   </FrameLayout>
+                        </LinearLayout>
 
 
 
+                    </FrameLayout>
 
 
-               </LinearLayout>
-           </TabHost>
 
-       </LinearLayout>
-        </RelativeLayout>
+
+
+                </LinearLayout>
+            </TabHost>
+
+        </LinearLayout>
+    </RelativeLayout>
 
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.changeandsuccess.nofapchallenge.profile_inside_tab;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TabHost;
@@ -130,6 +132,18 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
 
                     startActivity(i);
                 }
+            });
+
+            ImageButton my_product_sales = (ImageButton) rootView.findViewById(R.id.my_product_sales);
+            my_product_sales.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Dialog d = new Dialog(getActivity());
+                    d.setTitle("works");
+                    d.show();
+
+                }//
             });
 
             return rootView;
