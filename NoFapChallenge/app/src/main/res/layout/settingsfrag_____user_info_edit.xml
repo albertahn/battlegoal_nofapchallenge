@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="User Info Edit"
+        android:background="#ffb84d"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView5"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:id="@+id/title_id"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp" />
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/line_id"
+            android:layout_below="@+id/title_id"
+            android:layout_alignLeft="@+id/title_id"
+            android:background="@drawable/line" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goal"
+            android:id="@+id/title_goal"
+            android:layout_below="@+id/line_id"
+            android:layout_alignLeft="@+id/title_id"
+            android:textSize="20dp" />
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/line_goal"
+            android:layout_below="@+id/title_goal"
+            android:layout_alignLeft="@+id/title_id"
+            android:background="@drawable/line" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moto"
+            android:id="@+id/title_moto"
+            android:layout_below="@+id/title_goal"
+            android:layout_alignLeft="@+id/title_id"
+            android:textSize="20dp" />
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/line_moto"
+            android:layout_below="@+id/title_moto"
+            android:layout_alignLeft="@+id/title_id"
+            android:background="@drawable/line" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intro"
+            android:id="@+id/title_intro"
+            android:layout_below="@+id/title_moto"
+            android:layout_alignLeft="@+id/title_id"
+            android:textSize="20dp" />
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/line_intro"
+            android:layout_below="@+id/title_intro"
+            android:layout_alignLeft="@+id/title_id"
+            android:background="@drawable/line" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            android:id="@+id/title_contact"
+            android:layout_below="@+id/title_intro"
+            android:layout_alignLeft="@+id/title_id"
+            android:textSize="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language"
+            android:id="@+id/title_language"
+            android:layout_below="@+id/title_contact"
+            android:layout_alignLeft="@+id/title_id"
+            android:textSize="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interesting"
+            android:id="@+id/title_interesting"
+            android:layout_below="@+id/title_language"
+            android:layout_alignLeft="@+id/title_id"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

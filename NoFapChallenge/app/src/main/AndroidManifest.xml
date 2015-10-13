@@ -153,6 +153,10 @@
             android:name=".store_puchase_stuff.StoreLastScene">
         </activity>
 
+        <activity
+            android:name=".profile_inside_tab.UserInfoEdit">
+        </activity>
+
 
         <service android:name="com.changeandsuccess.nofapchallenge.GcmIntentService" />
 

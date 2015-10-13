@@ -3,93 +3,240 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="App Setting"
+        android:text="User Info"
         android:id="@+id/textView"
         android:textSize="30dp"
         android:padding="10dp" />
-
-
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <TabHost
+        android:id="@+id/tabhost"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:weightSum="1">
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            </TabWidget>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="User Info"
-            android:id="@+id/button3"
-            android:layout_weight="0.42" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AppSetting"
-            android:id="@+id/button4"
-            android:layout_weight="0.58" />
-    </LinearLayout>
+                <ScrollView
+                    android:id="@+id/tab1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="350dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="#b5b5b5">
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/profileTitle"
+                                android:text="Profile"
+                                android:textSize="20dp"
+                                android:layout_margin="5dp"
+                                android:textStyle="bold" />
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:id="@+id/profilePicture"
+                                android:layout_below="@id/profileTitle"
+                                android:text="Profile"
+                                android:textSize="20dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ic_launcher" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/profileID"
+                                android:text="ID : "
+                                android:textSize="20dp"
+                                android:layout_toRightOf="@id/profilePicture"
+                                android:layout_below="@id/profileTitle"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/profileGoal"
+                                android:text="Goal : "
+                                android:textSize="20dp"
+                                android:layout_toRightOf="@id/profilePicture"
+                                android:layout_below="@id/profileID"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/profileMoto"
+                                android:text="Moto : "
+                                android:textSize="20dp"
+                                android:layout_toRightOf="@id/profilePicture"
+                                android:layout_below="@id/profileGoal"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/underLine"
+                                android:text="---------------------------------"
+                                android:textSize="20dp"
+                                android:layout_below="@id/profilePicture"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_centerHorizontal="true" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/profileDetail"
+                                android:text="Words of thanks"
+                                android:textSize="20dp"
+                                android:layout_below="@id/underLine"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:id="@+id/profileChangeBtn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  Edit User Infomation"
+                            android:textSize="20dp"
+                            android:layout_below="@id/underLine"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_vertical" />
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/arrow_purchase"
+                                android:background="#898989"
+                                android:layout_marginLeft="100dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="#ffffff"
+                            android:layout_margin="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="Contect"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text=" Email : "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text=" Phone : "/>
 
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="
         Current Version : 4.7.7
 
         4.7.7. Version Info
         "
-        android:id="@+id/textView5"
-        android:textSize="20dp" />
+                        android:id="@+id/textView5"
+                        android:textSize="20dp" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:weightSum="1">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:weightSum="1">
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Notice Setting"
-            android:textSize="30dp"
-            android:padding="10dp" />
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Notice Setting"
+                            android:textSize="30dp"
+                            android:padding="10dp" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Notice/Notification"
-            android:id="@+id/notify_button"
-            android:textSize="30dp" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Notice/Sound"
-            android:id="@+id/checkBox2"
-            android:textSize="30dp" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Full notification"
-            android:id="@+id/checkBox3"
-            android:textSize="30dp" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Part notification"
-            android:id="@+id/checkBox4"
-            android:textSize="30dp" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="News/Email"
-            android:id="@+id/checkBox5"
-            android:textSize="30dp" />
-    </LinearLayout>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notice/Notification"
+                            android:id="@+id/notify_button"
+                            android:textSize="30dp" />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notice/Sound"
+                            android:id="@+id/checkBox2"
+                            android:textSize="30dp" />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Full notification"
+                            android:id="@+id/checkBox3"
+                            android:textSize="30dp" />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Part notification"
+                            android:id="@+id/checkBox4"
+                            android:textSize="30dp" />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="News/Email"
+                            android:id="@+id/checkBox5"
+                            android:textSize="30dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 
 </LinearLayout>
