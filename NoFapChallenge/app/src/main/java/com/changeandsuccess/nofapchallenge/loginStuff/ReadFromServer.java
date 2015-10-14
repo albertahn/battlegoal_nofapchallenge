@@ -96,12 +96,13 @@ public class ReadFromServer extends AsyncTask<String, Integer, String> {
             String profile_picture = json.get("profile_picture").toString();
             String FID =  json.get("FID").toString();
             String level =  json.get("level").toString();
+            String text_profile = json.get("profile").toString();
 
             //Log.d("jsonfuck", ""+ username + email+password+profile_picture+FID);
 
             UserDatabase entry = new UserDatabase(context);
             entry.open();
-            entry.createEntry(user_index, username, email, password, profile_picture, FID,level);
+            entry.createEntry(user_index, username, email, password, profile_picture, FID,level, text_profile);
             entry.close();
 
             new GetLastDayFromServer(context, user_index).execute();

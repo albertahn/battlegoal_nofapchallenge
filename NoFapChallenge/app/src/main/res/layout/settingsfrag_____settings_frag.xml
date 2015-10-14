@@ -16,7 +16,7 @@
     <TabHost
         android:id="@+id/tabhost"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 <ScrollView
                     android:id="@+id/tab1"
                     android:layout_width="fill_parent"
-                    android:layout_height="350dp">
+                    android:layout_height="match_parent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -231,7 +231,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="News/Email"
-                            android:id="@+id/checkBox5"
+                            android:id="@+id/email_checkbox"
                             android:textSize="30dp" />
                     </LinearLayout>
                 </LinearLayout>

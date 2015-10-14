@@ -71,49 +71,6 @@ public class LoginHelper extends MainActivity{
     } //end checklogin
 
 
-   /* public void readSavedUser(Context context, ArrayList<LoginItem> generatedLoginItem, View rootView) {
-
-        TextView usernameText = (TextView) rootView.findViewById(R.id.user_name_profile);
-
-        String username = generatedLoginItem.get(0).getUsername().toString();
-
-         usernameText.setText(username);
-
-        String propic = generatedLoginItem.get(0).getProfile_picture();
-
-       // LoadImage loadImage = new LoadImage(context);
-        //loadImage.execute(propic);
-        ImageView profile_photo = (ImageView) rootView.findViewById(R.id.myprofile_picture);
-        String imageurl = "http://tanggoal.com/public/uploads/members_pic/" + propic;
-
-
-
-
-        ImageLoader imageloader = ImageLoader.getInstance();
-
-        //imageloader.displayImage(url, view);
-
-        DisplayImageOptions options = new DisplayImageOptions.Builder()
-                .showImageForEmptyUri(R.drawable.ic_launcher)
-                .displayer(new RoundedBitmapDisplayer(250))
-                .cacheInMemory(true)
-                .considerExifParams(true)
-                .build();
-
-        //kill it first
-
-        //imageloader.destroy();
-
-        Boolean isInit = imageloader.isInited();
-
-        if(!isInit) {
-            imageloader.init(ImageLoaderConfiguration.createDefault(context));
-        }
-
-        imageloader.displayImage(imageurl, profile_photo, options);
-
-
-    } //end readSavedUser*/
 
     public void logoutUser(final Context context){
 

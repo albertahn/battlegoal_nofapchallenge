@@ -139,12 +139,13 @@ public class SendFB_Data extends AsyncTask<String, Integer, String> {
             String profile_picture = json.get("profile_picture").toString();
             String FID =  json.get("FID").toString();
             String level = json.get("level").toString();
+            String text_profile = json.get("profile").toString();
 
             //Log.d("jsonfuck", ""+ username + email+password+profile_picture+FID);
 
             UserDatabase entry = new UserDatabase(activity);
             entry.open();
-            entry.createEntry(user_index, username, email, password, profile_picture, FID, level);
+            entry.createEntry(user_index, username, email, password, profile_picture, FID, level, text_profile);
             entry.close();
 
             if(user_index!=""){
@@ -164,6 +165,14 @@ public class SendFB_Data extends AsyncTask<String, Integer, String> {
                         MainActivity.class);
 
                 activity.startActivity(i);
+
+
+                Dialog da2 = new Dialog(activity);
+                da2.setTitle(""+text_profile);
+                TextView tv1 = new TextView(activity);
+                tv1.setText(""+text_profile);
+                da2.setContentView(tv1);
+                da2.show();
 
 
             }else{

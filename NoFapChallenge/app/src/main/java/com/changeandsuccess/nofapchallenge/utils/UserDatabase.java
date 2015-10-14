@@ -28,12 +28,16 @@ public class UserDatabase {
     public static final String KEY_PROFILE_PICTURE = "profile_picture";
     public static final String KEY_FID = "FID";
     public static final String KEY_LEVEL = "level";
+    //level
+
+    public static final String KEY_TEXT_PROFILE = "text_profile";
+
 
     //db stuff
 
     private static final String DATABASE_NAME = "TangGoalDb";
     private static final String DATABASE_TABLE ="membersTable";
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 6;
 
     private DbHelper ourHelper;
     private final Context ourContext;
@@ -57,7 +61,8 @@ public class UserDatabase {
                             KEY_PASSWORD + " TEXT NOT NULL, " +
                             KEY_PROFILE_PICTURE + " TEXT NOT NULL, " +
                             KEY_FID+ " TEXT NOT NULL, "+
-                            KEY_LEVEL+ " TEXT NOT NULL);"
+                            KEY_LEVEL+ " TEXT NOT NULL, "+
+                            KEY_TEXT_PROFILE+ " TEXT NOT NULL);"
 
             );
 
@@ -99,7 +104,8 @@ public class UserDatabase {
             String password,
             String profile_picture,
             String FID,
-            String level){
+            String level,
+            String text_profile){
 
         //write to database and close db
         ContentValues cv = new ContentValues();
@@ -111,6 +117,7 @@ public class UserDatabase {
         cv.put(KEY_PROFILE_PICTURE, profile_picture);
         cv.put(KEY_FID, FID);
         cv.put(KEY_LEVEL, level);
+        cv.put(KEY_TEXT_PROFILE, text_profile);
         return ourDatabase.insert(DATABASE_TABLE, null, cv);
 
     }
@@ -119,7 +126,7 @@ public class UserDatabase {
     public String[][] getData() {
         // get all the data from database
 
-        String[] columns = new String[] {KEY_ROWID,KEY_USERINDEX, KEY_USERNAME, KEY_EMAIL, KEY_PASSWORD, KEY_PROFILE_PICTURE, KEY_FID, KEY_LEVEL};
+        String[] columns = new String[] {KEY_ROWID,KEY_USERINDEX, KEY_USERNAME, KEY_EMAIL, KEY_PASSWORD, KEY_PROFILE_PICTURE, KEY_FID, KEY_LEVEL, KEY_TEXT_PROFILE};
         Cursor c = ourDatabase.query( DATABASE_TABLE, columns, null, null, null, null, null);
 
 
@@ -132,11 +139,12 @@ public class UserDatabase {
         int iProfilePicture = c.getColumnIndex(KEY_PROFILE_PICTURE);
         int iFID = c.getColumnIndex(KEY_FID);
         int iLevel = c.getColumnIndex(KEY_LEVEL);
+        int iTextProfile = c.getColumnIndex(KEY_LEVEL);
 
         String[][] result = null;
 
         //7 columns
-        result= new String[c.getCount()][8];
+        result= new String[c.getCount()][9];
 
         if(c.moveToFirst()){
             for (int i =0; i<c.getCount(); i++){
@@ -150,6 +158,7 @@ public class UserDatabase {
                 result[i][5] =c.getString(iProfilePicture);
                 result[i][6] =c.getString(iFID);
                 result[i][7] =c.getString(iLevel);
+                result[i][8] =c.getString(iTextProfile);
 
                 c.moveToNext();
             }
