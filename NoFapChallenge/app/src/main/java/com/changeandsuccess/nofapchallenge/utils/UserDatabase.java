@@ -32,12 +32,14 @@ public class UserDatabase {
 
     public static final String KEY_TEXT_PROFILE = "text_profile";
 
+    public static final String KEY_EXP_POINTS = "exp_points";
+
 
     //db stuff
 
     private static final String DATABASE_NAME = "TangGoalDb";
     private static final String DATABASE_TABLE ="membersTable";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
 
     private DbHelper ourHelper;
     private final Context ourContext;
@@ -62,7 +64,8 @@ public class UserDatabase {
                             KEY_PROFILE_PICTURE + " TEXT NOT NULL, " +
                             KEY_FID+ " TEXT NOT NULL, "+
                             KEY_LEVEL+ " TEXT NOT NULL, "+
-                            KEY_TEXT_PROFILE+ " TEXT NOT NULL);"
+                            KEY_TEXT_PROFILE+ " TEXT NOT NULL,"+
+                            KEY_EXP_POINTS+ " TEXT NOT NULL);"
 
             );
 
@@ -105,7 +108,8 @@ public class UserDatabase {
             String profile_picture,
             String FID,
             String level,
-            String text_profile){
+            String text_profile,
+            String exp_points){
 
         //write to database and close db
         ContentValues cv = new ContentValues();
@@ -118,6 +122,7 @@ public class UserDatabase {
         cv.put(KEY_FID, FID);
         cv.put(KEY_LEVEL, level);
         cv.put(KEY_TEXT_PROFILE, text_profile);
+        cv.put(KEY_EXP_POINTS, exp_points);
         return ourDatabase.insert(DATABASE_TABLE, null, cv);
 
     }
@@ -139,12 +144,13 @@ public class UserDatabase {
         int iProfilePicture = c.getColumnIndex(KEY_PROFILE_PICTURE);
         int iFID = c.getColumnIndex(KEY_FID);
         int iLevel = c.getColumnIndex(KEY_LEVEL);
-        int iTextProfile = c.getColumnIndex(KEY_LEVEL);
+        int iTextProfile = c.getColumnIndex(KEY_TEXT_PROFILE);
+        int iexp_points = c.getColumnIndex(KEY_EXP_POINTS);
 
         String[][] result = null;
 
         //7 columns
-        result= new String[c.getCount()][9];
+        result= new String[c.getCount()][10];
 
         if(c.moveToFirst()){
             for (int i =0; i<c.getCount(); i++){
@@ -159,6 +165,7 @@ public class UserDatabase {
                 result[i][6] =c.getString(iFID);
                 result[i][7] =c.getString(iLevel);
                 result[i][8] =c.getString(iTextProfile);
+                result[i][8] =c.getString(iexp_points);
 
                 c.moveToNext();
             }
