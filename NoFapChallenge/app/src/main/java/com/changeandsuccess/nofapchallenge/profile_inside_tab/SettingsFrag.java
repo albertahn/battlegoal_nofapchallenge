@@ -129,17 +129,16 @@ public class SettingsFrag extends Fragment {
     } //end generate
 
     public void readSavedUser(Context context, ArrayList<LoginItem> generatedLoginItem) {
-
         TextView usernameText = (TextView) rootView.findViewById(R.id.profileID);
-      //  TextView lvText =  (TextView) rootView.findViewById(R.id.profileLevel);
+        //  TextView lvText =  (TextView) rootView.findViewById(R.id.profileLevel);
 
         String username = generatedLoginItem.get(0).getUsername().toString();
-      //  String lv = generatedLoginItem.get(0).getLevel().toString();
+        //  String lv = generatedLoginItem.get(0).getLevel().toString();
 
         username = "ID : "+username;
         usernameText.setText(username);
-     //   lv = "LV."+lv;
-     //   lvText.setText(lv);
+        //   lv = "LV."+lv;
+        //   lvText.setText(lv);
 
         String propic = generatedLoginItem.get(0).getProfile_picture();
 

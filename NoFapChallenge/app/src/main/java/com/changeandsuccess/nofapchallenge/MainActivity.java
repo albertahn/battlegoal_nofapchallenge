@@ -68,7 +68,7 @@ import java.util.ArrayList;
 public class MainActivity extends ActionBarActivity {
 
 
-       Context context = this;
+    Context context = this;
 
     final Activity activity = this;
 
@@ -95,8 +95,9 @@ public class MainActivity extends ActionBarActivity {
     public static boolean isHome;
 
     ImageButton home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu,profile_menu,store_menu;
+    ImageButton home_up,chat_up,inbox_up,profile_up;
     RelativeLayout news_menu,notice_menu;
-View searchBar;
+    View searchBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +108,7 @@ View searchBar;
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         isHome = true;
+
         LoginHelper loginHelper = new LoginHelper();
         String[][] loginData = loginHelper.checkLogin(this);
         ArrayList<LoginItem> generatedLoginItem = generateData(loginData);
@@ -127,14 +129,18 @@ View searchBar;
         //menubuttons
 
         home_menu = (ImageButton) mDrawerList.findViewById(R.id.home_menu);//0
+        home_up =  (ImageButton)findViewById(R.id.imageButton1);//0
         chat_menu = (ImageButton) mDrawerList.findViewById(R.id.chat_menu); //2
+        chat_up =  (ImageButton) findViewById(R.id.imageButton2);//0
         blog_menu = (ImageButton) mDrawerList.findViewById(R.id.blog_menu);  //1
         inbox_menu = (ImageButton) mDrawerList.findViewById(R.id.inbox_menu);
+        inbox_up =  (ImageButton) findViewById(R.id.imageButton3);//0
         battle_menu = (ImageButton) mDrawerList.findViewById(R.id.battle_menu); //8
         coach_menu = (ImageButton) mDrawerList.findViewById(R.id.coach_menu); //5
         level_menu = (ImageButton) mDrawerList.findViewById(R.id.level_menu);  //7
         store_menu = (ImageButton) mDrawerList.findViewById(R.id.store_menu);//6
         profile_menu =  (ImageButton) mDrawerList.findViewById(R.id.profile_menu);
+        profile_up =  (ImageButton) findViewById(R.id.imageButton4);//0
         setting_menu = (ImageButton) mDrawerList.findViewById(R.id.setting_menu);//6
 
         news_menu = (RelativeLayout)mDrawerList.findViewById(R.id.News);
@@ -156,8 +162,14 @@ View searchBar;
             }
         });
 
-
         home_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(0);
+            }
+        });
+
+        home_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 displayView(0);
@@ -170,11 +182,17 @@ View searchBar;
                 displayView(2);
             }
         });
+        chat_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(2);
+            }
+        });
 
         blog_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 displayView(1);
+                displayView(1);
             }
         });
 
@@ -184,6 +202,13 @@ View searchBar;
                 displayView(3);
             }
         });
+        inbox_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(3);
+            }
+        });
+
 
         battle_menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -218,13 +243,20 @@ View searchBar;
                 displayView(12);
             }
         });
+        profile_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(12);
+            }
+        });
+
         setting_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 displayView(11);
             }
         });
-     //searchBar
+        //searchBar
         /*
         searchBar = (View) mDrawerList.findViewById(R.id.search_place);//6
 
@@ -249,7 +281,7 @@ View searchBar;
 
         getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.bartrans));
 
-       // getSupportActionBar().setCustomView(getResources().getDrawable(R.style.ActionButtonStyle));
+        // getSupportActionBar().setCustomView(getResources().getDrawable(R.style.ActionButtonStyle));
 
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 R.drawable.ic_drawer, //nav menu toggle icon
@@ -260,7 +292,7 @@ View searchBar;
 
                 getSupportActionBar().setTitle(mTitle);
                 // calling onPrepareOptionsMenu() to show action bar icons
-               // invalidateOptionsMenu();
+                // invalidateOptionsMenu();
                 supportInvalidateOptionsMenu();
 
             }
@@ -292,10 +324,10 @@ View searchBar;
 
 
         // configure Flurry
-       // FlurryAgent.setLogEnabled(true);
+        // FlurryAgent.setLogEnabled(true);
 
         // init Flurry
-       // FlurryAgent.init(this, "B97Z5BMSGM97ZS4V7MBV");
+        // FlurryAgent.init(this, "B97Z5BMSGM97ZS4V7MBV");
 
         //onStart();
 
@@ -303,7 +335,7 @@ View searchBar;
         CloseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //   mDrawerLayout.closeDrawer(v);
+                //   mDrawerLayout.closeDrawer(v);
                 mDrawerLayout.closeDrawer(mDrawerList);
             }
         });
@@ -317,7 +349,7 @@ View searchBar;
             return true;
 
         }else{
-                return super.onKeyDown(keyCode, event);
+            return super.onKeyDown(keyCode, event);
         }
     }
 
@@ -353,7 +385,7 @@ View searchBar;
         switch (position) {
             case 0:
 
-                fragment = new Home(mDrawerLayout,mDrawerList);
+                fragment = new Home();
                 hideNavSpinnerLang();
                 break;
             case 1:
@@ -426,8 +458,8 @@ View searchBar;
                     .replace(R.id.frame_container, fragment).commit();
 
             // update selected item and title, then close the drawer
-        //    mDrawerList.setItemChecked(position, true);
-        //    mDrawerList.setSelection(position);
+            //    mDrawerList.setItemChecked(position, true);
+            //    mDrawerList.setSelection(position);
 
             //set titles for tabs
             //setTitle(navMenuTitles[position]);
@@ -468,7 +500,7 @@ View searchBar;
 
         ActionBar actionBar =((ActionBarActivity)context).getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-       // actionBar.setDisplayShowTitleEnabled(false);
+        // actionBar.setDisplayShowTitleEnabled(false);
 
     }//end hide spinner
 
@@ -540,28 +572,6 @@ View searchBar;
 
     }
 
-
-    //flurry stuff
-
-
-    /*@Override
-    protected void onStart()
-    {
-        super.onStart();
-
-        FlurryAgent.init(this, "B97Z5BMSGM97ZS4V7MBV");
-        FlurryAgent.onStartSession(context, "B97Z5BMSGM97ZS4V7MBV");
-
-
-    }
-
-    @Override
-    protected void onStop()
-    {
-        super.onStop();
-        FlurryAgent.onEndSession(context);
-    }
-    */
 
     public void onBackPressed(final Activity activity) {
         if(isHome==true) {

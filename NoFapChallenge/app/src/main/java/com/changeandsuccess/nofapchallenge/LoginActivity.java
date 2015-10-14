@@ -108,9 +108,7 @@ public class LoginActivity extends ActionBarActivity {
            return true;
 
         }else{
-
             return false;
-
         }
     }
 

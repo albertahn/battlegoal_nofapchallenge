@@ -23,7 +23,6 @@ public class UserDatabase {
     public static final String KEY_USERNAME = "username";
     public static final String KEY_EMAIL = "email";
 
-
     public static final String KEY_PASSWORD = "password";
     public static final String KEY_PROFILE_PICTURE = "profile_picture";
     public static final String KEY_FID = "FID";
@@ -31,7 +30,6 @@ public class UserDatabase {
     //level
 
     public static final String KEY_TEXT_PROFILE = "text_profile";
-
     public static final String KEY_EXP_POINTS = "exp_points";
 
 
@@ -66,9 +64,7 @@ public class UserDatabase {
                             KEY_LEVEL+ " TEXT NOT NULL, "+
                             KEY_TEXT_PROFILE+ " TEXT NOT NULL,"+
                             KEY_EXP_POINTS+ " TEXT NOT NULL);"
-
             );
-
         }
 
         @Override
@@ -131,7 +127,7 @@ public class UserDatabase {
     public String[][] getData() {
         // get all the data from database
 
-        String[] columns = new String[] {KEY_ROWID,KEY_USERINDEX, KEY_USERNAME, KEY_EMAIL, KEY_PASSWORD, KEY_PROFILE_PICTURE, KEY_FID, KEY_LEVEL, KEY_TEXT_PROFILE};
+        String[] columns = new String[] {KEY_ROWID,KEY_USERINDEX, KEY_USERNAME, KEY_EMAIL, KEY_PASSWORD, KEY_PROFILE_PICTURE, KEY_FID, KEY_LEVEL, KEY_TEXT_PROFILE, KEY_EXP_POINTS};
         Cursor c = ourDatabase.query( DATABASE_TABLE, columns, null, null, null, null, null);
 
 
@@ -154,8 +150,6 @@ public class UserDatabase {
 
         if(c.moveToFirst()){
             for (int i =0; i<c.getCount(); i++){
-
-
                 result[i][0] =c.getString(iRow);
                 result[i][1] =c.getString(iUserIndex);
                 result[i][2] =c.getString(iUsername);
@@ -165,7 +159,7 @@ public class UserDatabase {
                 result[i][6] =c.getString(iFID);
                 result[i][7] =c.getString(iLevel);
                 result[i][8] =c.getString(iTextProfile);
-                result[i][8] =c.getString(iexp_points);
+                result[i][9] =c.getString(iexp_points);
 
                 c.moveToNext();
             }

@@ -62,7 +62,8 @@ public class Home extends Fragment {
     ImageButton add;
     ImageButton  restart;
     ImageButton shareBTN;
-    ImageButton homeBtn,chatBtn,inboxBtn,profileBtn;
+
+
     ImageButton userSettingBtn;
 
     TextView nfDay, hourText;
@@ -88,21 +89,10 @@ public class Home extends Fragment {
     String userLevel;
 
     int levelRuler;
-boolean islogg;
-
-
-    private DrawerLayout mDrawerLayout;
-    private View mDrawerList;
+    boolean islogg;
 
 
     //FragmentManager fragmentManager = getSupportFragmentManager();
-
-    public Home(){}
-    public Home(DrawerLayout mDrawerLayout,View mDrawerList){
-        this.mDrawerLayout = mDrawerLayout;
-        this.mDrawerList = mDrawerList;
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
@@ -115,7 +105,7 @@ boolean islogg;
         islogg= loginActivity.isLoggedIn(getActivity());
 
 //progress_peak
-         activity= getActivity();
+        activity= getActivity();
         mainActLayout = inflater.inflate( R.layout.mainactivity_____activity_main, container, false);
         context = getActivity();
         mainActivity = new MainActivity();
@@ -138,13 +128,10 @@ boolean islogg;
 
         hourText = (TextView) rootViewman.findViewById(R.id.hours_text);
 
-        homeBtn = (ImageButton) rootViewman.findViewById(R.id.imageButton1);
-        chatBtn = (ImageButton) rootViewman.findViewById(R.id.imageButton2);
-        inboxBtn = (ImageButton) rootViewman.findViewById(R.id.imageButton3);
-        profileBtn = (ImageButton) rootViewman.findViewById(R.id.imageButton4);
+
         userSettingBtn = (ImageButton) rootViewman.findViewById(R.id.userSetting);
 
-       // String hoursPast = new HomeDateCount(activity).getDiffTime();
+        // String hoursPast = new HomeDateCount(activity).getDiffTime();
         //hourText.setText(""+hoursPast);
         //get the last day from database
 
@@ -265,34 +252,6 @@ boolean islogg;
             }
         });
 
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayView(0);
-            }
-        });
-
-        chatBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayView(2);
-            }
-        });
-
-        inboxBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayView(3);
-            }
-        });
-
-        profileBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayView(12);
-            }
-        });
-
        /* userSettingBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -305,7 +264,7 @@ boolean islogg;
         getActivity().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-  //check user login and level
+        //check user login and level
         UserDatabase info = new UserDatabase(context);
         info.open();
         String[][] data = info.getData();
@@ -369,7 +328,7 @@ boolean islogg;
             ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) my_level
                     .getLayoutParams();
 
-           // mlp.setMargins(0, 500, 0, 0);
+            // mlp.setMargins(0, 500, 0, 0);
 
             String strColor = "#aacccc99";
 
@@ -439,7 +398,7 @@ boolean islogg;
     }
 
 
-//run the wheel
+    //run the wheel
     public void wheelRun(int intSuccess){
 
        /* Toast toast = Toast.makeText(activity,
@@ -457,7 +416,7 @@ boolean islogg;
         levelRuler=myLevelRuler(userLevel);
         levelRuler++;
 
-      //  Log.e("levelRuler", ""+levelRuler);
+        //  Log.e("levelRuler", ""+levelRuler);
 
         final Runnable r = new Runnable() {
             public void run() {
@@ -516,7 +475,7 @@ boolean islogg;
 
 
 
-           int lastday = lastcal.get(lastcal.DAY_OF_YEAR);
+            int lastday = lastcal.get(lastcal.DAY_OF_YEAR);
 
 
             Calendar currentCal = Calendar.getInstance();
@@ -558,12 +517,12 @@ boolean islogg;
                         LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT, Gravity.CENTER);
 
                 toastView.addView(imageCodeProject, para);
-               // toastView.addView(imageCodeProject);
+                // toastView.addView(imageCodeProject);
 
                 toast.show();
 
 
-                Fragment fragment = new Home(mDrawerLayout,mDrawerList);
+                Fragment fragment = new Home();
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.frame_container, fragment).commit();
@@ -650,11 +609,11 @@ boolean islogg;
 
             case 8:
                 returingRuler= context.getResources().getInteger(R.integer.lv9);
-            break;
+                break;
 
             case 9:
                 returingRuler= context.getResources().getInteger(R.integer.lv10);
-            break;
+                break;
 
             case 10:
                 returingRuler= context.getResources().getInteger(R.integer.lv10)+1;
@@ -670,109 +629,4 @@ boolean islogg;
 
         return returingRuler;
     }
-
-    public void displayView(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment = null;
-        if(position ==0)
-            MainActivity.isHome = true;
-        else
-            MainActivity.isHome = false;
-
-        switch (position) {
-            case 0:
-
-                fragment = new Home(mDrawerLayout,mDrawerList);
-                hideNavSpinnerLang();
-                break;
-            case 1:
-
-                fragment = new Blog();//LiveFragShow();//AllNewsBlog();//Videos();
-                hideNavSpinnerLang();
-                break;
-            case 2:
-                fragment = new CommentsFrag();
-
-                break;
-            case 3:
-                //fragment = new ViewProgress();
-                fragment = new Message();
-                hideNavSpinnerLang();
-                break;
-            case 4:
-                fragment = new ProfileTab();
-                hideNavSpinnerLang();
-                break;
-
-            case 5:
-                fragment = new AllCoachTabs();//Featured();
-                hideNavSpinnerLang();
-                break;
-
-            case 6:
-                fragment = new AllStoreTabsFrag();//new ComingSoon();//new AllStoreTabsFrag();//StoreFrag();
-                hideNavSpinnerLang();
-                break;
-
-            case 7:
-                fragment = new LevelFrag();
-
-                hideNavSpinnerLang();
-                break;
-
-            case 8:
-                fragment = new AllBattleTab();//new BattleFrag();
-                hideNavSpinnerLang();
-                break;
-
-            case 9:
-                fragment = new CommentsFrag();
-                hideNavSpinnerLang();
-                break;
-            case 10:
-                fragment = new ComingSoon();
-                hideNavSpinnerLang();
-                break;
-
-            case 11:
-                fragment = new SettingsFrag();
-                hideNavSpinnerLang();
-                break;
-            case 12:
-                fragment = new ProfileTab();
-                hideNavSpinnerLang();
-                break;
-
-
-            default:
-                hideNavSpinnerLang();
-                break;
-        }
-
-        if (fragment != null) {
-            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.frame_container, fragment).commit();
-
-            // update selected item and title, then close the drawer
-            //    mDrawerList.setItemChecked(position, true);
-            //    mDrawerList.setSelection(position);
-
-            //set titles for tabs
-            //setTitle(navMenuTitles[position]);
-            mDrawerLayout.closeDrawer(mDrawerList);
-            mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
-        } else {
-            // error in creating fragment
-            Log.e("MainActivity", "Error in creating fragment");
-        }
-    }
-
-    public void hideNavSpinnerLang(){
-
-        ActionBar actionBar =((ActionBarActivity)context).getSupportActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        // actionBar.setDisplayShowTitleEnabled(false);
-
-    }//end hide spinner
 }//end
