@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -51,6 +49,7 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
     ImageView profile_photo;
     ArrayList<LoginItem> generatedLoginItem;
     ImageButton replyButton;
+    Button moreCommentsBtn;
 
     String userIndex;
     static int rowList = R.layout.com_in_adapter_____comment_bubble_list_row;
@@ -116,34 +115,20 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
         final Integer commentindex = Integer.parseInt(itemsArrayList.get(position).getcomment_index().toString());
 
        int rep_to= itemsArrayList.get(position).getreply_to();
+
         // 2. Get rowView from inflater
         rowView = inflater.inflate(rowList, parent, false);
 
+        moreCommentsBtn = (Button)rowView.findViewById(R.id.moreCommentsBtn);
+        moreCommentsBtn.setVisibility(View.GONE);
         if(rep_to!=0){ //if its a reply change color
 
             //rowView.setBackgroundResource(R.drawable.gradient_bg);
-
             //set top
-
-            Button reply_to_who = (Button) rowView.findViewById(R.id.reply_to_who);
-            reply_to_who.setText("Reply to "+itemsArrayList.get(position).getreply_to());
 
             final int reply_index = (int) itemsArrayList.get(position).getreply_to();
 
-            reply_to_who.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    new  LoadReplies(userIndex, activity, reply_index).execute();
-                }
-            });
-
         }else{
-
-            Button reply_to_who = (Button) rowView.findViewById(R.id.reply_to_who);
-            //rowView.setId(position);
-            reply_to_who.setVisibility(View.GONE);
-
         }
 
             // 3. Get the two text view from the rowView
@@ -157,10 +142,21 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
             // 4. Set the text for textView
             text_body_sample.setText(itemsArrayList.get(position).getcomment_text());
             username.setText(itemsArrayList.get(position).getusername());
-            replynum.setText(itemsArrayList.get(position).getreply_num());
-            likesnum.setText(itemsArrayList.get(position).getLikes());
+            replynum.setText(""+itemsArrayList.get(position).getreply_num());
+            likesnum.setText(""+itemsArrayList.get(position).getLikes());
             timestamp.setText(itemsArrayList.get(position).getTimeStamp());
 
+
+        if(itemsArrayList.get(position).getreply_num().compareTo("0")==0){
+        }else{
+            moreCommentsBtn.setVisibility(View.VISIBLE);
+            moreCommentsBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new LoadReplies(userIndex, activity, commentindex).execute();
+                }
+            });
+        }
 
             profile_photo = (ImageView) rowView.findViewById(R.id.user_profile);
 
@@ -204,13 +200,14 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
             int reply_to = itemsArrayList_reply.get(i).getreply_to();
             if(reply_to==commentindex){
                 ListView listview = (ListView) rowView.findViewById(R.id.listView2);
-                ReplyAdapter adapter = new ReplyAdapter(activity);
+                ReplyAdapterOutside adapter = new ReplyAdapterOutside(activity);
                 adapter.addItem(new ReplyItem(itemsArrayList_reply.get(i).getmembers_index(),itemsArrayList_reply.get(i).getusername(),itemsArrayList_reply.get(i).getcomment_text(),itemsArrayList_reply.get(i).getprofile_picture()));
                 listview.setAdapter(adapter);
             }
         }
 
         //get the rep buttons
+
 
          replyButton = (ImageButton) rowView.findViewById(R.id.reply_button);
         final ImageButton likeButton = (ImageButton) rowView.findViewById(R.id.like_button);

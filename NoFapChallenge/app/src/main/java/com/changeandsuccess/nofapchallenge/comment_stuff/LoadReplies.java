@@ -12,7 +12,6 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.adapter.ReplyAdapter;
 import com.changeandsuccess.nofapchallenge.model.CommentItem;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 
@@ -87,11 +86,6 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
 
 
         if (jsonArray != null) {
-
-
-
-
-
             //homeListView.getContext()
 
             // View rootView = ((Activity) activity).getWindow().getDecorView().findViewById(android.R.id.content);

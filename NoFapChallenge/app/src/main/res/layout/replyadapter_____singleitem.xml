@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-   >
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="50dp"
@@ -15,32 +14,34 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp" />
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user_profile"
+        android:background="#ffffff">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="username"
-        android:textColor="#ffffff"
-        android:fontFamily="sans-serif-thin"
         android:id="@+id/user_name"
-        android:layout_toEndOf="@+id/user_profile"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/user_profile" />
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="text body"
-        android:textColor="#ffffff"
         android:id="@+id/text_body"
-        android:layout_below="@+id/user_name"
-        android:layout_toRightOf="@+id/user_profile"
-        android:layout_toEndOf="@+id/user_profile"
-        android:paddingBottom="70dp"
-        android:background="@drawable/recievebubble"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp" />
+        android:layout_below="@+id/time_stamp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="10dp" />
 
     <RelativeLayout
         android:id="@+id/reply_rel"
@@ -63,74 +64,18 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageButton
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:id="@+id/like_button"
-        android:src="@drawable/like2"
-        android:background="@color/transparent"
-        android:padding="5dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="23dp"
-        android:layout_alignLeft="@+id/text_body"
-        android:layout_alignBottom="@+id/text_body" />
-
-    <ImageButton
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:id="@+id/reply_button"
-        android:src="@drawable/message3"
-        android:background="@color/transparent"
-        android:adjustViewBounds="true"
-        android:padding="5dp"
-        android:layout_alignBottom="@+id/text_body"
-        android:layout_toRightOf="@+id/num_likes" />
-
-    <TextView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="0"
-        android:id="@+id/num_reply"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:layout_centerHorizontal="true"
-        android:layout_toRightOf="@+id/reply_button"
-        android:layout_alignBottom="@+id/text_body" />
-
-    <TextView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="0"
-        android:id="@+id/num_likes"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:layout_toRightOf="@+id/like_button"
-        android:layout_toEndOf="@+id/like_button"
-        android:layout_alignBottom="@+id/text_body" />
-
-    <TextView
+        <TextView
 
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_height="wrap_content"
         android:text="time_stamp"
         android:id="@+id/time_stamp"
-        android:textColor="#ffffff"
-        android:paddingLeft="40dp"
-        android:paddingRight="5dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="5dp"
         android:bottomRightRadius="57dp"
 
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_alignParentTop="false"
-        android:layout_alignRight="@+id/text_body"
-        android:layout_alignEnd="@+id/text_body"
-        android:layout_alignBottom="@+id/text_body" />
-
+        android:layout_toRightOf="@+id/user_name"
+        android:layout_alignBottom="@+id/user_name"
+        android:layout_marginLeft="10dp" />
+    </RelativeLayout>
 </RelativeLayout>
 
 

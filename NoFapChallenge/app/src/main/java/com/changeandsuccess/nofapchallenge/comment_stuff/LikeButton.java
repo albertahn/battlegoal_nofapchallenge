@@ -4,13 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ListView;
 
-import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.adapter.ReplyAdapter;
-import com.changeandsuccess.nofapchallenge.model.CommentItem;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 
 import org.json.JSONArray;
@@ -18,7 +12,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by albert on 9/7/14.

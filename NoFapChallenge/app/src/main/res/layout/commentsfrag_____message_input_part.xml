@@ -3,7 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/message_back">
+    android:background="#e0e2e8">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -11,13 +11,15 @@
         android:orientation="horizontal"
         android:id="@+id/langSelectZone"
         android:layout_below="@+id/live_chat_btn"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff">
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/arrow_purchase_left"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:tint="#010101" />
     <HorizontalScrollView
         android:layout_width="320dp"
         android:layout_height="wrap_content"
@@ -83,7 +85,8 @@
             android:layout_height="30dp"
             android:src="@drawable/arrow_purchase"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:tint="#010101" />
     </LinearLayout>
 
     <ListView

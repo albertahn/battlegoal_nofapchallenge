@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-   >
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orginalComment"
+        android:background="#ffffff"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
 
     <ImageView
         android:layout_width="50dp"
@@ -20,27 +28,24 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="username"
-        android:textColor="#ffffff"
-        android:fontFamily="sans-serif-thin"
         android:id="@+id/user_name"
-        android:layout_toEndOf="@+id/user_profile"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/user_profile" />
+        android:layout_alignTop="@+id/user_profile"
+        android:layout_toRightOf="@+id/user_profile"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="3dp" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="text body"
-        android:textColor="#ffffff"
         android:id="@+id/text_body"
-        android:layout_below="@+id/user_name"
-        android:layout_toRightOf="@+id/user_profile"
-        android:layout_toEndOf="@+id/user_profile"
         android:paddingBottom="70dp"
-        android:background="@drawable/recievebubble"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp" />
+        android:paddingRight="20dp"
+        android:layout_below="@+id/user_profile"
+        android:layout_alignLeft="@+id/user_profile"
+        android:layout_alignStart="@+id/user_profile" />
 
     <RelativeLayout
         android:id="@+id/reply_rel"
@@ -70,10 +75,10 @@
         android:src="@drawable/like2"
         android:background="@color/transparent"
         android:padding="5dp"
-        android:layout_marginLeft="23dp"
+        android:layout_marginLeft="180dp"
         android:layout_marginStart="23dp"
-        android:layout_alignLeft="@+id/text_body"
-        android:layout_alignBottom="@+id/text_body" />
+        android:layout_alignBottom="@+id/text_body"
+        android:tint="#010101" />
 
     <ImageButton
         android:layout_width="35dp"
@@ -82,76 +87,82 @@
         android:src="@drawable/message3"
         android:background="@color/transparent"
         android:adjustViewBounds="true"
-        android:padding="5dp"
         android:layout_alignBottom="@+id/text_body"
-        android:layout_toRightOf="@+id/num_likes" />
+        android:layout_toRightOf="@+id/num_likes"
+        android:tint="#010101"
+        android:layout_marginLeft="10dp" />
 
     <TextView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="0"
         android:id="@+id/num_reply"
         android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
         android:layout_centerHorizontal="true"
         android:layout_toRightOf="@+id/reply_button"
-        android:layout_alignBottom="@+id/text_body" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text=""
-        android:id="@+id/reply_to_who"
-        android:layout_below="@+id/reply_rel"
+        android:layout_alignBottom="@+id/text_body"
+        android:textSize="20dp" />
 
-        android:layout_marginRight="10dp"
-        android:textColor="#ffffff"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"/>
-
-    <TextView
+        <TextView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="0"
+            android:text="0"
         android:id="@+id/num_likes"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:layout_toRightOf="@+id/like_button"
-        android:layout_toEndOf="@+id/like_button"
-        android:layout_alignBottom="@+id/text_body" />
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/like_button"
+        android:layout_alignBottom="@+id/text_body"
+            android:paddingLeft="10dp"
+            android:textSize="20dp" />
 
     <TextView
 
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="time_stamp"
         android:id="@+id/time_stamp"
-        android:textColor="#ffffff"
-        android:paddingLeft="40dp"
-        android:paddingRight="5dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="5dp"
         android:bottomRightRadius="57dp"
 
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_alignParentTop="false"
-        android:layout_alignRight="@+id/text_body"
-        android:layout_alignEnd="@+id/text_body"
-        android:layout_alignBottom="@+id/text_body" />
+        android:layout_below="@+id/user_name"
+        android:layout_alignLeft="@+id/user_name"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/line"
+            android:background="@drawable/line"
+
+            android:layout_above="@+id/like_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/moreCommentsBtn"
+        android:layout_below="@+id/orginalComment"
+        android:layout_centerHorizontal="true"
+        android:text="more comments ..."
+        android:background="#00ffffff"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:textColor="#ff8805" />
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView2"
-        android:layout_below="@+id/reply_rel"
-        android:layout_alignLeft="@+id/like_button"
-        android:layout_alignStart="@+id/like_button"
-        android:layout_alignRight="@+id/reply_to_who"
-        android:layout_alignEnd="@+id/reply_to_who" />
+        android:layout_below="@+id/moreCommentsBtn"
+        android:layout_marginLeft="80dp" />
+
 </RelativeLayout>
 
 
