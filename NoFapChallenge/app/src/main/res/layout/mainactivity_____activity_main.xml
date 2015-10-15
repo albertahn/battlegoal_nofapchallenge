@@ -166,12 +166,12 @@
             android:layout_height="match_parent"
             android:id="@+id/list_slidermenu"
             android:layout_alignParentBottom="true"
-            android:background="@color/transparent"
+
             android:layout_gravity="start"
             android:layout_marginLeft="-64dp"
             >
-            <!--
-            android:layout_gravity="start"
+
+            <!-- android:layout_gravity="start"
             android:layout_marginLeft="-64dp"
             -->
 
@@ -184,13 +184,14 @@
                 android:divider="@color/list_divider"
                 android:dividerHeight="1dp"
                 android:listSelector="@drawable/list_selector"
-                android:background="@color/black_transparent">
+                android:background="#cfffffff"
+                >
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:id="@+id/userProfile"
-                    android:background="#ffffff">
+                    android:background="@drawable/img_tag_1">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -260,9 +261,10 @@
                         android:id="@+id/userSetting"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:src="@drawable/setting"
+                        android:src="@drawable/btn_setup_n"
                         android:scaleType="fitCenter"
                         android:padding="10dp"
+                        android:tint="#ffffff"
                         android:background="#aaaaaa"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp" />
@@ -273,7 +275,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/userProfile"
-                    android:id="@+id/buttons">
+                    android:id="@+id/buttons"
+                    android:background="#11ffffff">
 
                     <ImageButton
                         android:layout_width="90dp"
@@ -285,7 +288,7 @@
 
                         android:gravity="fill"
                         android:layout_gravity="right|top"
-                        android:src="@drawable/chat"
+                        android:src="@drawable/m_livechat_btn"
                         android:layout_toRightOf="@+id/home_menu"
 
                         android:adjustViewBounds="true"
@@ -308,7 +311,7 @@
                         android:gravity="fill"
 
                         android:layout_gravity="right|top"
-                        android:src="@drawable/inbox"
+                        android:src="@drawable/m_inbox_btn"
 
 
                         android:adjustViewBounds="true"
@@ -329,7 +332,7 @@
 
                         android:adjustViewBounds="true"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/home"
+                        android:src="@drawable/m_home_btn"
                         android:paddingBottom="20dp"
                         android:paddingLeft="10dp"
                         android:paddingTop="10dp"
@@ -343,7 +346,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/menubacktest"
 
-                        android:src="@drawable/blog"
+                        android:src="@drawable/m_event_btn"
 
                         android:adjustViewBounds="true"
                         android:scaleType="fitCenter"
@@ -361,7 +364,7 @@
                         android:id="@+id/battle_menu"
 
                         android:background="@drawable/menubacktest"
-                        android:src="@drawable/battle"
+                        android:src="@drawable/m_battle_btn"
 
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
@@ -396,7 +399,7 @@
 
                     <ImageButton
                         android:id="@+id/level_menu"
-                        android:src="@drawable/level"
+                        android:src="@drawable/m_level_btn"
                         android:background="@drawable/menubacktest"
                         android:layout_width="90dp"
                         android:layout_height="70dp"
@@ -445,7 +448,7 @@
                         android:adjustViewBounds="true"
                         android:scaleType="fitCenter"
 
-                        android:src="@drawable/profile_menu"
+                        android:src="@drawable/m_profile_btn"
 
                         android:paddingLeft="10dp"
                         android:paddingTop="10dp"
@@ -465,7 +468,7 @@
                         android:adjustViewBounds="true"
                         android:scaleType="fitCenter"
 
-                        android:src="@drawable/setting"
+                        android:src="@drawable/m_setting_btn"
 
                         android:paddingLeft="10dp"
                         android:paddingTop="10dp"
@@ -477,7 +480,7 @@
 
                     <ImageButton
                         android:id="@+id/livechat_menu"
-                        android:src="@drawable/message"
+                        android:src="@drawable/m_board_btn"
                         android:background="@drawable/menubacktest"
                         android:layout_width="90dp"
                         android:layout_height="70dp"
@@ -579,7 +582,7 @@
                         android:layout_alignBottom="@+id/battle_menu"
                         android:layout_alignLeft="@+id/battle_menu"
                         android:layout_alignRight="@+id/battle_menu"
-                        android:textColor="#ffffff"
+                        android:textColor="#1e0b00"
 
 
                         android:gravity="center"
@@ -646,31 +649,31 @@
                         android:fontFamily="sans-serif"
                         android:textSize="10.5dp"
                         android:layout_marginBottom="5dp"/>
+                    <!--
+                                        <TextView
+                                            android:layout_width="50dp"
+                                            android:layout_height="20dp"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="NEW!"
+                                            android:id="@+id/new_tag"
+                                            android:layout_alignTop="@+id/blog_menu"
+                                            android:layout_marginTop="20dp"
+                                            android:layout_marginLeft="20dp"
+                                            android:textColor="#ff0000"
+                                            android:layout_toLeftOf="@+id/inbox_menu" />
 
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="20dp"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="NEW!"
-                        android:id="@+id/new_tag"
-                        android:layout_alignTop="@+id/blog_menu"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:textColor="#ff0000"
-                        android:layout_toLeftOf="@+id/inbox_menu" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="20dp"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="NEW!"
-                        android:id="@+id/new_tag2"
-                        android:layout_alignTop="@+id/battle_menu"
-                        android:layout_toRightOf="@+id/battle_menu"
-                        android:layout_toEndOf="@+id/battle_menu"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:textColor="#ff0000" />
+                                      <TextView
+                                            android:layout_width="50dp"
+                                            android:layout_height="20dp"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="NEW!"
+                                            android:id="@+id/new_tag2"
+                                            android:layout_alignTop="@+id/battle_menu"
+                                            android:layout_toRightOf="@+id/battle_menu"
+                                            android:layout_toEndOf="@+id/battle_menu"
+                                            android:layout_marginTop="20dp"
+                                            android:layout_marginLeft="20dp"
+                                            android:textColor="#ff0000" />-->
 
 
                     <TextView
@@ -732,106 +735,120 @@
                         android:layout_marginBottom="5dp"/>
 
                 </RelativeLayout>
-
                 <RelativeLayout
-                    android:layout_width="340dp"
-                    android:layout_height="wrap_content"
-                    android:background="#2299ff"
+                    android:id="@+id/bottom_new_tabs"
+                    android:background="#ffffff"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
                     android:layout_below="@+id/buttons"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/News">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="340dp"
                         android:layout_height="wrap_content"
-                        android:text="NewsTitle"
-                        android:id="@+id/NewsTitle"
-                        android:layout_alignParentTop="true"
+                        android:background="#1E0B0011"
+
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:textColor="#ffffff"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="There is no News"
-                        android:id="@+id/NewsContents1"
-                        android:layout_below="@+id/NewsTitle"
-                        android:textSize="15dp"
-                        android:textColor="#ffffff" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="..."
-                        android:id="@+id/NewsContents2"
-                        android:layout_below="@+id/NewsContents1"
-                        android:textSize="15dp"
-                        android:textColor="#ffffff" />
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/arrow_purchase"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentEnd="true" />
-                </RelativeLayout>
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/News">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NewsTitle"
+                            android:id="@+id/NewsTitle"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#1e0b00"
+                            android:textSize="18dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="There is no News"
+                            android:id="@+id/NewsContents1"
+                            android:layout_below="@+id/NewsTitle"
+                            android:textSize="15dp"
+                            android:textColor="#1e0b00" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="..."
+                            android:id="@+id/NewsContents2"
+                            android:layout_below="@+id/NewsContents1"
+                            android:textSize="15dp"
+                            android:textColor="#ffffff" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/btn_arrow_n"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="340dp"
-                    android:layout_height="wrap_content"
-                    android:background="#2299ff"
-                    android:layout_below="@+id/News"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="10dp"
-                    android:id="@+id/Notices"
-                    android:layout_marginTop="5dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="340dp"
                         android:layout_height="wrap_content"
-                        android:text="Notice"
-                        android:id="@+id/NoticesTitle"
-                        android:layout_alignParentTop="true"
+                        android:background="#1E0B0011"
+                        android:layout_below="@+id/News"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:textColor="#ffffff"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="We are testing this session."
-                        android:id="@+id/NoticesContents1"
-                        android:layout_below="@+id/NoticesTitle"
-                        android:textSize="15dp"
-                        android:textColor="#ffffff" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="..."
-                        android:id="@+id/NoticesContents2"
-                        android:layout_below="@+id/NoticesContents1"
-                        android:textSize="15dp"
-                        android:textColor="#ffffff" />
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/arrow_purchase"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentEnd="true" />
-                </RelativeLayout>
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/Notices"
+                        android:layout_marginTop="5dp">
 
-                <com.google.android.gms.ads.AdView
-                    android:id="@+id/adView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    ads:adSize="BANNER"
-                    ads:adUnitId="@string/banner_ad_unit_id"
-                    android:layout_marginLeft="15dp"
-                    android:layout_below="@+id/Notices">
-                </com.google.android.gms.ads.AdView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notice"
+                            android:id="@+id/NoticesTitle"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#1e0b00"
+                            android:textSize="18dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="We are testing this session."
+                            android:id="@+id/NoticesContents1"
+                            android:layout_below="@+id/NoticesTitle"
+                            android:textSize="15dp"
+                            android:textColor="#1e0b00" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="..."
+                            android:id="@+id/NoticesContents2"
+                            android:layout_below="@+id/NoticesContents1"
+                            android:textSize="15dp"
+                            android:textColor="#ffffff" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/btn_arrow_n"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+
+                    <com.google.android.gms.ads.AdView
+                        android:id="@+id/adView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="@string/banner_ad_unit_id"
+                        android:layout_marginLeft="15dp"
+                        android:layout_below="@+id/Notices">
+                    </com.google.android.gms.ads.AdView>
+
+                </RelativeLayout>><!-- bottom_new_tabs-->
+
 
 
             </RelativeLayout>
