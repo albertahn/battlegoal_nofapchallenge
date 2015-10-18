@@ -1,14 +1,15 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Base application theme. parent="Theme.AppCompat.Light.DarkActionBar" -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
 
         <item name="android:spinnerDropDownItemStyle">@style/YourCustomDropDownItemStyle</item>
-
+        <item name="android:background">#ffffff</item>
     </style>
 
     <style name="YourCustomDropDownItemStyle" parent="AppTheme">
         <item name="android:textAppearance">@style/YourCustomDropDownItemTextStyle</item>
+        <item name="android:background">#ffffff</item>
     </style>
 
     <style name="YourCustomDropDownItemTextStyle" parent="@android:style/Widget">

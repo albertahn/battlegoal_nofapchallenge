@@ -83,7 +83,7 @@ public class MainActivity extends ActionBarActivity {
     private CharSequence mDrawerTitle;
 
     // used to store app title
-    private CharSequence mTitle;
+    private CharSequence mTitle, current_title;
 
     // slide menu items
     private String[] navMenuTitles;
@@ -98,6 +98,8 @@ public class MainActivity extends ActionBarActivity {
     ImageButton home_up,chat_up,inbox_up,profile_up;
     RelativeLayout news_menu,notice_menu;
     View searchBar;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +118,7 @@ public class MainActivity extends ActionBarActivity {
             readSavedUser(this, generatedLoginItem);
         }
 
-        mTitle = mDrawerTitle = getTitle();
+        mTitle = mDrawerTitle = current_title;
         // load slide menu items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
         // nav drawer icons from resources
@@ -277,9 +279,10 @@ public class MainActivity extends ActionBarActivity {
 
 
 
-        //getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.tab_bg_selector));
 
-        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.bartrans));
+        //getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.tab_bg_selector));
+//set background of bar color
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_color));
 
         // getSupportActionBar().setCustomView(getResources().getDrawable(R.style.ActionButtonStyle));
 
@@ -387,62 +390,73 @@ public class MainActivity extends ActionBarActivity {
 
                 fragment = new Home();
                 hideNavSpinnerLang();
+                current_title = "Home";
                 break;
             case 1:
                 fragment = new Blog();//LiveFragShow();//AllNewsBlog();//Videos();
                 hideNavSpinnerLang();
+                current_title = "Blog";
                 break;
             case 2:
                 fragment = new CommentsFrag();
-
+                current_title = "Comment Board";
                 break;
             case 3:
                 //fragment = new ViewProgress();
                 fragment = new Message();
                 hideNavSpinnerLang();
+                current_title = "Message";
                 break;
             case 4:
                 fragment = new ProfileTab();
                 hideNavSpinnerLang();
+                current_title = "Profile";
                 break;
 
             case 5:
                 fragment = new AllCoachTabs();//Featured();
                 hideNavSpinnerLang();
+                current_title = "Coaches";
                 break;
 
             case 6:
                 fragment = new AllStoreTabsFrag();//new ComingSoon();//new AllStoreTabsFrag();//StoreFrag();
                 hideNavSpinnerLang();
+                current_title = "Store";
                 break;
 
             case 7:
                 fragment = new LevelFrag();
-
+                current_title = "Level";
                 hideNavSpinnerLang();
                 break;
 
             case 8:
                 fragment = new AllBattleTab();//new BattleFrag();
                 hideNavSpinnerLang();
+                current_title = "Battle";
                 break;
 
             case 9:
                 fragment = new CommentsFrag();
                 hideNavSpinnerLang();
+                current_title = "Comments";
                 break;
             case 10:
                 fragment = new ComingSoon();
                 hideNavSpinnerLang();
+                current_title = "Soon";
                 break;
 
             case 11:
                 fragment = new SettingsFrag();
                 hideNavSpinnerLang();
+                current_title = "Settings";
                 break;
             case 12:
                 fragment = new ProfileTab();
                 hideNavSpinnerLang();
+                current_title = "Profile";
                 break;
 
 
@@ -464,7 +478,7 @@ public class MainActivity extends ActionBarActivity {
             //set titles for tabs
             //setTitle(navMenuTitles[position]);
             mDrawerLayout.closeDrawer(mDrawerList);
-            mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
+            //mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
         } else {
             // error in creating fragment
             Log.e("MainActivity", "Error in creating fragment");

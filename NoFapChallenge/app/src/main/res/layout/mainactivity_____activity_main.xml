@@ -166,9 +166,10 @@
             android:layout_height="match_parent"
             android:id="@+id/list_slidermenu"
             android:layout_alignParentBottom="true"
-
             android:layout_gravity="start"
             android:layout_marginLeft="-64dp"
+
+
             >
 
             <!-- android:layout_gravity="start"
@@ -542,7 +543,7 @@
                         android:layout_alignBottom="@+id/blog_menu"
                         android:layout_alignLeft="@+id/blog_menu"
                         android:layout_alignRight="@+id/blog_menu"
-                        android:textColor="#ffffff"
+                        android:textColor="#aaaaaa"
 
 
                         android:gravity="center"
@@ -582,7 +583,7 @@
                         android:layout_alignBottom="@+id/battle_menu"
                         android:layout_alignLeft="@+id/battle_menu"
                         android:layout_alignRight="@+id/battle_menu"
-                        android:textColor="#1e0b00"
+                        android:textColor="#aaaaaa"
 
 
                         android:gravity="center"
@@ -601,7 +602,7 @@
                         android:layout_alignBottom="@+id/coach_menu"
                         android:layout_alignLeft="@+id/coach_menu"
                         android:layout_alignRight="@+id/coach_menu"
-                        android:textColor="#ffffff"
+                        android:textColor="#aaaaaa"
 
 
                         android:gravity="center"
@@ -621,14 +622,14 @@
                         android:layout_alignBottom="@+id/level_menu"
                         android:layout_alignLeft="@+id/level_menu"
                         android:layout_alignRight="@+id/level_menu"
-                        android:textColor="#ffffff"
 
 
                         android:gravity="center"
                         android:textScaleX="1.2"
                         android:fontFamily="sans-serif"
                         android:textSize="10.5dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#aaaaaa" />
 
 
                     <TextView
@@ -641,7 +642,7 @@
                         android:layout_alignBottom="@+id/store_menu"
                         android:layout_alignLeft="@+id/store_menu"
                         android:layout_alignRight="@+id/store_menu"
-                        android:textColor="#ffffff"
+                        android:textColor="#aaaaaa"
 
 
                         android:gravity="center"
@@ -686,7 +687,7 @@
                         android:layout_alignBottom="@+id/profile_menu"
                         android:layout_alignLeft="@+id/profile_menu"
                         android:layout_alignRight="@+id/profile_menu"
-                        android:textColor="#ffffff"
+                        android:textColor="#aaaaaa"
 
 
                         android:gravity="center"
@@ -705,7 +706,7 @@
                         android:layout_alignBottom="@+id/setting_menu"
                         android:layout_alignLeft="@+id/setting_menu"
                         android:layout_alignRight="@+id/setting_menu"
-                        android:textColor="#ffffff"
+                        android:textColor="#aaaaaa"
 
 
                         android:gravity="center"
@@ -844,7 +845,7 @@
                         ads:adSize="BANNER"
                         ads:adUnitId="@string/banner_ad_unit_id"
                         android:layout_marginLeft="15dp"
-                        android:layout_below="@+id/Notices">
+                        android:layout_alignParentBottom="true">
                     </com.google.android.gms.ads.AdView>
 
                 </RelativeLayout>><!-- bottom_new_tabs-->
