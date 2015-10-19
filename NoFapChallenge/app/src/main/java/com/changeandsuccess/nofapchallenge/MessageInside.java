@@ -57,7 +57,7 @@ public class MessageInside extends ActionBarActivity{
         //the acitonbar title
 
         getSupportActionBar().setTitle("hi"+otherguyname);
-        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.titlecolor));
+        //getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.titlecolor));
 
         //get userid
         LoginHelper loginHelper = new LoginHelper();
@@ -93,7 +93,7 @@ public class MessageInside extends ActionBarActivity{
 
         }else{
 
-            rootview = LayoutInflater.from(getApplicationContext()).inflate(R.layout.commentsfrag_____message_input_part, null);
+            rootview = LayoutInflater.from(getApplicationContext()).inflate(R.layout.message_inside_____message_input_part, null);
             setContentView(rootview);
 
 

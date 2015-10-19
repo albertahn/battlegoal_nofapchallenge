@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.model.MessageTabItem;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -58,11 +57,12 @@ public class MessageTabAdapter extends ArrayAdapter<MessageTabItem> {
         // 3. Get the two text view from the rowView
         TextView text_body_sample = (TextView) rowView.findViewById(R.id.text_body_sample);
         TextView username =(TextView) rowView.findViewById(R.id.username);
-
+        TextView seen_by = (TextView) rowView.findViewById(R.id.seen_by);
 
         // 4. Set the text for textView
         text_body_sample.setText(itemsArrayList.get(position).getmessages_body());
         username.setText(itemsArrayList.get(position).getother_person_name());
+        seen_by.setText("seen by: "+itemsArrayList.get(position).get_seen());
 
 
 //image

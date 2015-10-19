@@ -52,6 +52,16 @@
         android:layout_toEndOf="@+id/product_picture"
         android:textSize="16dp"
         android:textColor="#f2f6ff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/seen_by"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
     <!--here new one-->
 
 </RelativeLayout>

@@ -100,6 +100,25 @@
                     android:paddingRight="10dp"
                     android:paddingBottom="20dp"
                     android:scaleType="fitCenter" />
+<!-- notification badge -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="3"
+
+                    android:id="@+id/inbox_notification_badge"
+                    android:background="@drawable/badge_circle"
+                    android:layout_alignRight="@+id/imageButton3"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:textScaleX="1.2"
+                    android:fontFamily="sans-serif"
+                    android:textSize="10.5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignTop="@+id/imageButton3" />
+
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

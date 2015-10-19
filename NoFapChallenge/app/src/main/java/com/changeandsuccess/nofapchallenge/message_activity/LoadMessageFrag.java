@@ -1,7 +1,9 @@
 package com.changeandsuccess.nofapchallenge.message_activity;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
@@ -10,7 +12,6 @@ import android.widget.ListView;
 
 import com.changeandsuccess.nofapchallenge.MessageInside;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.model.MessageTabItem;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 
 import org.json.JSONArray;
@@ -22,9 +23,11 @@ import java.util.ArrayList;
 
 /**
  * Created by albert on 7/20/14.
+ * list of list_message_summary
  */
 public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
 
+    public static final String MY_PREFS_NAME = "MyPrefsFile";
 
     final static String STREAMURL = "http://mobile.tanggoal.com/message/list_message_summary/";
     JSONArray jsonArray;
@@ -33,6 +36,7 @@ public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
     String userID;
     JSONObject jsonOb;
     View rootView;
+    int unread_message;
 
 
 
@@ -41,7 +45,7 @@ public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
         this.activity = activity;
         this.userID = userID;
 
-    }
+    }// load message
 
 
     //interface to get result
@@ -93,6 +97,7 @@ public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
 
                      i.putExtra("prevActivity", "MainActivity");
                     activity.startActivity(i);
+
                 }
             });
 
@@ -113,9 +118,11 @@ public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
 
         ArrayList<MessageTabItem> items = new ArrayList<MessageTabItem>();
 
+
         for (int i =0; i<jsondata.length() ; i++){
 
             try{
+
                 //check if course comment
                 //if(jsondata.getJSONObject(i).getString("courses_index")!="") {
 
@@ -129,8 +136,29 @@ public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
                             jsondata.getJSONObject(i).getString("timestamp"),
                             jsondata.getJSONObject(i).getString("other_person_pic"),
                             jsondata.getJSONObject(i).getString("other_person_name"),
-                            jsondata.getJSONObject(i).getString("other_person_index")
+                            jsondata.getJSONObject(i).getString("other_person_index"),
+                            jsondata.getJSONObject(i).getString("seen")
+
                     ));
+
+
+                if (jsondata.getJSONObject(i).getString("seen").toString().equalsIgnoreCase("0") && !jsondata.getJSONObject(i).getString("members_index").equalsIgnoreCase(userID)){
+
+                    unread_message++;
+
+                   /* Dialog d = new Dialog(activity);
+                    d.setTitle(""+unread_message);
+                    d.show();*/
+
+                    SharedPreferences.Editor editor = activity.getSharedPreferences(MY_PREFS_NAME, 0).edit();
+
+                    editor.putInt("unread_message", unread_message);
+                    editor.commit();
+
+
+
+
+                }
 
                // }//end if
             }catch(JSONException e){
@@ -139,7 +167,16 @@ public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
 
             }
 
-        }
+        }//endfor
+
+
+        SharedPreferences prefs = activity.getSharedPreferences(MY_PREFS_NAME, 0);
+
+        int unread_int = prefs.getInt("unread_message", 0);
+
+        Dialog d = new Dialog(activity);
+        d.setTitle(""+ unread_int);
+        d.show();
 
         return items;
 

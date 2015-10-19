@@ -1,7 +1,9 @@
-package com.changeandsuccess.nofapchallenge.adapter;
+package com.changeandsuccess.nofapchallenge.message_activity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.support.v7.app.ActionBar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.model.MessageTabItem;
+import com.changeandsuccess.nofapchallenge.message_activity.MessageTabItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -30,6 +32,7 @@ public class MessageInsideAdapter extends ArrayAdapter<MessageTabItem>{
 
     View rowView;
     ImageView profile_photo;
+    String userIndex;
 
     static int rowList = R.layout.messageinsideadapter_____message_bubble;
 
@@ -49,13 +52,13 @@ public class MessageInsideAdapter extends ArrayAdapter<MessageTabItem>{
         this.itemsArrayList = itemsArrayList;
         this.actionbar =actionbar;
 
-        if(imageLoader.isInited()==false) {
+        if(imageLoader.isInited()==false){
 
             imageLoader.init(ImageLoaderConfiguration.createDefault(context));
 
         }//end if
 
-    } //end
+    }//end
 
 
     @Override
@@ -72,12 +75,12 @@ public class MessageInsideAdapter extends ArrayAdapter<MessageTabItem>{
         String[][] data = info.getData();
         info.close();
 
-        String userIndex = data[0][1];
+         userIndex = data[0][1];
 
 
         String messagePersonID = itemsArrayList.get(position).getmembers_index();
 
-        if(userIndex.equals(messagePersonID)){
+        if(userIndex.equals(messagePersonID)){ //if i sent the message
 
 
             rowView = inflater.inflate(R.layout.messageinsideadapter_____message_bubble_my, parent, false);
@@ -128,10 +131,15 @@ public class MessageInsideAdapter extends ArrayAdapter<MessageTabItem>{
         //username.setText(itemsArrayList.get(position).getuser_name());
 
 
+          /*  if (itemsArrayList.get(position).get_seen().toString().equalsIgnoreCase("0")){
+//send seenmessage
+               new SeenMessage_send(userIndex, itemsArrayList.get(position).getmessages_index(), context).execute();
+
+            }//end if*/
+
             actionbar.setTitle(itemsArrayList.get(position).getuser_name());
 
             //set timeline
-
 
             String dateString = itemsArrayList.get(position).get_timestamp();
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

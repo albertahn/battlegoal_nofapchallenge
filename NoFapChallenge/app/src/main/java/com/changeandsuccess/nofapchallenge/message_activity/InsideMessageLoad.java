@@ -1,9 +1,7 @@
 package com.changeandsuccess.nofapchallenge.message_activity;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.os.AsyncTask;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.View;
@@ -11,8 +9,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.adapter.MessageInsideAdapter;
-import com.changeandsuccess.nofapchallenge.model.MessageTabItem;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 
 import org.json.JSONArray;
@@ -123,8 +119,18 @@ public class InsideMessageLoad extends AsyncTask<String, Integer, String> {
                         jsondata.getJSONObject(i).getString("timestamp"),
                         " ",
                         " ",
-                        ""
+                        "",
+                        jsondata.getJSONObject(i).getString("seen")
                 ));
+
+
+                //also check if not seen check as seen
+
+                if (jsondata.getJSONObject(i).getString("seen").toString().equalsIgnoreCase("0") && !jsondata.getJSONObject(i).getString("members_index").equalsIgnoreCase(my_index)){
+
+                    new SeenMessage_send(my_index, jsondata.getJSONObject(i).getString("messages_index"), activity).execute();
+
+                }
 
             } catch (JSONException e) {
 

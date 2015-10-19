@@ -1,10 +1,9 @@
-package com.changeandsuccess.nofapchallenge.model;
+package com.changeandsuccess.nofapchallenge.message_activity;
 
 /**
  * Created by albert on 7/21/14.
  */
 public class MessageTabItem {
-
 
     private String messages_index,
             messages_body,
@@ -15,8 +14,8 @@ public class MessageTabItem {
             timestamp,
             other_person_pic,
             other_person_name,
-            other_person_index;
-
+            other_person_index,
+            seen;
 
     public MessageTabItem(
             String messages_index,
@@ -28,7 +27,8 @@ public class MessageTabItem {
             String timestamp,
             String other_person_pic,
             String other_person_name,
-            String other_person_index) {
+            String other_person_index,
+            String seen) {
 
 
         this.messages_index = messages_index;
@@ -44,11 +44,16 @@ public class MessageTabItem {
         this. other_person_index= other_person_index;
 
         this.timestamp =timestamp;
-
+        this.seen = seen;
 
 
     }// end loginitem
 
+
+    public String getmessages_index(){
+
+        return  messages_index;
+    }
 
     public String getmembers_index(){
 
@@ -97,6 +102,13 @@ public class MessageTabItem {
     public String get_timestamp(){
 
         return timestamp;
+    }
+
+    //get number of people who seen
+
+    public String get_seen(){
+
+        return seen;
     }
 
 }
