@@ -285,7 +285,7 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_color));
 
         // getSupportActionBar().setCustomView(getResources().getDrawable(R.style.ActionButtonStyle));
-
+        //getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.titlecolor));
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 R.drawable.ic_drawer, //nav menu toggle icon
                 R.string.app_name, // nav drawer open - description for accessibility
@@ -320,7 +320,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         //title
-        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.titlecolor));
+
 
         //start flurry
 
