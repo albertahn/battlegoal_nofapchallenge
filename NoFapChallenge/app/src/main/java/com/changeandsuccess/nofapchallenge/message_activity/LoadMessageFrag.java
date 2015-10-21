@@ -174,9 +174,9 @@ public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
 
         int unread_int = prefs.getInt("unread_message", 0);
 
-        Dialog d = new Dialog(activity);
+        /*Dialog d = new Dialog(activity);
         d.setTitle(""+ unread_int);
-        d.show();
+        d.show();*/
 
         return items;
 

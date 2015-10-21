@@ -3,14 +3,9 @@ package com.changeandsuccess.nofapchallenge.message_activity;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBar;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
@@ -19,35 +14,34 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.HttpMultipartMode;
-import org.apache.http.entity.mime.MIME;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.CoreProtocolPNames;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by albert on 10/19/15.
+ * Created by albert on 10/21/15.
  */
-public class SeenMessage_send extends AsyncTask<String, Integer, String> {
+public class Check_unread_messages extends AsyncTask<String, Integer, String> {
 
     String[] messageArray= new String[3];
     String jsonString;
 
     HttpResponse httpResponse;
     Context context;
+    public static final String MY_PREFS_NAME = "MyPrefsFile";
 
     String my_index, message_index;
-    public SeenMessage_send(String my_index, String message_index, Context context){
+
+    public Check_unread_messages( String my_index, Context context){
 
         this.my_index = my_index;
         this.message_index = message_index;
-this.context = context;
+        this.context = context;
     }//end seen public
 
     //interface to get result
@@ -70,7 +64,7 @@ this.context = context;
             httpClient.getParams().setParameter(CoreProtocolPNames.USER_AGENT,
                     System.getProperty("http.agent"));
 
-            HttpPost httpPost = new HttpPost("http://mobile.tanggoal.com/message/update_seen_by/"+message_index+"/"+my_index);
+            HttpPost httpPost = new HttpPost("http://mobile.tanggoal.com/message/count_list_message_summary/"+my_index);
 
             httpPost.setEntity( builder.build());
 
@@ -80,7 +74,6 @@ this.context = context;
             String is;
 
             try {
-
                 BufferedReader rd = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
                 String body = "";
                 String content = "";
@@ -111,11 +104,22 @@ this.context = context;
         try {
 
 
-            //new Check_unread_messages(my_index, context).execute();
 
-           /* Dialog d = new Dialog(context);
+
+            SharedPreferences.Editor editor = context.getSharedPreferences(MY_PREFS_NAME, 0).edit();
+
+            editor.putInt("unread_message", Integer.parseInt(result));
+            editor.commit();
+
+            View rootView = ((Activity) context).getWindow().getDecorView().findViewById(android.R.id.content);
+
+           TextView inbox_notification_badge = (TextView) rootView.findViewById(R.id.inbox_notification_badge);
+
+            inbox_notification_badge.setText(""+result);
+
+              Dialog d = new Dialog(context);
             d.setTitle(""+result);
-            d.show();*/
+            d.show();
 
         } catch (Exception e) {
             // TODO Auto-generated catch block

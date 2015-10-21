@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -34,12 +35,14 @@ import com.changeandsuccess.nofapchallenge.coaches_tab_stuff.AllCoachTabs;
 import com.changeandsuccess.nofapchallenge.fragments.ComingSoon;
 import com.changeandsuccess.nofapchallenge.comment_stuff.CommentsFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.LevelFrag;
+import com.changeandsuccess.nofapchallenge.message_activity.Check_unread_messages;
 import com.changeandsuccess.nofapchallenge.message_activity.Message;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.model.NavDrawerItem;
 import com.changeandsuccess.nofapchallenge.profile_inside_tab.ProfileTab;
 import com.changeandsuccess.nofapchallenge.profile_inside_tab.SettingsFrag;
 import com.changeandsuccess.nofapchallenge.store_puchase_stuff.AllStoreTabsFrag;
+import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -99,6 +102,8 @@ public class MainActivity extends ActionBarActivity {
     RelativeLayout news_menu,notice_menu;
     View searchBar;
 
+    TextView inbox_notification_badge;
+
 
 
     @Override
@@ -111,12 +116,33 @@ public class MainActivity extends ActionBarActivity {
         mAdView.loadAd(adRequest);
         isHome = true;
 
+//check unread message
+
         LoginHelper loginHelper = new LoginHelper();
         String[][] loginData = loginHelper.checkLogin(this);
         ArrayList<LoginItem> generatedLoginItem = generateData(loginData);
         if( generatedLoginItem.toString() !="[]"){
             readSavedUser(this, generatedLoginItem);
-        }
+
+            //check unread mesasge if loggedin
+
+            UserDatabase info = new UserDatabase(context);
+            info.open();
+            String[][] data = info.getData();
+            info.close();
+
+            String userIndex = data[0][1];
+
+//check unread
+            new Check_unread_messages(userIndex, this ).execute();
+
+            inbox_notification_badge = (TextView) findViewById(R.id.inbox_notification_badge);
+
+            SharedPreferences prefs = activity.getSharedPreferences("MyPrefsFile", 0);
+            int unread_int = prefs.getInt("unread_message", 0);
+
+            inbox_notification_badge.setText(""+unread_int);
+        }//
 
         mTitle = mDrawerTitle = current_title;
         // load slide menu items
