@@ -152,7 +152,7 @@ public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
 
                     SharedPreferences.Editor editor = activity.getSharedPreferences(MY_PREFS_NAME, 0).edit();
 
-                    editor.putInt("unread_message", unread_message);
+                    editor.putString("unread_message", ""+unread_message);
                     editor.commit();
 
 
@@ -170,11 +170,11 @@ public class LoadMessageFrag extends AsyncTask<String, Integer, String> {
         }//endfor
 
 
-        SharedPreferences prefs = activity.getSharedPreferences(MY_PREFS_NAME, 0);
+       /* SharedPreferences prefs = activity.getSharedPreferences(MY_PREFS_NAME, 0);
 
         int unread_int = prefs.getInt("unread_message", 0);
 
-        /*Dialog d = new Dialog(activity);
+        Dialog d = new Dialog(activity);
         d.setTitle(""+ unread_int);
         d.show();*/
 

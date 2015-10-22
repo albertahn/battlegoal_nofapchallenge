@@ -34,6 +34,7 @@ import com.changeandsuccess.nofapchallenge.battle_stuff.AllBattleTab;
 import com.changeandsuccess.nofapchallenge.coaches_tab_stuff.AllCoachTabs;
 import com.changeandsuccess.nofapchallenge.fragments.ComingSoon;
 import com.changeandsuccess.nofapchallenge.comment_stuff.CommentsFrag;
+import com.changeandsuccess.nofapchallenge.guide_stuff.GuideFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.LevelFrag;
 import com.changeandsuccess.nofapchallenge.message_activity.Check_unread_messages;
 import com.changeandsuccess.nofapchallenge.message_activity.Message;
@@ -97,7 +98,7 @@ public class MainActivity extends ActionBarActivity {
 
     public static boolean isHome;
 
-    ImageButton home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu,profile_menu,store_menu;
+    ImageButton guide_menu, home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu,profile_menu,store_menu;
     ImageButton home_up,chat_up,inbox_up,profile_up;
     RelativeLayout news_menu,notice_menu;
     View searchBar;
@@ -136,12 +137,13 @@ public class MainActivity extends ActionBarActivity {
 //check unread
             new Check_unread_messages(userIndex, this ).execute();
 
-            inbox_notification_badge = (TextView) findViewById(R.id.inbox_notification_badge);
+            //inbox_notification_badge = (TextView) findViewById(R.id.inbox_notification_badge);
 
-            SharedPreferences prefs = activity.getSharedPreferences("MyPrefsFile", 0);
-            int unread_int = prefs.getInt("unread_message", 0);
+           // SharedPreferences prefs = activity.getSharedPreferences("MyPrefsFile", 0);
 
-            inbox_notification_badge.setText(""+unread_int);
+           // String unread_int = prefs.getString("unread_message","0");
+
+           // inbox_notification_badge.setText(""+unread_int);
         }//
 
         mTitle = mDrawerTitle = current_title;
@@ -170,6 +172,7 @@ public class MainActivity extends ActionBarActivity {
         profile_menu =  (ImageButton) mDrawerList.findViewById(R.id.profile_menu);
         profile_up =  (ImageButton) findViewById(R.id.imageButton4);//0
         setting_menu = (ImageButton) mDrawerList.findViewById(R.id.setting_menu);//6
+        guide_menu = (ImageButton) mDrawerList.findViewById(R.id.guide_menu);//9
 
         news_menu = (RelativeLayout)mDrawerList.findViewById(R.id.News);
         notice_menu = (RelativeLayout)mDrawerLayout.findViewById(R.id.Notices);
@@ -275,6 +278,15 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 displayView(12);
+            }
+        });
+
+        guide_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayView(9);
+
+
             }
         });
 
@@ -464,9 +476,10 @@ public class MainActivity extends ActionBarActivity {
                 break;
 
             case 9:
-                fragment = new CommentsFrag();
+
+                fragment = new GuideFrag();
                 hideNavSpinnerLang();
-                current_title = "Comments";
+                current_title = "Guide";
                 break;
             case 10:
                 fragment = new ComingSoon();
@@ -579,7 +592,7 @@ public class MainActivity extends ActionBarActivity {
 
             case R.id.action_commentsfrag:
 
-                displayView(9);
+                displayView(2);
 
                 return true;
 

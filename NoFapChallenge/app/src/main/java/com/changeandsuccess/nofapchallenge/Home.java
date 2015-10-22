@@ -129,7 +129,7 @@ public class Home extends Fragment {
         hourText = (TextView) rootViewman.findViewById(R.id.hours_text);
 
 
-        userSettingBtn = (ImageButton) rootViewman.findViewById(R.id.userSetting);
+       // userSettingBtn = (ImageButton) rootViewman.findViewById(R.id.userSetting);
 
         // String hoursPast = new HomeDateCount(activity).getDiffTime();
         //hourText.setText(""+hoursPast);

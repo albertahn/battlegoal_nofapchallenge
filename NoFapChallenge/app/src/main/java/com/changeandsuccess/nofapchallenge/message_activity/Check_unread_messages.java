@@ -103,23 +103,22 @@ public class Check_unread_messages extends AsyncTask<String, Integer, String> {
         super.onPostExecute(result);
         try {
 
+            /*Dialog d = new Dialog(context);
+            d.setTitle("" + result);
+            d.show();*/
 
-
+            //int intresult = Integer.parseInt(result);
 
             SharedPreferences.Editor editor = context.getSharedPreferences(MY_PREFS_NAME, 0).edit();
-
-            editor.putInt("unread_message", Integer.parseInt(result));
+           // editor.putInt("unread_message", intresult);
+            editor.putString("unread_message",result);
             editor.commit();
 
             View rootView = ((Activity) context).getWindow().getDecorView().findViewById(android.R.id.content);
-
            TextView inbox_notification_badge = (TextView) rootView.findViewById(R.id.inbox_notification_badge);
 
-            inbox_notification_badge.setText(""+result);
+            inbox_notification_badge.setText("" + result);
 
-              Dialog d = new Dialog(context);
-            d.setTitle(""+result);
-            d.show();
 
         } catch (Exception e) {
             // TODO Auto-generated catch block

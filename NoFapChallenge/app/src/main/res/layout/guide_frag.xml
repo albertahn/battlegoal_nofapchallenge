@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="How to Meditate"
+        android:id="@+id/recieve_textView"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp" />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/webView"
+        android:layout_alignTop="@+id/recieve_textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:background="@color/transparent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="How to use BattleGoal"
+        android:fontFamily="sans-serif-thin"
+        android:id="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:textIsSelectable="false"
+        android:textColor="#000000"
+        android:layout_marginTop="15dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar_video"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
