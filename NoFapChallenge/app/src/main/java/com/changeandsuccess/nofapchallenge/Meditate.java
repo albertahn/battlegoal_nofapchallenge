@@ -26,10 +26,6 @@ public class Meditate extends Fragment {
          rootView = inflater.inflate(R.layout.meditate_____med_frag, container, false);
 
 
-
-
-
-
         mWeb = (WebView) rootView.findViewById(R.id.webView);
        /* web.setWebChromeClient(new WebChromeClient());
 

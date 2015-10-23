@@ -39,7 +39,7 @@
         android:layout_alignBottom="@+id/text_body_sample"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/abc_ic_go_search_api_holo_light" />
+        android:src="@drawable/arrow_purchase" />
 
     <TextView
         android:layout_width="wrap_content"

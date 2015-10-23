@@ -140,7 +140,7 @@ public class ProfileTab extends Fragment implements TabHost.OnTabChangeListener 
                 public void onClick(View v) {
 
                     Dialog d = new Dialog(getActivity());
-                    d.setTitle("works");
+                    d.setTitle("Coming Soon!");
                     d.show();
 
                 }//

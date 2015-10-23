@@ -84,7 +84,7 @@ public class UnFollowButton  extends AsyncTask<String, Integer, String> {
 
             follow_btn.setText("follow");
 
-            follow_btn.setBackgroundResource(R.drawable.abc_tab_unselected_pressed_holo);
+            follow_btn.setBackgroundResource(R.drawable.roundedcorner_trans);
 
             follow_btn.setOnClickListener(new View.OnClickListener() {
                 @Override

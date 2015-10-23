@@ -20,7 +20,7 @@
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
         android:fontFamily="sans-serif-thin"
-        android:textSize="@dimen/abc_action_bar_title_text_size"
+        android:textSize="12sp"
         android:layout_below="@+id/featured_profile_picture"
 
         android:textColor="#ffffff"

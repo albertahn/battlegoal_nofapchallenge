@@ -8,11 +8,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.net.Uri;
 import android.os.Bundle;
 
-import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -177,19 +179,25 @@ public class MainActivity extends ActionBarActivity {
         news_menu = (RelativeLayout)mDrawerList.findViewById(R.id.News);
         notice_menu = (RelativeLayout)mDrawerLayout.findViewById(R.id.Notices);
 
-        news_menu.setOnTouchListener(new View.OnTouchListener(){
+        news_menu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                displayView(1);
-                return true;
+            public void onClick(View v) {
+                // displayView(1);
+                //  return true;
+
+                Uri uri = Uri.parse("https://www.kickstarter.com/projects/928496024/824178241?token=358d26c4"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+
+
             }
         });
 
-        notice_menu.setOnTouchListener(new View.OnTouchListener(){
+        notice_menu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            public void onClick(View v) {
                 displayView(1);
-                return true;
+
             }
         });
 
@@ -271,13 +279,13 @@ public class MainActivity extends ActionBarActivity {
         profile_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayView(12);
+                displayView(4);
             }
         });
         profile_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayView(12);
+                displayView(4);
             }
         });
 
@@ -320,15 +328,10 @@ public class MainActivity extends ActionBarActivity {
 
         //getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.tab_bg_selector));
 //set background of bar color
-        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_color));
+        getSupportActionBar().setBackgroundDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.actionbar_color, null));//getResources().getDrawable(R.drawable.actionbar_color));
 
-        // getSupportActionBar().setCustomView(getResources().getDrawable(R.style.ActionButtonStyle));
-        //getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.titlecolor));
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-                R.drawable.ic_drawer, //nav menu toggle icon
-                R.string.app_name, // nav drawer open - description for accessibility
-                R.string.app_name // nav drawer close - description for accessibility
-        ) {
+
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close){
             public void onDrawerClosed(View view) {
 
                 getSupportActionBar().setTitle(mTitle);
@@ -492,11 +495,7 @@ public class MainActivity extends ActionBarActivity {
                 hideNavSpinnerLang();
                 current_title = "Settings";
                 break;
-            case 12:
-                fragment = new ProfileTab();
-                hideNavSpinnerLang();
-                current_title = "Profile";
-                break;
+
 
 
             default:

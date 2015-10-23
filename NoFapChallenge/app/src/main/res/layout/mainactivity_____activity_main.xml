@@ -102,21 +102,20 @@
                     android:scaleType="fitCenter" />
 <!-- notification badge -->
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
                     android:text="0"
 
                     android:id="@+id/inbox_notification_badge"
                     android:background="@drawable/badge_circle"
-                    android:layout_alignRight="@+id/imageButton3"
                     android:textColor="#ffffff"
                     android:gravity="center"
                     android:textScaleX="1.2"
                     android:fontFamily="sans-serif"
                     android:textSize="10.5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_alignTop="@+id/imageButton3" />
+                    android:layout_alignTop="@+id/imageButton3"
+                    android:layout_alignRight="@+id/imageButton3" />
 
 
                 <TextView
@@ -188,6 +187,7 @@
 
             android:layout_gravity="start"
             android:layout_marginLeft="-64dp"
+
 
             >
 
@@ -767,18 +767,19 @@
 
                     <RelativeLayout
                         android:layout_width="340dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:background="#1E0B0011"
 
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_marginLeft="10dp"
                         android:id="@+id/News"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                      >
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="NewsTitle"
+                            android:text="Even a Comment helps!"
                             android:id="@+id/NewsTitle"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentLeft="true"
@@ -788,15 +789,16 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="There is no News"
+                            android:text="Support Us On"
                             android:id="@+id/NewsContents1"
                             android:layout_below="@+id/NewsTitle"
                             android:textSize="15dp"
-                            android:textColor="#1e0b00" />
+                            android:textColor="#1e0b00"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center_vertical|center_horizontal" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="..."
                             android:id="@+id/NewsContents2"
                             android:layout_below="@+id/NewsContents1"
                             android:textSize="15dp"
@@ -807,12 +809,28 @@
                             android:src="@drawable/btn_arrow_n"
                             android:layout_centerVertical="true"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentEnd="true" />
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/imageView6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text=" Kickstarter !"
+                            android:id="@+id/kickstarter_text"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@+id/NewsContents1"
+                            android:layout_below="@+id/NewsTitle"
+                            android:layout_toRightOf="@+id/NewsContents1"
+                            android:textColor="#138102" />
+
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="340dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:background="#1E0B0011"
                         android:layout_below="@+id/News"
                         android:layout_alignParentLeft="true"
@@ -824,7 +842,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Notice"
+                            android:text="Check Our Latest Post!"
                             android:id="@+id/NoticesTitle"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentLeft="true"
@@ -834,7 +852,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="We are testing this session."
+                            android:text="New Blog Post Every Sunday!"
                             android:id="@+id/NoticesContents1"
                             android:layout_below="@+id/NoticesTitle"
                             android:textSize="15dp"

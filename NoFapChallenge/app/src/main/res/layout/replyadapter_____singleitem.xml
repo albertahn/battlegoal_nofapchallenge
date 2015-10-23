@@ -59,7 +59,7 @@
         android:layout_height="30dp"
         android:id="@+id/delete_comment_btn"
         android:background="@color/transparent"
-        android:src="@drawable/abc_ic_clear_search_api_holo_light"
+        android:src="@drawable/delete_x"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />

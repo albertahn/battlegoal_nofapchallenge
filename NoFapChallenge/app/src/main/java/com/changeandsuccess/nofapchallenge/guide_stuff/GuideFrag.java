@@ -47,7 +47,7 @@ public class GuideFrag  extends Fragment
             mWeb = (WebView) rootView.findViewById(R.id.webView);
 
 
-            site = "http://www.youtube.com/embed/3i1A0CQ6qpw";//https://www.youtube.com/watch?v=3i1A0CQ6qpw
+            site = "https://www.youtube.com/watch?v=cH-58plWVkU";//"http://www.youtube.com/embed/cH-58plWVkU";//https://www.youtube.com/watch?v=3i1A0CQ6qpwhttps://www.youtube.com/watch?v=cH-58plWVkU
 
 
 
