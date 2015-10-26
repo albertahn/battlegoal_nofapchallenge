@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.LoginActivity;
@@ -99,7 +100,7 @@ public class ReadFromServer extends AsyncTask<String, Integer, String> {
             String text_profile = json.get("profile").toString();
             String exp_points = json.get("points").toString();
 
-            //Log.d("jsonfuck", ""+ username + email+password+profile_picture+FID);
+            Log.e("points: ", "" + exp_points);
 
             UserDatabase entry = new UserDatabase(context);
             entry.open();

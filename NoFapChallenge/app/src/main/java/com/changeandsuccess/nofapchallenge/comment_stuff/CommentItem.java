@@ -1,4 +1,4 @@
-package com.changeandsuccess.nofapchallenge.model;
+package com.changeandsuccess.nofapchallenge.comment_stuff;
 
 /**
  * Created by albert on 8/25/14.

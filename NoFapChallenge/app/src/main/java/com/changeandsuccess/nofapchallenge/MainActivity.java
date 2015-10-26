@@ -38,6 +38,7 @@ import com.changeandsuccess.nofapchallenge.fragments.ComingSoon;
 import com.changeandsuccess.nofapchallenge.comment_stuff.CommentsFrag;
 import com.changeandsuccess.nofapchallenge.guide_stuff.GuideFrag;
 import com.changeandsuccess.nofapchallenge.level_stuff.LevelFrag;
+import com.changeandsuccess.nofapchallenge.level_stuff.PointOneUp;
 import com.changeandsuccess.nofapchallenge.message_activity.Check_unread_messages;
 import com.changeandsuccess.nofapchallenge.message_activity.Message;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
@@ -101,9 +102,14 @@ public class MainActivity extends ActionBarActivity {
     public static boolean isHome;
 
     ImageButton guide_menu, home_menu, chat_menu, blog_menu, inbox_menu, battle_menu, coach_menu, level_menu, setting_menu,profile_menu,store_menu;
-    ImageButton home_up,chat_up,inbox_up,profile_up;
+    ImageButton home_up,chat_up,inbox_up, profile_up;
     RelativeLayout news_menu,notice_menu;
     View searchBar;
+
+    //top text view
+
+    TextView exp_points_text, coin_text;
+    String user_exp_points;
 
     TextView inbox_notification_badge;
 
@@ -125,6 +131,7 @@ public class MainActivity extends ActionBarActivity {
         String[][] loginData = loginHelper.checkLogin(this);
         ArrayList<LoginItem> generatedLoginItem = generateData(loginData);
         if( generatedLoginItem.toString() !="[]"){
+
             readSavedUser(this, generatedLoginItem);
 
             //check unread mesasge if loggedin
@@ -135,6 +142,11 @@ public class MainActivity extends ActionBarActivity {
             info.close();
 
             String userIndex = data[0][1];
+            user_exp_points = data[0][9];
+
+      //test point up
+            new PointOneUp(userIndex, user_exp_points, this).execute();
+
 
 //check unread
             new Check_unread_messages(userIndex, this ).execute();
@@ -248,7 +260,6 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-
         battle_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -273,7 +284,7 @@ public class MainActivity extends ActionBarActivity {
         store_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayView(6);
+                displayView(10);
             }
         });
         profile_menu.setOnClickListener(new View.OnClickListener() {
@@ -301,7 +312,7 @@ public class MainActivity extends ActionBarActivity {
         setting_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayView(11);
+                displayView(10);
             }
         });
         //searchBar
@@ -356,9 +367,9 @@ public class MainActivity extends ActionBarActivity {
         if (savedInstanceState == null) {
 
             // on first time display view for first nav item
-            displayView(0);
+            displayView(2);
 
-        }
+        }// if
 
         //title
 
@@ -652,9 +663,14 @@ public class MainActivity extends ActionBarActivity {
 
         TextView usernameText = (TextView) findViewById(R.id.profileName);
         TextView lvText =  (TextView) findViewById(R.id.profileLevel);
+        exp_points_text = (TextView) findViewById(R.id.points_menu);
+
 
         String username = generatedLoginItem.get(0).getUsername().toString();
         String lv = generatedLoginItem.get(0).getLevel().toString();
+        String exp_points = generatedLoginItem.get(0).get_points().toString();
+//set exp points
+        exp_points_text.setText("Exp Points: "+exp_points);
 
         usernameText.setText(username);
         lv = "LV."+lv;
@@ -686,12 +702,21 @@ public class MainActivity extends ActionBarActivity {
         }
 
         imageloader.displayImage(imageurl, profile_photo, options);
-    }
+    }//end read saved user
+
+
     public static ArrayList<LoginItem> generateData(String[][] data){
         ArrayList<LoginItem> items = new ArrayList<LoginItem>();
 
         for (int i =0; i<data.length ; i++){
-            items.add(new LoginItem( data[i][1], data[i][2], data[i][3],data[i][4],data[i][5],data[i][6],data[i][7]));
+            items.add(new LoginItem( data[i][1],
+                    data[i][2],
+                    data[i][3],
+                    data[i][4],
+                    data[i][5],
+                    data[i][6],
+                    data[i][7],
+                    data[i][9]));
         }
         return items;
     } //end generate

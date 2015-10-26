@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.model.CommentItem;
+import com.changeandsuccess.nofapchallenge.comment_stuff.CommentItem;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 
 import org.json.JSONArray;

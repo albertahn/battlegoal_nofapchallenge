@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.model.CommentItem;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
 
 import org.json.JSONArray;
@@ -35,7 +34,7 @@ public class LoadComments extends AsyncTask<String, Integer, String> {
     private  ArrayList<CommentItem> itemsArrayList,ItemsArrayList_reply;
 
 
-    public LoadComments(String userID, View rootView, Activity activity) {
+    public LoadComments(String userID, View rootView,  Activity activity) {
         this.rootView = rootView;
         this.activity = activity;
         this.userID = userID;
@@ -77,6 +76,8 @@ public class LoadComments extends AsyncTask<String, Integer, String> {
 
             itemsArrayList = generateData(jsonArray);
 
+            ItemsArrayList_reply = generateReply(jsonArray);
+
             Com_in_Adapter proAdapter = new Com_in_Adapter(activity,itemsArrayList,ItemsArrayList_reply, userID);
 
            final ListView listView = (ListView) rootView.findViewById(R.id.message_frag_list);
@@ -93,7 +94,7 @@ public class LoadComments extends AsyncTask<String, Integer, String> {
 
     ArrayList<CommentItem> generateData(JSONArray jsondata) {
         ArrayList<CommentItem> items = new ArrayList<CommentItem >();
-        ItemsArrayList_reply = new ArrayList<CommentItem >();
+
 
         for (int i = 0; i < jsondata.length(); i++) {
             try {
@@ -101,18 +102,6 @@ public class LoadComments extends AsyncTask<String, Integer, String> {
                 //if(jsondata.getJSONObject(i).getString("courses_index")!="") {
                 if (jsondata.getJSONObject(i).getInt("reply_to")==0) {
                     items.add(new CommentItem(
-                            jsondata.getJSONObject(i).getString("members_index"),
-                            jsondata.getJSONObject(i).getString("profile_picture"),
-                            jsondata.getJSONObject(i).getString("username"),
-                            jsondata.getJSONObject(i).getString("comment_index"),
-                            jsondata.getJSONObject(i).getString("comment_text"),
-                            jsondata.getJSONObject(i).getInt("reply_to"),
-                            jsondata.getJSONObject(i).getString("reply_num"),
-                            jsondata.getJSONObject(i).getString("likes"),
-                            jsondata.getJSONObject(i).getString("timestamp")
-                    ));
-                }else{
-                    ItemsArrayList_reply.add(new CommentItem(
                             jsondata.getJSONObject(i).getString("members_index"),
                             jsondata.getJSONObject(i).getString("profile_picture"),
                             jsondata.getJSONObject(i).getString("username"),
@@ -131,4 +120,35 @@ public class LoadComments extends AsyncTask<String, Integer, String> {
         }
         return items;
     }// end generate
+
+
+    ArrayList<CommentItem> generateReply(JSONArray jsondata) {
+        ArrayList<CommentItem> items = new ArrayList<CommentItem >();
+
+
+        for (int i = 0; i < jsondata.length(); i++) {
+            try {
+                //check if course comment
+                //if(jsondata.getJSONObject(i).getString("courses_index")!="") {
+                if (jsondata.getJSONObject(i).getInt("reply_to")!=0) {
+                    items.add(new CommentItem(
+                            jsondata.getJSONObject(i).getString("members_index"),
+                            jsondata.getJSONObject(i).getString("profile_picture"),
+                            jsondata.getJSONObject(i).getString("username"),
+                            jsondata.getJSONObject(i).getString("comment_index"),
+                            jsondata.getJSONObject(i).getString("comment_text"),
+                            jsondata.getJSONObject(i).getInt("reply_to"),
+                            jsondata.getJSONObject(i).getString("reply_num"),
+                            jsondata.getJSONObject(i).getString("likes"),
+                            jsondata.getJSONObject(i).getString("timestamp")
+                    ));
+                }
+                // }//end if
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return items;
+    }// end generate
+
 }

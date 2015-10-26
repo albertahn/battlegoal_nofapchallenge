@@ -185,9 +185,9 @@
             android:id="@+id/list_slidermenu"
             android:layout_alignParentBottom="true"
 
+
             android:layout_gravity="start"
             android:layout_marginLeft="-64dp"
-
 
             >
 
@@ -243,8 +243,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Goal :"
-                        android:id="@+id/profileGoal"
+                        android:text="Exp Points :"
+                        android:id="@+id/points_menu"
                         android:layout_toRightOf="@+id/profilePicture"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="10dp"
@@ -254,9 +254,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Moto :"
+                        android:text="Coin: "
                         android:id="@+id/profileMoto"
-                        android:layout_below="@+id/profileGoal"
+                        android:layout_below="@+id/points_menu"
                         android:layout_toRightOf="@+id/profilePicture"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
@@ -495,7 +495,10 @@
                         android:paddingRight="10dp"
                         android:paddingBottom="20dp"
                         android:layout_below="@+id/battle_menu"
-                        android:layout_toRightOf="@+id/profile_menu" />
+                        android:layout_toRightOf="@+id/profile_menu"
+
+                        android:visibility="invisible"
+                        />
 
 
                     <ImageButton
@@ -732,7 +735,10 @@
                         android:textScaleX="1.2"
                         android:fontFamily="sans-serif"
                         android:textSize="10.5dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:layout_marginBottom="5dp"
+
+                        android:visibility="invisible"
+                        />
 
 
                     <TextView

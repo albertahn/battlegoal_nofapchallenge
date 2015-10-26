@@ -8,14 +8,20 @@ public class ReplyItem {
     String userName;
     String bodyText;
     String portraitName;
+    int reply_to;
 
-    public ReplyItem( String membersIndex, String userName,String bodyText, String portraitName) {
+    public ReplyItem( String membersIndex, String userName,String bodyText, String portraitName, int reply_to) {
         this.membersIndex =membersIndex;
         this.bodyText = bodyText;
         this.portraitName = portraitName;
         this.userName = userName;
+        this.reply_to = reply_to;
     }
     public ReplyItem() {}
+
+    public int get_reply_to() {
+        return reply_to;
+    }
 
     public String getMembersIndex() {
         return membersIndex;

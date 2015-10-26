@@ -68,10 +68,10 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="time_stamp"
+        android:text=""
         android:id="@+id/time_stamp"
         android:bottomRightRadius="57dp"
-
+         android:textColor="#ffffff"
         android:layout_toRightOf="@+id/user_name"
         android:layout_alignBottom="@+id/user_name"
         android:layout_marginLeft="10dp" />

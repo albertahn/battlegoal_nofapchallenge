@@ -2,18 +2,22 @@ package com.changeandsuccess.nofapchallenge.comment_stuff;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.media.Image;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.model.CommentItem;
+import com.changeandsuccess.nofapchallenge.level_stuff.PointOneUp;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
+import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,20 +39,29 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
     Activity activity;
    final String userID;
 
+
     //origin comment stuff
     String origin_text;
-    String origin_username;
+    String origin_username, user_exp_points;
 
     int commentindex;
 
-
+    ArrayList<CommentItem> items;
 
 
     public LoadReplies(String userID, Activity activity, int commentindex) {
        // this.rootView = rootView;
         this.activity = activity;
-       this.userID = userID;
+        this.userID = userID;
         this.commentindex = commentindex;
+
+        UserDatabase userDatabase = new UserDatabase(activity);
+        userDatabase.open();
+        String[][] data = userDatabase.getData();
+        userDatabase.close();
+
+        user_exp_points = data[0][9];
+
 
     }
 
@@ -67,6 +80,8 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
 
             origin_text =(String) jsonObject.getString("comment_text").toString();
             origin_username = (String) jsonObject.getString("username").toString();
+
+
 
             // return jsonArray;
         } catch (IOException e) {
@@ -90,7 +105,27 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
 
             // View rootView = ((Activity) activity).getWindow().getDecorView().findViewById(android.R.id.content);
 
-            final View repliesInputpart = LayoutInflater.from(activity).inflate(R.layout.commentsfrag_____message_input_part, null);
+            final View repliesInputpart = LayoutInflater.from(activity).inflate(R.layout.load_replies_layout_scrollview, null);
+            try {
+                items = new ArrayList<CommentItem >();
+                items.add(new CommentItem(
+                        jsonObject.getString("members_index"),
+                        jsonObject.getString("profile_picture"),
+                        jsonObject.getString("username"),
+                        jsonObject.getString("comment_index"),
+                        jsonObject.getString("comment_text"),
+                        jsonObject.getInt("reply_to"),
+                        jsonObject.getString("reply_num"),
+                        jsonObject.getString("likes"),
+                        jsonObject.getString("timestamp")
+
+                ));
+            }catch (JSONException e) {
+
+                e.printStackTrace();
+
+            }
+
 
             ReplyAdapter proAdapter = new ReplyAdapter(activity, generateData(jsonArray));
 
@@ -105,11 +140,11 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
 
           final Button sendButton = (Button) repliesInputpart.findViewById(R.id.send_message_btn);
 
-            sendButton.setOnClickListener( new View.OnClickListener() {
+            sendButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                   EditText inputpart = (EditText) repliesInputpart.findViewById(R.id.input_edit_text);
+                    EditText inputpart = (EditText) repliesInputpart.findViewById(R.id.input_edit_text);
 
                     String inputText = inputpart.getText().toString();
 
@@ -125,13 +160,25 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
                     ProgressBar progressBar = (ProgressBar) repliesInputpart.findViewById(R.id.input_progress_bar);
                     progressBar.setVisibility(View.VISIBLE);
 
+                    new PointOneUp(userID, user_exp_points, activity).execute();
+
+
                     d.dismiss();
 
                 }
             });
 
+            RelativeLayout x_delete = (RelativeLayout) repliesInputpart.findViewById(R.id.close_dialog_relative_layout);
 
-            d.setTitle(origin_username+": "+origin_text);
+            x_delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    d.dismiss();
+                }
+            });
+
+
+
             d.setContentView(repliesInputpart);
             d.show();
             //now the input of replies
@@ -147,7 +194,7 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
 
     ArrayList<CommentItem> generateData(JSONArray jsondata) {
 
-        ArrayList<CommentItem> items = new ArrayList<CommentItem >();
+
 
         for (int i = 0; i < jsondata.length(); i++) {
 

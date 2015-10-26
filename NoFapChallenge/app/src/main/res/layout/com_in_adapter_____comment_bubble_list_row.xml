@@ -66,7 +66,8 @@
         android:src="@drawable/delete_x"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"/>
 
     <ImageButton
         android:layout_width="35dp"
@@ -119,12 +120,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="time_stamp"
+        android:text=""
         android:id="@+id/time_stamp"
         android:bottomRightRadius="57dp"
-
-        android:layout_below="@+id/user_name"
-        android:layout_alignLeft="@+id/user_name"
+android:textColor="#bcb6b6"
+        android:layout_below="@+id/text_body"
+        android:layout_alignLeft="@+id/user_profile"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="3dp" />
 
@@ -144,24 +145,26 @@
 
     </RelativeLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/moreCommentsBtn"
-        android:layout_below="@+id/orginalComment"
-        android:layout_centerHorizontal="true"
-        android:text="more comments ..."
-        android:background="#00ffffff"
-        android:textStyle="bold"
-        android:textSize="21dp"
-        android:textColor="#ff8805" />
-
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView2"
-        android:layout_below="@+id/moreCommentsBtn"
-        android:layout_marginLeft="80dp" />
+        android:layout_marginLeft="80dp"
+        android:layout_below="@+id/orginalComment" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/moreCommentsBtn"
+        android:text="more replies ..."
+        android:background="@drawable/add_btn"
+        android:textStyle="bold"
+        android:textSize="11dp"
+        android:textColor="#6c4613"
+        android:layout_alignParentBottom="false"
+        android:layout_alignLeft="@+id/orginalComment"
+        android:layout_alignStart="@+id/orginalComment"
+        android:layout_below="@+id/listView2" />
 
 </RelativeLayout>
 

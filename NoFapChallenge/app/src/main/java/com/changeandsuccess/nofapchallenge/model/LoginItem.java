@@ -2,7 +2,7 @@ package com.changeandsuccess.nofapchallenge.model;
 
 public class LoginItem {
 	
-	private String user_index, username, email, password, profile_picture, FID, level;
+	private String user_index, username, email, password, profile_picture, FID, level, exp_points;
 	
 	
 	public LoginItem(
@@ -12,7 +12,8 @@ public class LoginItem {
             String password,
             String profile_picture,
             String FID,
-            String level){
+            String level,
+            String points){
 
 
 		this.user_index= user_index;
@@ -22,6 +23,7 @@ public class LoginItem {
 		this.profile_picture = profile_picture;
 		this.FID = FID;
 		this.level = level;
+        this.exp_points = points;
 		
 	}// end loginitem
 	
@@ -29,7 +31,12 @@ public class LoginItem {
 	public CharSequence getUsername(){
 		
 		return username;
-	}
+	}//
+
+    public String get_points(){
+
+        return  exp_points;
+    }
 
     public String getProfile_picture(){
 

@@ -1,23 +1,16 @@
 package com.changeandsuccess.nofapchallenge.comment_stuff;
 
 import android.app.Activity;
-import android.app.Application;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.changeandsuccess.nofapchallenge.CoachProfile;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.model.CommentItem;
+import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
@@ -31,7 +24,7 @@ public class ReplyAdapterOutside extends BaseAdapter {
 
     private Activity activity;
     Reply_SingleItem view;
-
+    ReplyItem curItem;
     ArrayList<ReplyItem> items = new ArrayList<ReplyItem>();
 
     public ReplyAdapterOutside(Activity context) {
@@ -53,12 +46,13 @@ public class ReplyAdapterOutside extends BaseAdapter {
         return position;
     }
 
+    String userindex;
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         view = new Reply_SingleItem(activity);
         view.init(activity, parent);
 
-        ReplyItem curItem = items.get(position);
+         curItem = items.get(position);
 
         TextView username = (TextView) view.findViewById(R.id.user_name);
         username.setText(curItem.getUserName());
@@ -69,6 +63,24 @@ public class ReplyAdapterOutside extends BaseAdapter {
         setPhoto(curItem.getPortraitName(), curItem.getMembersIndex());
 
        // Button  moreCommentsBtn = (Button)view.findViewById(R.id.moreCommentsBtn);
+
+        UserDatabase userDatabase = new UserDatabase(activity);
+        userDatabase.open();
+        String[][] data = userDatabase.getData();
+        userDatabase.close();
+
+        userindex = data[0][1];
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                new LoadReplies(userindex, activity, curItem.get_reply_to()).execute();
+            }
+        });
+
 
       //  view.setBodyText(bodies[position]);
         return view;

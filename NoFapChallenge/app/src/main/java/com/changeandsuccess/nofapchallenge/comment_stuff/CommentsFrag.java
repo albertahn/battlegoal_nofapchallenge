@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
+import com.changeandsuccess.nofapchallenge.level_stuff.PointOneUp;
 import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
@@ -41,9 +42,9 @@ public class CommentsFrag extends Fragment {
     TextView inputMessageEdit;
     String inputText;
     String[] messageArray;
-    String userIndex;
+    String userIndex,user_exp_points;
     Button imageInsertBtn;
-    Button live_chat_btn;
+    //Button live_chat_btn;
 
     com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton englishBtn, espanolBtn,koreanBtn,portuguesBtn,deutschBtn;
     com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton francaisBtn, japaneseBtn,italianoBtn,farsiBtn,arabicBtn;
@@ -67,6 +68,7 @@ public class CommentsFrag extends Fragment {
 
         if(generatedLoginItem.toString() !="[]"){
             userIndex = data[0][1];
+            user_exp_points = data[0][9];
 
         }else{
 
@@ -83,7 +85,7 @@ public class CommentsFrag extends Fragment {
         sendMessageBtn = (Button) rootView.findViewById(R.id.send_message_btn);
         inputMessageEdit = (TextView) rootView.findViewById(R.id.input_edit_text);
         imageInsertBtn = (Button) rootView.findViewById(R.id.add_image_btn);
-        live_chat_btn = (Button) rootView.findViewById(R.id.live_chat_btn);
+        //live_chat_btn = (Button) rootView.findViewById(R.id.live_chat_btn);
 
         englishBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.EnglishButton);
         espanolBtn = (com.changeandsuccess.nofapchallenge.comment_stuff.BitmapButton)rootView.findViewById(R.id.EspanolButton);
@@ -108,7 +110,7 @@ public class CommentsFrag extends Fragment {
             }
         });
 
-        live_chat_btn.setOnClickListener(new View.OnClickListener() {
+       /*live_chat_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment  fragment = new LiveFragShow();
@@ -117,7 +119,7 @@ public class CommentsFrag extends Fragment {
                         .replace(R.id.frame_container, fragment).commit();
             }
         });
-
+*/
 
         //onclick
         sendMessageBtn.setOnClickListener(new View.OnClickListener() {
@@ -141,6 +143,10 @@ public class CommentsFrag extends Fragment {
 
                     ProgressBar progressBar = (ProgressBar) rootView.findViewById(R.id.input_progress_bar);
                     progressBar.setVisibility(View.VISIBLE);
+
+//point up
+                    new PointOneUp(userIndex, user_exp_points, getActivity()).execute();
+
                 }//end if
             }
         });
@@ -354,7 +360,7 @@ public class CommentsFrag extends Fragment {
         ArrayList<LoginItem> items = new ArrayList<LoginItem>();
 
         for (int i =0; i<data.length ; i++){
-            items.add(new LoginItem( data[i][1], data[i][2], data[i][3],data[i][4],data[i][5],data[i][6],data[i][7]));
+            items.add(new LoginItem( data[i][1], data[i][2], data[i][3],data[i][4],data[i][5],data[i][6], data[i][7], data[i][9]));
 
         }
         return items;

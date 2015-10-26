@@ -20,7 +20,6 @@ import android.widget.Toast;
 import com.changeandsuccess.nofapchallenge.CoachProfile;
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
-import com.changeandsuccess.nofapchallenge.model.CommentItem;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -50,6 +49,7 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
     ArrayList<LoginItem> generatedLoginItem;
     ImageButton replyButton;
     Button moreCommentsBtn;
+    ReplyAdapterOutside adapter;
 
     String userIndex;
     static int rowList = R.layout.com_in_adapter_____comment_bubble_list_row;
@@ -196,15 +196,26 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
            //final Integer commentindex = Integer.parseInt(itemsArrayList.get(position).getcomment_index().toString());
             rowView.setId(commentindex);
 
+
+
+        ListView listview = (ListView) rowView.findViewById(R.id.listView2);
+        adapter = new ReplyAdapterOutside(activity);
         for(int i=0;i<itemsArrayList_reply.size();i++){
             int reply_to = itemsArrayList_reply.get(i).getreply_to();
-            if(reply_to==commentindex){
-                ListView listview = (ListView) rowView.findViewById(R.id.listView2);
-                ReplyAdapterOutside adapter = new ReplyAdapterOutside(activity);
-                adapter.addItem(new ReplyItem(itemsArrayList_reply.get(i).getmembers_index(),itemsArrayList_reply.get(i).getusername(),itemsArrayList_reply.get(i).getcomment_text(),itemsArrayList_reply.get(i).getprofile_picture()));
-                listview.setAdapter(adapter);
-            }
-        }
+            if(reply_to == commentindex){
+
+
+                adapter.addItem(
+                        new ReplyItem(itemsArrayList_reply.get(i).getmembers_index(),
+                                itemsArrayList_reply.get(i).getusername(),
+                                itemsArrayList_reply.get(i).getcomment_text(),
+                                itemsArrayList_reply.get(i).getprofile_picture(),
+                                itemsArrayList_reply.get(i).getreply_to()));
+
+            }//if
+        }//for
+
+        listview.setAdapter(adapter);
 
         //get the rep buttons
 
@@ -324,7 +335,7 @@ public class Com_in_Adapter  extends ArrayAdapter<CommentItem> {
 
         for (int i =0; i<data.length ; i++){
 
-            items.add(new LoginItem( data[i][1], data[i][2], data[i][3],data[i][4],data[i][5],data[i][6],data[i][7]));
+            items.add(new LoginItem( data[i][1], data[i][2], data[i][3],data[i][4],data[i][5],data[i][6], data[i][7], data[i][9]));
 
         }
         return items;

@@ -89,6 +89,7 @@ public class LoadLevelRank  extends AsyncTask<String, Integer, String> {
 
 
             try {
+
                 //check if course comment
                 //if(jsondata.getJSONObject(i).getString("courses_index")!="") {
 

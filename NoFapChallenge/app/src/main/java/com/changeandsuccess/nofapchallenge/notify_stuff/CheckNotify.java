@@ -73,9 +73,9 @@ public class CheckNotify extends AsyncTask<String, Integer, String> {
 
             final View rootView = ((Activity) activity).getWindow().getDecorView().findViewById(android.R.id.content);
 
-            ImageButton bellButton = (ImageButton) rootView.findViewById(R.id.notify_button);
+           // ImageButton bellButton = (ImageButton) rootView.findViewById(R.id.notify_button);
 
-            if(jsonObj.get("result").equals("no") ) {
+          /*  if(jsonObj.get("result").equals("no") ) {
 
 
                 bellButton.setImageResource(R.drawable.no_bell);
@@ -85,14 +85,9 @@ public class CheckNotify extends AsyncTask<String, Integer, String> {
                bellButton.setImageResource(R.drawable.bell);
 
 
-               /* Dialog das = new Dialog(activity);
-                das.setTitle(""+ jsonObj);
-                TextView tvsa = new TextView(activity);
-                tvsa.setText(""+jsonObj.toString());
-                das.setContentView(tvsa);
-                das.show();*/
-            }//else
 
+            }//else
+*/
         }catch (Exception e) {
 
             // TODO Auto-generated catch block

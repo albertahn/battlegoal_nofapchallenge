@@ -95,7 +95,7 @@ public class UserInfoEdit extends ActionBarActivity{
         ArrayList<LoginItem> items = new ArrayList<LoginItem>();
 
         for (int i =0; i<data.length ; i++){
-            items.add(new LoginItem( data[i][1], data[i][2], data[i][3],data[i][4],data[i][5],data[i][6],data[i][7]));
+            items.add(new LoginItem( data[i][1], data[i][2], data[i][3],data[i][4],data[i][5],data[i][6], data[i][7], data[i][9]));
         }
         return items;
     } //end generate
