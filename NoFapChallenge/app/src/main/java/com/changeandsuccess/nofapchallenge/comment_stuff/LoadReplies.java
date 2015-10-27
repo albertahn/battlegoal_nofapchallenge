@@ -2,6 +2,7 @@ package com.changeandsuccess.nofapchallenge.comment_stuff;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.media.Image;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
+import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.level_stuff.PointOneUp;
 import com.changeandsuccess.nofapchallenge.utils.JsonReader;
@@ -55,12 +57,25 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
         this.userID = userID;
         this.commentindex = commentindex;
 
-        UserDatabase userDatabase = new UserDatabase(activity);
-        userDatabase.open();
-        String[][] data = userDatabase.getData();
-        userDatabase.close();
+        Boolean logged = new LoginActivity().isLoggedIn(activity);
 
-        user_exp_points = data[0][9];
+        if(logged){
+            UserDatabase userDatabase = new UserDatabase(activity);
+            userDatabase.open();
+            String[][] data = userDatabase.getData();
+            userDatabase.close();
+
+            user_exp_points = data[0][9];
+
+        }else{
+
+            Intent i = new Intent(activity,
+                    LoginActivity.class);
+            activity.startActivity(i);
+
+        }
+
+
 
 
     }

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.CoachProfile;
+import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
 import com.changeandsuccess.nofapchallenge.utils.UserDatabase;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -64,22 +65,32 @@ public class ReplyAdapterOutside extends BaseAdapter {
 
        // Button  moreCommentsBtn = (Button)view.findViewById(R.id.moreCommentsBtn);
 
-        UserDatabase userDatabase = new UserDatabase(activity);
-        userDatabase.open();
-        String[][] data = userDatabase.getData();
-        userDatabase.close();
+        Boolean logged = new LoginActivity().isLoggedIn(activity);
 
-        userindex = data[0][1];
+        if(logged){
+            UserDatabase userDatabase = new UserDatabase(activity);
+            userDatabase.open();
+            String[][] data = userDatabase.getData();
+            userDatabase.close();
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+            userindex = data[0][1];
 
 
-                new LoadReplies(userindex, activity, curItem.get_reply_to()).execute();
-            }
-        });
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+
+
+                    new LoadReplies(userindex, activity, curItem.get_reply_to()).execute();
+                }
+            });
+
+        }
+
+
+
+
 
 
       //  view.setBodyText(bodies[position]);
