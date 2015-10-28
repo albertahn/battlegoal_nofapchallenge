@@ -87,15 +87,12 @@ public class LoadReplies  extends AsyncTask<String, Integer, String> {
         try {
 
             jsonArray = JsonReader.readJsonArrayFromUrl(STREAMURL+commentindex);
-
             jsonObject = JsonReader.readJsonFromUrl(ONECOMMENT+commentindex);
-
 
             //get the origion comment stuff
 
             origin_text =(String) jsonObject.getString("comment_text").toString();
             origin_username = (String) jsonObject.getString("username").toString();
-
 
 
             // return jsonArray;

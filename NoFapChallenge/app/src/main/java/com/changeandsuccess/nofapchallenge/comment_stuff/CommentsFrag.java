@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -350,6 +351,11 @@ public class CommentsFrag extends Fragment {
        // int navInt = getActivity().getResources().getInteger(R.integer.navigation_int);
 
         //actionBar.setSelectedNavigationItem(navInt);
+
+        //hide keyboard
+        getActivity().getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
 
         String xx = Locale.getDefault().getLanguage();
         setLanguageMarked(xx);

@@ -16,8 +16,8 @@ android {
 
         minSdkVersion 10
         targetSdkVersion 20
-        versionCode 47
-        versionName '5.1.5'
+        versionCode 49
+        versionName '5.2.5'
     }
 
     buildTypes {
@@ -30,8 +30,8 @@ android {
             apply plugin: 'project-report'
             //runProguard true
 
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+           // minifyEnabled true
+            proguardFiles  'proguard-rules.txt' //getDefaultProguardFile('proguard-android.txt'),
             debuggable false
             // local path doesnt exist for app-debug.apk
         }
