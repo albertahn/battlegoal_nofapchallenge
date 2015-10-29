@@ -6,7 +6,7 @@
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:id="@+id/home_rel_layout"
-    android:background="#ffb84d"
+    android:background="@drawable/newback"
     android:scaleType="fitXY"
     android:gravity="fill_horizontal|fill|fill_vertical|top"
     >

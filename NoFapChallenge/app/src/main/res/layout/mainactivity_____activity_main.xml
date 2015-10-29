@@ -22,7 +22,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/relativeLayout"
-                android:background="#ffb84d">
+                android:background="#020202">
                 <ImageButton
                     android:layout_width="50dp"
                     android:layout_height="50dp"
