@@ -22,9 +22,9 @@ public class Videos extends Fragment {
 
     Button youtubeButton;
 
-    WebView mWeb;
-    ProgressBar progressBar;
-    String site;
+        WebView mWeb;
+        ProgressBar progressBar;
+        String site;
         View rootView;
 
         @Override
@@ -97,7 +97,7 @@ public class Videos extends Fragment {
 
 
             return rootView;
-        }
+        }//
 
 
     }

@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.changeandsuccess.nofapchallenge.LoginActivity;
 import com.changeandsuccess.nofapchallenge.R;
+import com.changeandsuccess.nofapchallenge.comment_stuff.comment_sqlite.LanguageAll_db;
 import com.changeandsuccess.nofapchallenge.level_stuff.PointOneUp;
 import com.changeandsuccess.nofapchallenge.live_chat.LiveFragShow;
 import com.changeandsuccess.nofapchallenge.model.LoginItem;
@@ -75,6 +76,10 @@ public class CommentsFrag extends Fragment {
 
             userIndex ="1";
         }
+
+//testLanguag
+        new LanguageAll_db().testit(getActivity());
+
 
         rootView = inflater.inflate(R.layout.commentsfrag_____message_input_part, container, false);
 
