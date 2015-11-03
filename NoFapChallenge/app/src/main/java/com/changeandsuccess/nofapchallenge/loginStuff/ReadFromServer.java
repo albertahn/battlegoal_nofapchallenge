@@ -111,12 +111,9 @@ public class ReadFromServer extends AsyncTask<String, Integer, String> {
 
             if(user_index!=null){
 
-
-
                 //LoginActivity
                 LoginActivity loginActivity = new LoginActivity();
                 loginActivity.loginSuccess(context);
-
 
                 //start activity
                 Intent i = new Intent(context,
@@ -124,9 +121,7 @@ public class ReadFromServer extends AsyncTask<String, Integer, String> {
 
                 context.startActivity(i);
 
-
             }else{
-
 
                 Dialog d = new Dialog(context);
                 d.setTitle("Email or Passord is wrong");
