@@ -70,12 +70,14 @@ public class CommentsFrag extends Fragment {
         generatedLoginItem = generateData(data);
 
         if(generatedLoginItem.toString() !="[]"){
+
             userIndex = data[0][1];
             user_exp_points = data[0][9];
 
         }else{
 
             userIndex ="1";
+
         }
 
 
