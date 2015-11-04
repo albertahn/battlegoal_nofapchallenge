@@ -19,9 +19,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Created by albertan on 11/3/15.
+ * Created by albertan on 11/4/15.
  */
-public class GetFromServer extends AsyncTask<String, Integer, String> {
+public class Check_if_updated extends AsyncTask<String, Integer, String> {
 
 
 
@@ -37,7 +37,7 @@ public class GetFromServer extends AsyncTask<String, Integer, String> {
     private ArrayList<CommentItem> itemsArrayList,ItemsArrayList_reply;
 
 
-    public GetFromServer(String userID, View rootView,  Activity activity) {
+    public Check_if_updated(String userID, View rootView,  Activity activity) {
         this.rootView = rootView;
         this.activity = activity;
         this.userID = userID;
@@ -46,12 +46,13 @@ public class GetFromServer extends AsyncTask<String, Integer, String> {
         // progressBar = (ProgressBar) rootView.findViewById(R.id.input_progress_bar);
         // progressBar.setVisibility(View.VISIBLE);
 
-    }
+    }//check if updated
 
 
     //interface to get result
     @Override
     protected String doInBackground(String... params) {
+
         try {
 
             final String STREAMURL = activity.getResources().getString(R.string.default_comments_url);
@@ -76,10 +77,8 @@ public class GetFromServer extends AsyncTask<String, Integer, String> {
         if (jsonArray != null) {
             //homeListView.getContext()
 
-
             //insert into sqlite(jsonArray);
             insertToSqlite(jsonArray);
-
 
             itemsArrayList = generateData(jsonArray);
             ItemsArrayList_reply = generateReply(jsonArray);
@@ -88,7 +87,7 @@ public class GetFromServer extends AsyncTask<String, Integer, String> {
             if(listView !=null){
                 listView.setAdapter(proAdapter);
 
-            }
+            }//if
 
         } else {
             Log.d("emptyarray", "sptmey man");
@@ -97,9 +96,7 @@ public class GetFromServer extends AsyncTask<String, Integer, String> {
     }// end post ex
 
     public void insertToSqlite(JSONArray jsondata){
-
         LanguageAll_db languageAll_db = new LanguageAll_db(activity);
-
 
         //database
 
@@ -117,28 +114,28 @@ public class GetFromServer extends AsyncTask<String, Integer, String> {
             try {
 
 
-                    languageAll_db.open();
-                    languageAll_db.createEntry(
-                            jsondata.getJSONObject(i).getString("members_index"),
-                            jsondata.getJSONObject(i).getString("profile_picture"),
-                            jsondata.getJSONObject(i).getString("username"),
-                            jsondata.getJSONObject(i).getString("comment_index"),
-                            jsondata.getJSONObject(i).getString("comment_text"),
+                languageAll_db.open();
+                languageAll_db.createEntry(
+                        jsondata.getJSONObject(i).getString("members_index"),
+                        jsondata.getJSONObject(i).getString("profile_picture"),
+                        jsondata.getJSONObject(i).getString("username"),
+                        jsondata.getJSONObject(i).getString("comment_index"),
+                        jsondata.getJSONObject(i).getString("comment_text"),
 
-                            jsondata.getJSONObject(i).getString("courses_index"),
-                            jsondata.getJSONObject(i).getString("comment_picture"),
-                            jsondata.getJSONObject(i).getString("comment_text"),
-                            jsondata.getJSONObject(i).getString("reply_num"),
-                            jsondata.getJSONObject(i).getString("likes"),
+                        jsondata.getJSONObject(i).getString("courses_index"),
+                        jsondata.getJSONObject(i).getString("comment_picture"),
+                        jsondata.getJSONObject(i).getString("comment_text"),
+                        jsondata.getJSONObject(i).getString("reply_num"),
+                        jsondata.getJSONObject(i).getString("likes"),
 
-                            jsondata.getJSONObject(i).getString("new_type"),
-                            jsondata.getJSONObject(i).getString("course_name"),
-                            jsondata.getJSONObject(i).getString("course_privacy"),
+                        jsondata.getJSONObject(i).getString("new_type"),
+                        jsondata.getJSONObject(i).getString("course_name"),
+                        jsondata.getJSONObject(i).getString("course_privacy"),
 
-                            jsondata.getJSONObject(i).getString("timestamp"),
+                        jsondata.getJSONObject(i).getString("timestamp"),
 
-                            jsondata.getJSONObject(i).getString("reply_to")
-                           );
+                        jsondata.getJSONObject(i).getString("reply_to")
+                );
                 languageAll_db.close();
                 // }//end if
             } catch (JSONException e) {
@@ -209,5 +206,4 @@ public class GetFromServer extends AsyncTask<String, Integer, String> {
         return items;
     }// end generate
 
-}
-
+} //end class
