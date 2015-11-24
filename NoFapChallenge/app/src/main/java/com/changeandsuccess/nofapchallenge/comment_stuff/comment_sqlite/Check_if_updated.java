@@ -116,6 +116,7 @@ public class Check_if_updated extends AsyncTask<String, Integer, String> {
 
                 languageAll_db.open();
                 languageAll_db.createEntry(
+
                         jsondata.getJSONObject(i).getString("members_index"),
                         jsondata.getJSONObject(i).getString("profile_picture"),
                         jsondata.getJSONObject(i).getString("username"),
@@ -135,6 +136,7 @@ public class Check_if_updated extends AsyncTask<String, Integer, String> {
                         jsondata.getJSONObject(i).getString("timestamp"),
 
                         jsondata.getJSONObject(i).getString("reply_to")
+
                 );
                 languageAll_db.close();
                 // }//end if

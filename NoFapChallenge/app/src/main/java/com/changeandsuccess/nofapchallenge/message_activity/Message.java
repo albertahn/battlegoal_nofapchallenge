@@ -66,10 +66,6 @@ public class Message extends Fragment {
             //check gcm
             checkDeviceGCM(getActivity(), getActivity());
 //adshow
-            AdView mAdView = (AdView) rootView.findViewById(R.id.adView);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mAdView.loadAd(adRequest);
-
 
             return rootView;
 
@@ -214,7 +210,8 @@ public class Message extends Fragment {
 
         return context.getSharedPreferences(MainActivity.class.getSimpleName(),
                 Context.MODE_PRIVATE);
-    }
+
+    }//shared
 
 
 

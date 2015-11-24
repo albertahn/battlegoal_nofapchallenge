@@ -31,8 +31,6 @@ public class LanguageAll_db {
     public static final String KEY_COURSES_INDEX = "courses_index";
     public static final String KEY_COMMENT_PICTURE = "comment_picture";
 
-
-
     public static final String KEY_REPLY_NUM = "reply_num";
     public static final String KEY_LIKES = "likes";
     public static final String KEY_NEWS_TYPE = "news_type";
@@ -85,8 +83,6 @@ public class LanguageAll_db {
 
              KEY_COURSES_INDEX+ " TEXT NOT NULL, " +
              KEY_COMMENT_PICTURE+ " TEXT NOT NULL, " +
-
-
 
              KEY_REPLY_NUM+ " TEXT NOT NULL, " +
              KEY_LIKES+ " TEXT NOT NULL, " +
@@ -185,8 +181,6 @@ public class LanguageAll_db {
                 cv.put  ( KEY_COURSES_INDEX ,COURSES_INDEX);
                 cv.put(KEY_COMMENT_PICTURE ,COMMENT_PICTURE);
 
-
-
                 cv.put(KEY_REPLY_NUM ,REPLY_NUM );
                 cv.put (KEY_LIKES ,LIKES);
                 cv.put ( KEY_NEWS_TYPE ,NEWS_TYPE);
@@ -218,8 +212,6 @@ public class LanguageAll_db {
 
                         KEY_COURSES_INDEX,
                         KEY_COMMENT_PICTURE,
-
-
 
                         KEY_REPLY_NUM,
                         KEY_LIKES,
@@ -258,7 +250,7 @@ public class LanguageAll_db {
         int iREPLY_TO = c.getColumnIndex(KEY_REPLY_TO);
 
         String[][] result = null;
-        result= new String[c.getCount()][15];
+        result= new String[c.getCount()][16];
 
         if(c.moveToFirst()){
 
@@ -274,12 +266,14 @@ public class LanguageAll_db {
                 result[i][6] =c.getString(iCOMMENT_TEXT );
                 result[i][7] =c.getString(iCOURSES_INDEX);
                 result[i][8] =c.getString(iCOMMENT_PICTURE);
-                result[i][9] =c.getString(iLIKES);
-                result[i][10] =c.getString(iNEWS_TYPE);
-                result[i][11] =c.getString(iCOURSES_NAME);
-                result[i][12] =c.getString(iCOURSE_PRIVACY);
-                result[i][13] =c.getString(iTIMESTAMP);
-                result[i][14] =c.getString(iREPLY_TO);
+                result[i][9] =c.getString(iREPLY_NUM);
+
+                result[i][10] =c.getString(iLIKES);
+                result[i][11] =c.getString(iNEWS_TYPE);
+                result[i][12] =c.getString(iCOURSES_NAME);
+                result[i][13] =c.getString(iCOURSE_PRIVACY);
+                result[i][14] =c.getString(iTIMESTAMP);
+                result[i][15] =c.getString(iREPLY_TO);
 
                 //" "+c.getString(iDay) + "            " + c.getString(iNote) + "    "+ c.getString(iDate) ;
                 c.moveToNext();
@@ -310,9 +304,6 @@ public class LanguageAll_db {
 
 
     }//delete
-
-
-
 
 
 }

@@ -17,13 +17,19 @@
 
     <string name="home_tab">홈</string>
 
-    <string name="news_tab">뉴스</string>
+    <string name="news_tab">공지</string>
     <string name="message_tab">메세지</string>
     <string name="progress_tab">진행</string>
     <string name="profile_tab">프로필</string>
 
     <string name="chat_tab">게시판</string>
-    <string name="inbox_tab">개인 메세지</string>
+    <string name="inbox_tab">메세지</string>
+
+    <string name="battle_tab">배틀</string>
+    <string name="coach_tab">코치</string>
+    <string name="level_tab">레벨</string>
+    <string name="store_tab">스토어</string>
+    <string name="guide_tab">가이드</string>
 
     <!--texts-->
 
