@@ -2,46 +2,46 @@
 <items version="2" >
 
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-ws/2.4.0/69206d28966656052a982ceded583abdeb41cf63/okhttp-ws-2.4.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-74e85d8c9c5613511b66eecadf621d1c91390161.jar" />
+        sha1="69206d28966656052a982ceded583abdeb41cf63">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okhttp-ws-2.4.0-674a42078763acdcbf3f666fc45be7f98dc109bc.jar" />
     </item>
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/jars/classes.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-2c611daeca7847ea58d01e44dd2e7ad4a0c7dd21.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/socket.io-client/0.5.2/41182e10002a59498572181410172744abd0f637/socket.io-client-0.5.2.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-1a1dbda53d8ddf5e447c82efc8012d1ffe33bc6a.jar" />
+        sha1="41182e10002a59498572181410172744abd0f637">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/socket.io-client-0.5.2-f680cddaaff5aeb0a0066579fea418b46070126a.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-4cd1fce19444c87e384083ffcda85ddedfede120.jar" />
     </item>
     <item
         jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/jars/classes.jar"
         jumboMode="false"
-        revision="19.1.0"
+        revision="23.0.2"
         sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
         <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-d2731a7d5576a0995dbfdc887e5a39fcfc17ba58.jar" />
     </item>
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/jars/classes.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/jars/classes.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-67a97fc20455e3cc014a250a9b84a49c1e23516b.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-ba47b9e4c8c32cf48c2028b453f561954834b744.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-339068488a7258c8fdf13cdb6dd33a231712edf1.jar" />
+        revision="23.0.2"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-f0ba94f06e24541590d34f2215d94d1dc7c691e1.jar" />
     </item>
     <item
         jar="/Users/albertan/Documents/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
@@ -51,32 +51,11 @@
         <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-8433f60cb2842255759bb883bfe899c4813c341c.jar" />
     </item>
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/FlurryAnalytics-5.0.0.jar"
+        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/socket.io-client/0.5.2/41182e10002a59498572181410172744abd0f637/socket.io-client-0.5.2.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="9143ea9b390b4f6eeee3673533402669de23ab7e">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/FlurryAnalytics-5.0.0-a3b4697bf8d37f44327a598a6ab9b900e687fbd5.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okio-1.4.0-67f6135f444ad3babe3ef43df26ef8fe333b21c6.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-b0d42d26d7addbe0981ee444796b4dfdb018cde8.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0-7307fe1d5a9667b0f05790b362187e822cf5d2e2.jar" />
+        revision="23.0.2"
+        sha1="41182e10002a59498572181410172744abd0f637">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/socket.io-client-0.5.2-f680cddaaff5aeb0a0066579fea418b46070126a.jar" />
     </item>
     <item
         jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/jars/classes.jar"
@@ -86,39 +65,11 @@
         <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-4cd1fce19444c87e384083ffcda85ddedfede120.jar" />
     </item>
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/jars/classes.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-c5f07564f21f42ec80951f79492c1e03ff3a2f4c.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-7af3db2917493f0b55d4f76a17b28f94e9954493.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="055783146ba9654a725442563be78cad303aad1f">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-ee8083ccee282e4b9f76b2ef70add2fed36a0316.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-2796513df03d0a047a645b07f5e56d25878e2a26.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-2ba636ceee299c9d2fc358a4c07a5e8babbf1f4a.jar" />
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-43899587ec37a16da3a8b9a580bd64cae40c1fb3.jar" />
     </item>
     <item
         jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/jars/classes.jar"
@@ -128,25 +79,18 @@
         <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-2c611daeca7847ea58d01e44dd2e7ad4a0c7dd21.jar" />
     </item>
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpmime-4.3.4.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="54ffde537682aea984c22fbcf0106f21397c5f9b">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpmime-4.3.4-74c808bd3209af216d1d921bdfa90672b7f27164.jar" />
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-b0d42d26d7addbe0981ee444796b4dfdb018cde8.jar" />
     </item>
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/jars/libs/bolts.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/jars/classes.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/bolts-5bbadcda1117d81d5aefb8eb6f5eb9a55353c8b7.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-929d44d8b58e273a9514e33245044a032d2a4f24.jar" />
+        revision="23.0.2"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-67a97fc20455e3cc014a250a9b84a49c1e23516b.jar" />
     </item>
     <item
         jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpclient-4.3.4.jar"
@@ -156,60 +100,81 @@
         <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpclient-4.3.4-698ebc2b93d95f3cbe921d1096f26652cd8d38e5.jar" />
     </item>
     <item
-        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-ws/2.4.0/69206d28966656052a982ceded583abdeb41cf63/okhttp-ws-2.4.0.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-74e85d8c9c5613511b66eecadf621d1c91390161.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/universal-image-loader-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9e025bc5b84968e7d6ac765e660a70b3e5a87432">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.2-e0ca667e2cb2f1baa31dfba82fb550ddf743ae51.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-d2731a7d5576a0995dbfdc887e5a39fcfc17ba58.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-ba47b9e4c8c32cf48c2028b453f561954834b744.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-74e85d8c9c5613511b66eecadf621d1c91390161.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/FlurryAnalytics-5.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9143ea9b390b4f6eeee3673533402669de23ab7e">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/FlurryAnalytics-5.0.0-a3b4697bf8d37f44327a598a6ab9b900e687fbd5.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-67a97fc20455e3cc014a250a9b84a49c1e23516b.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpclient-4.3.4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a9a1fef2faefed639ee0d0fba5b3b8e4eb2ff2d8">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpclient-4.3.4-698ebc2b93d95f3cbe921d1096f26652cd8d38e5.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-ba47b9e4c8c32cf48c2028b453f561954834b744.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-ws/2.4.0/69206d28966656052a982ceded583abdeb41cf63/okhttp-ws-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
         sha1="69206d28966656052a982ceded583abdeb41cf63">
         <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okhttp-ws-2.4.0-674a42078763acdcbf3f666fc45be7f98dc109bc.jar" />
     </item>
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/jars/classes.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/jars/classes.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-f0ba94f06e24541590d34f2215d94d1dc7c691e1.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="ee1f28669a6426ef8c7009a9f392ad62fd1e950a">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-f89fdaf94a4f4604d1d688607af187267bc38f82.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpcore-4.3.2.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="31fbbff1ddbf98f3aa7377c94d33b0447c646b6e">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpcore-4.3.2-e05c3e58bb6c8cb5086a1773140a9616c5bd6a00.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-6a48f964f0dcefea677f3610032cbaa17bb19b11.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-52f688fda061646fce181aac69946d42c49c2142.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-68d9a855526faa14b3b8bcf4668dd14f516a2798.jar" />
-    </item>
-    <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-43899587ec37a16da3a8b9a580bd64cae40c1fb3.jar" />
+        revision="23.0.2"
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-b0d42d26d7addbe0981ee444796b4dfdb018cde8.jar" />
     </item>
     <item
         jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/jars/classes.jar"
@@ -226,11 +191,102 @@
         <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-78e4396af7c89fa8bd89067fecad67a9d7ad75d7.jar" />
     </item>
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/jars/classes.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/universal-image-loader-1.9.2.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-beaabd3622c7037817e3de6a368e58d529828db2.jar" />
+        sha1="9e025bc5b84968e7d6ac765e660a70b3e5a87432">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.2-e0ca667e2cb2f1baa31dfba82fb550ddf743ae51.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okio-1.4.0-67f6135f444ad3babe3ef43df26ef8fe333b21c6.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-43899587ec37a16da3a8b9a580bd64cae40c1fb3.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-8433f60cb2842255759bb883bfe899c4813c341c.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpmime-4.3.4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="54ffde537682aea984c22fbcf0106f21397c5f9b">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpmime-4.3.4-74c808bd3209af216d1d921bdfa90672b7f27164.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okio-1.4.0-67f6135f444ad3babe3ef43df26ef8fe333b21c6.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-f0ba94f06e24541590d34f2215d94d1dc7c691e1.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-c5f07564f21f42ec80951f79492c1e03ff3a2f4c.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-2796513df03d0a047a645b07f5e56d25878e2a26.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-2796513df03d0a047a645b07f5e56d25878e2a26.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/engine.io-client/0.5.1/c83503e6668d63b3d5b2a27edf6e3a54d9eb7a66/engine.io-client-0.5.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c83503e6668d63b3d5b2a27edf6e3a54d9eb7a66">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/engine.io-client-0.5.1-47e088277fea3d26c6206e1be4622cc69cd72992.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpcore-4.3.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="31fbbff1ddbf98f3aa7377c94d33b0447c646b6e">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpcore-4.3.2-e05c3e58bb6c8cb5086a1773140a9616c5bd6a00.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpmime-4.3.4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="54ffde537682aea984c22fbcf0106f21397c5f9b">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpmime-4.3.4-74c808bd3209af216d1d921bdfa90672b7f27164.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/httpcore-4.3.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="31fbbff1ddbf98f3aa7377c94d33b0447c646b6e">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/httpcore-4.3.2-e05c3e58bb6c8cb5086a1773140a9616c5bd6a00.jar" />
     </item>
     <item
         jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/engine.io-client/0.5.1/c83503e6668d63b3d5b2a27edf6e3a54d9eb7a66/engine.io-client-0.5.1.jar"
@@ -240,18 +296,214 @@
         <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/engine.io-client-0.5.1-47e088277fea3d26c6206e1be4622cc69cd72992.jar" />
     </item>
     <item
-        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/socket.io-client/0.5.2/41182e10002a59498572181410172744abd0f637/socket.io-client-0.5.2.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="41182e10002a59498572181410172744abd0f637">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/socket.io-client-0.5.2-f680cddaaff5aeb0a0066579fea418b46070126a.jar" />
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-929d44d8b58e273a9514e33245044a032d2a4f24.jar" />
     </item>
     <item
-        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/universal-image-loader-1.9.2.jar"
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="9e025bc5b84968e7d6ac765e660a70b3e5a87432">
-        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.2-e0ca667e2cb2f1baa31dfba82fb550ddf743ae51.jar" />
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-1a1dbda53d8ddf5e447c82efc8012d1ffe33bc6a.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-c5f07564f21f42ec80951f79492c1e03ff3a2f4c.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-7af3db2917493f0b55d4f76a17b28f94e9954493.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-7af3db2917493f0b55d4f76a17b28f94e9954493.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-6a48f964f0dcefea677f3610032cbaa17bb19b11.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-52f688fda061646fce181aac69946d42c49c2142.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/jars/libs/bolts.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/bolts-5bbadcda1117d81d5aefb8eb6f5eb9a55353c8b7.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-1a1dbda53d8ddf5e447c82efc8012d1ffe33bc6a.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-929d44d8b58e273a9514e33245044a032d2a4f24.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-339068488a7258c8fdf13cdb6dd33a231712edf1.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-339068488a7258c8fdf13cdb6dd33a231712edf1.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0-7307fe1d5a9667b0f05790b362187e822cf5d2e2.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0-7307fe1d5a9667b0f05790b362187e822cf5d2e2.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-78e4396af7c89fa8bd89067fecad67a9d7ad75d7.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-92505543a1cbc200ea6aaaaefbfde9d7837f05da.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-68d9a855526faa14b3b8bcf4668dd14f516a2798.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/libs/FlurryAnalytics-5.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="9143ea9b390b4f6eeee3673533402669de23ab7e">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/FlurryAnalytics-5.0.0-a3b4697bf8d37f44327a598a6ab9b900e687fbd5.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-2ba636ceee299c9d2fc358a4c07a5e8babbf1f4a.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/jars/libs/bolts.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/bolts-5bbadcda1117d81d5aefb8eb6f5eb9a55353c8b7.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-52f688fda061646fce181aac69946d42c49c2142.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-6a48f964f0dcefea677f3610032cbaa17bb19b11.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-ee8083ccee282e4b9f76b2ef70add2fed36a0316.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-ee8083ccee282e4b9f76b2ef70add2fed36a0316.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-68d9a855526faa14b3b8bcf4668dd14f516a2798.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-2ba636ceee299c9d2fc358a4c07a5e8babbf1f4a.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-beaabd3622c7037817e3de6a368e58d529828db2.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-beaabd3622c7037817e3de6a368e58d529828db2.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ee1f28669a6426ef8c7009a9f392ad62fd1e950a">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-f89fdaf94a4f4604d1d688607af187267bc38f82.jar" />
+    </item>
+    <item
+        jar="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/exploded-aar/NoFapChallenge.app.libraries/facebook/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="153424f6b8d461925417989e155986e1df1328b5">
+        <dex dex="/Users/albertan/Documents/github/11_2_battlegoal_nofapchallenge/NoFapChallenge/app/build/intermediates/pre-dexed/debug/classes-f89fdaf94a4f4604d1d688607af187267bc38f82.jar" />
     </item>
 
 </items>

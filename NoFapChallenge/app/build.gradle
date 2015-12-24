@@ -2,7 +2,7 @@ apply plugin: 'android'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '19.1.0'
+    buildToolsVersion '23.0.2'
     compileOptions.encoding = 'UTF-8'
 
     packagingOptions {
@@ -30,10 +30,11 @@ android {
             apply plugin: 'project-report'
             //runProguard true
 
-           // minifyEnabled true
-            proguardFiles  'proguard-rules.txt' //getDefaultProguardFile('proguard-android.txt'),
+            // minifyEnabled true
+            proguardFiles 'proguard-rules.txt' //getDefaultProguardFile('proguard-android.txt'),
             debuggable false
             // local path doesnt exist for app-debug.apk
+
         }
     }
     signingConfigs {
@@ -53,7 +54,7 @@ dependencies {
     //compile 'com.google.android.gms:play-services:5.0.+'
     //compile 'com.google.android.gms:play-services:6.1.71'
     //compile 'com.android.support:appcompat-v7:21.1.+'
-   // compile 'com.android.support:recyclerview-v7:21.0.+'
+    // compile 'com.android.support:recyclerview-v7:21.0.+'
     compile('com.github.nkzawa:socket.io-client:0.5.2') {
 
         exclude group: 'org.json', module: 'json'
@@ -66,7 +67,7 @@ dependencies {
     compile files('libs/FlurryAnalytics-5.0.0.jar')
     compile project('libraries:facebook')
     //compile project('libraries:volley')
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.android.support:recyclerview-v7:23.1.0'
 }
