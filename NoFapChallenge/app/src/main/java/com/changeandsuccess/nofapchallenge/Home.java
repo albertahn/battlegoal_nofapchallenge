@@ -107,7 +107,7 @@ public class Home extends Fragment {
 //progress_peak
         activity= getActivity();
         mainActLayout = inflater.inflate( R.layout.mainactivity_____activity_main, container, false);
-        context = getActivity();
+        mShareBtn  context = getActivity();
         mainActivity = new MainActivity();
 
 //progress wheel
